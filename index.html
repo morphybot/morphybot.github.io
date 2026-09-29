@@ -17,11 +17,97 @@
 <title>Morphy | The Discord bot that becomes yours</title><style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#16141f;color:#ecebf3;margin:0;padding:0 16px;line-height:1.6}
 main{max-width:760px;margin:0 auto;padding:40px 0 64px}a{color:#8fd3ff}h1{margin-top:0}h2{margin-top:2em;color:#c9b8ff}
 code{background:#2a2638;padding:1px 6px;border-radius:4px}.btn{display:inline-block;background:#6a5cff;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;margin:8px 8px 0 0}
-.muted{color:#a9a6ba}footer{margin-top:48px;color:#a9a6ba;font-size:14px}</style></head><body><main>
+.muted{color:#a9a6ba}footer{margin-top:48px;color:#a9a6ba;font-size:14px}
+.servers{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:12px;margin-top:16px}
+.server{display:flex;align-items:center;gap:12px;min-width:0;background:#201c2c;border:1px solid #2f2a42;border-radius:12px;padding:12px}
+.server-icon{width:48px;height:48px;flex:none;border-radius:50%;object-fit:cover;background:#2a2638;color:#c9b8ff;display:grid;place-items:center;font-weight:700;font-size:20px}
+.server-info{flex:1;min-width:0}.server-name{font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}.server-members{font-size:14px}
+.server .btn{margin:0;padding:8px 14px;flex:none}button.btn{border:0;cursor:pointer;font-family:inherit;font-size:inherit;margin-top:16px}
+.trying h2{font-size:1.15em;color:#a9a6ba}.trying .server{background:none;border-style:dashed}.trying .btn{background:#2a2638}</style></head><body><main>
 <h1>Morphy</h1>
 <p><strong>The all-in-one Discord bot that becomes yours.</strong> Tickets, welcome cards, staff applications, invite rewards, giveaways, polls, info panels, points and a casino, all running under your server's own name and look.</p>
 <p class="muted">7-day free trial, then $9.99/month per server. Cancel any time.</p>
 <p><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1549234696041271306&amp;scope=bot+applications.commands&amp;permissions=335932662">Add Morphy to your server</a><a class="btn" style="background:#2a2638" href="https://discord.gg/Mp8c7ra6dx">Get help</a></p>
 <h2>Getting started</h2>
 <ul><li>Invite Morphy, then run <code>/setup</code> in your server.</li><li>Run <code>/help</code> to see everything it can do.</li><li>Make it yours with <code>/branding</code>: your server's name, logo and banner.</li></ul>
+<section id="showcase" hidden>
+<h2>Servers running Morphy</h2>
+<div id="showcase-list" class="servers"></div>
+</section>
+<section id="showcase-trying" class="trying" hidden>
+<h2>Trying Morphy right now</h2>
+<p class="muted">These servers are on the free trial.</p>
+<div id="showcase-trying-list" class="servers"></div>
+</section>
+<script>
+(() => {
+  if (!window.fetch) return;
+  const el = (tag, className, text) => {
+    const node = document.createElement(tag);
+    node.className = className;
+    if (text) node.textContent = text;
+    return node;
+  };
+  // One server's card, or null if it has no name.
+  const serverCard = (s) => {
+    const name = s && typeof s.name === "string" ? s.name.trim() : "";
+    if (!name) return null;
+    const card = el("div", "server");
+    if (typeof s.icon === "string" && s.icon.startsWith("https://cdn.discordapp.com/")) {
+      const img = el("img", "server-icon");
+      img.src = s.icon;
+      img.alt = "";
+      img.width = 48;
+      img.height = 48;
+      img.loading = "lazy";
+      img.referrerPolicy = "no-referrer";
+      card.append(img);
+    } else {
+      // No icon: the first letter or digit, so a name that starts with a bracket or symbol still gets a letter.
+      const initial = (name.match(/[\p{L}\p{N}]/u) || Array.from(name))[0].toUpperCase();
+      card.append(el("span", "server-icon", initial));
+    }
+    const info = el("div", "server-info");
+    const label = el("div", "server-name", name);
+    label.title = name; // names longer than two lines get cut; hovering shows the whole name
+    info.append(label);
+    if (Number.isFinite(s.members)) {
+      info.append(el("div", "server-members muted", s.members.toLocaleString("en-US") + (s.members === 1 ? " member" : " members")));
+    }
+    card.append(info);
+    if (typeof s.invite === "string" && s.invite.startsWith("https://discord.gg/")) {
+      const join = el("a", "btn", "Join");
+      join.setAttribute("aria-label", "Join " + name); // screen readers list links by name: not "Join, Join, Join"
+      join.href = s.invite;
+      join.target = "_blank";
+      join.rel = "noopener";
+      card.append(join);
+    }
+    return card;
+  };
+  // One group into its section. A group with no servers leaves its section hidden.
+  const fill = (sectionId, listId, servers) => {
+    const section = document.getElementById(sectionId);
+    const list = document.getElementById(listId);
+    if (!section || !list) return;
+    const cards = (Array.isArray(servers) ? servers : []).map(serverCard).filter(Boolean);
+    if (!cards.length) return;
+    list.append(...cards.slice(0, 12));
+    if (cards.length > 12) {
+      const more = el("button", "btn", "Show all " + cards.length + " servers");
+      more.type = "button";
+      more.addEventListener("click", () => {
+        list.append(...cards.slice(12));
+        more.remove();
+      });
+      section.append(more);
+    }
+    section.hidden = false;
+  };
+  fetch("https://morphy-production-c1ba.up.railway.app/api/showcase", { referrerPolicy: "no-referrer" }).then((r) => (r.ok ? r.json() : null)).then((data) => {
+    fill("showcase", "showcase-list", data && data.servers);
+    fill("showcase-trying", "showcase-trying-list", data && data.trying);
+  }).catch(() => {});
+})();
+</script>
 <footer><a href="index.html">Morphy</a> · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></footer></main></body></html>
