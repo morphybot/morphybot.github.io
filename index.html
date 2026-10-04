@@ -676,7 +676,7 @@ fetch("https://morphy-production-c1ba.up.railway.app/api/showcase", { referrerPo
 .then((r) => (r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status))))
 .then((data) => {
 const main = fill(document.getElementById("showcase-list"), list(data && data.servers));
-const also = fill(document.getElementById("showcase-also-list"), [...list(data && data.free), ...list(data && data.trying)]);
+const also = fill(document.getElementById("showcase-also-list"), list(data && data.free));
 if (also) document.getElementById("showcase-also").hidden = false;
 if (main || also) status.hidden = true;
 else statusText.textContent = "No servers are listed right now.";

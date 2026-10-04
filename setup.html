@@ -199,34 +199,32 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/autoreact add</code> reacts with up to 3 emojis to every post in a channel, to posts with a word or phrase, or to that word in one channel only. Words inside links and emoji names don't count. <code>/autoreact list</code> shows them and <code>/autoreact remove</code> stops one. A server can have up to 25. In a very busy chat Morphy skips some reactions so the rest don't show up late.</li>
 </ul>
 <h2>Step 7: Announcements, giveaways and info panels (Premium)</h2>
-<ul>
-<li><strong>Announcements:</strong>
+<h3>Announcements</h3>
 <ul>
 <li><code>/announce send</code> starts from a ready-made template: Event, Update, Maintenance, Alert, General and more.</li>
 <li>A form opens so you can fill in the <code>[brackets]</code>. Morphy won't post until they're filled.</li>
 <li>Make your own templates with <code>/announce template-edit</code>.</li>
-</ul></li>
-<li><strong>Giveaways:</strong>
+</ul>
+<h3>Giveaways</h3>
 <ul>
 <li><code>/giveaway start</code> starts one. Members press <strong>Enter</strong>, and winners are drawn automatically when time's up.</li>
 <li><code>/giveaway reroll</code> picks new winners.</li>
 <li>If Morphy couldn't post the winner ping (or isn't sure it did), it won't ping twice. Your log channel gets a note and <code>/giveaway list</code> shows it for a week, so you can ping the winners yourself. The giveaway post always shows who won.</li>
 <li>Save your usual giveaways with <code>/giveaway template-edit</code>.</li>
-</ul></li>
-<li><strong>Info panels:</strong>
+</ul>
+<h3>Info panels</h3>
 <ul>
 <li><code>/panel edit</code> fills in a starter panel: Rules, FAQ, Server info, Links and more.</li>
 <li><code>/panel post</code> posts it.</li>
 <li>Editing a posted panel updates it instantly, and posting again moves it to the bottom of the channel.</li>
 <li>Staff can also type <code>!</code> plus the panel name, e.g. <code>!rules</code>, to drop a copy into any channel.</li>
-</ul></li>
-<li><strong>Payment links:</strong>
+</ul>
+<h3>Payment links</h3>
 <ul>
 <li><code>/payments add method:Cash App link:$yourtag</code> adds a way for members to pay you (Cash App, PayPal, Venmo, Stripe…). The emoji is optional, but it has to be a real one: pick it from Discord's emoji picker, or use one of your server's own, which looks like <code>&lt;:paypal:123456789012345678&gt;</code>. Anything else is refused instead of breaking the panel.</li>
 <li><code>/payments post</code> posts the panel. Members pick a method from the menu and get your link privately.</li>
 <li>Staff can type <code>!payments</code> in any channel to post it.</li>
-<li><strong>About <code>!links</code>:</strong> once you have at least one payment method, <code>!links</code> posts the <strong>payment</strong> panel, not the <strong>Links</strong> info panel, and Morphy says so when it does. For the info panel use <code>/panel post</code>, and for the payment panel use <code>!payments</code>. With no payment methods set, <code>!links</code> posts the Links info panel as usual.</li>
-</ul></li>
+<li>Once you have at least one payment method, <code>!links</code> posts the payment panel, not the Links info panel, and Morphy says so when it does. For the info panel use <code>/panel post</code>, and for the payment panel use <code>!payments</code>. With no payment methods set, <code>!links</code> posts the Links info panel as usual.</li>
 </ul>
 <h2>Step 8: Staff applications (Premium)</h2>
 <ol>
@@ -282,7 +280,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>Each payment covers 30 days, or 365 days for the yearly price. You get a DM when Premium is on. Renewing early doesn't cost you days: the new days start when your current paid time ends.</li>
 <li>The server owner gets a DM, and your log channel gets a post, 3 days before, 1 day before, the same day, and when paid time ends. Premium doesn't renew by itself, so keep your DMs open.</li>
 <li>When paid time ends, Premium stays on for 3 more days so a late payment doesn't switch anything off. A payment made during those 3 days is still added to the old end date, so paying on the second of them leaves you about 28 days, not 30.</li>
-<li>After that the server goes back to the Free plan. Welcome and goodbye messages, auto roles and role menus keep working. The Premium features pause, anti-nuke and the do-not-post trap included, and the bot's name, picture, banner and About Me go back to Morphy's own look. All your settings are kept. When you pay again, the Premium features come back and Morphy puts back the branding it saved.</li>
+<li>After that the server goes back to the Free plan. Welcome messages and picture cards, goodbye messages, auto roles and role menus keep working. The Premium features pause, anti-nuke and the do-not-post trap included, and the bot's name, picture, banner and About Me go back to Morphy's own look. All your settings are kept. When you pay again, the Premium features come back and Morphy puts back the branding it saved.</li>
 </ul>
 <h2>Troubleshooting</h2>
 <div class="table"><table><thead><tr><th>Problem</th><th>Fix</th></tr></thead><tbody><tr><td>A command doesn't show up</td><td>Press <strong>Ctrl+R</strong> to refresh Discord. Setup commands only show for staff.</td></tr><tr><td>&quot;Morphy is missing … permission&quot;</td><td>Give Morphy's role that permission, or allow it in that channel's settings.</td></tr><tr><td>Morphy can't give a role</td><td>Drag Morphy's role above that role in Server Settings → Roles.</td></tr><tr><td>Nothing happens in a channel</td><td>Check the channel doesn't block Morphy (channel settings → Permissions).</td></tr><tr><td>A feature stopped after you changed channels or roles</td><td>Run <code>/setup</code> again. It marks any channel that was deleted or that Morphy can't post in, and names the missing permission.</td></tr><tr><td>&quot;This is a Morphy Premium feature.&quot;</td><td>Your server is on the Free plan. Run <code>/setup</code> to see your plan, then <code>/subscribe</code>.</td></tr></tbody></table></div>
