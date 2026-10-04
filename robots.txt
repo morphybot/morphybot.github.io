@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://morphybot.github.io/sitemap.xml

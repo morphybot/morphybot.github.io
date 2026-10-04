@@ -1,9 +1,11 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#6a5cff">
-<meta name="description" content="Tickets, welcome cards, staff applications, invite rewards, giveaways, polls, info panels, points and a casino, all under your server's own name and look. 7-day free trial, then $9.99/month per server.">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://morphybot.github.io/">
+<meta name="description" content="Tickets, welcome cards, staff applications, invite rewards, giveaways, polls, info panels, points and a casino. Welcome messages, auto roles and role menus are free. Premium is $9.99/month or $99.90/year per server.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Morphy">
 <meta property="og:title" content="Morphy | The Discord bot that becomes yours">
-<meta property="og:description" content="Tickets, welcome cards, staff applications, invite rewards, giveaways, polls, info panels, points and a casino, all under your server's own name and look. 7-day free trial, then $9.99/month per server.">
+<meta property="og:description" content="Tickets, welcome cards, staff applications, invite rewards, giveaways, polls, info panels, points and a casino. Welcome messages, auto roles and role menus are free. Premium is $9.99/month or $99.90/year per server.">
 <meta property="og:url" content="https://morphybot.github.io/">
 <meta property="og:image" content="https://morphybot.github.io/og-banner.png">
 <meta property="og:image:type" content="image/png">
@@ -12,8 +14,9 @@
 <meta property="og:image:alt" content="Morphy's purple-to-teal slime mascot next to the word Morphy and &quot;The Discord bot that becomes yours&quot;, with eight feature chips (Tickets, Welcome cards, Applications, Invite rewards, Giveaways, Polls, Info panels, Casino) and &quot;7 days free then $9.99/month per server&quot;.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Morphy | The Discord bot that becomes yours">
-<meta name="twitter:description" content="Tickets, welcome cards, staff applications, invite rewards, giveaways, polls, info panels, points and a casino, all under your server's own name and look. 7-day free trial, then $9.99/month per server.">
+<meta name="twitter:description" content="Tickets, welcome cards, staff applications, invite rewards, giveaways, polls, info panels, points and a casino. Welcome messages, auto roles and role menus are free. Premium is $9.99/month or $99.90/year per server.">
 <meta name="twitter:image" content="https://morphybot.github.io/og-banner.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Morphy","applicationCategory":"CommunicationApplication","operatingSystem":"Discord","url":"https://morphybot.github.io/","image":"https://morphybot.github.io/og-banner.png","description":"Tickets, welcome cards, staff applications, invite rewards, giveaways, polls, info panels, points and a casino. Welcome messages, auto roles and role menus are free. Premium is $9.99/month or $99.90/year per server.","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free plan: welcome messages and picture cards, goodbye messages, auto roles and role menus"},{"@type":"Offer","price":"9.99","priceCurrency":"USD","description":"Premium, $9.99/month per server (30 days)"},{"@type":"Offer","price":"99.90","priceCurrency":"USD","description":"Premium, $99.90/year per server (365 days)"}]}</script>
 <title>Morphy | The Discord bot that becomes yours</title><style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#16141f;color:#ecebf3;margin:0;padding:0 16px;line-height:1.6}
 main{max-width:760px;margin:0 auto;padding:40px 0 64px}a{color:#8fd3ff}h1{margin-top:0}h2{margin-top:2em;color:#c9b8ff}
 code{background:#2a2638;padding:1px 6px;border-radius:4px}.btn{display:inline-block;background:#6a5cff;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;margin:8px 8px 0 0}
@@ -23,22 +26,39 @@ code{background:#2a2638;padding:1px 6px;border-radius:4px}.btn{display:inline-bl
 .server-icon{width:48px;height:48px;flex:none;border-radius:50%;object-fit:cover;background:#2a2638;color:#c9b8ff;display:grid;place-items:center;font-weight:700;font-size:20px}
 .server-info{flex:1;min-width:0}.server-name{font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}.server-members{font-size:14px}
 .server .btn{margin:0;padding:8px 14px;flex:none}button.btn{border:0;cursor:pointer;font-family:inherit;font-size:inherit;margin-top:16px}
-.trying h2{font-size:1.15em;color:#a9a6ba}.trying .server{background:none;border-style:dashed}.trying .btn{background:#2a2638}</style></head><body><main>
+#servers{scroll-margin-top:16px}.free h2{font-size:1.15em;color:#a9a6ba}.free .server{background:none;border-style:dashed}.free .btn{background:#2a2638}
+:focus-visible{outline:3px solid #5fe6d0;outline-offset:2px}main:focus{outline:0}
+.skip{position:absolute;left:-9999px;top:8px;z-index:9;background:#6a5cff;color:#fff;padding:8px 14px;border-radius:8px}.skip:focus{left:16px}
+.top{max-width:760px;margin:0 auto;padding-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+.top a{color:#ecebf3;text-decoration:none}.top a:hover{text-decoration:underline}.top a[aria-current=page]{color:#5fe6d0}
+.top .btn{margin:0 0 0 auto;padding:8px 16px;color:#fff}
+.table{overflow-x:auto}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid #2f2a42}th{color:#c9b8ff}td code{overflow-wrap:anywhere}
+li p{margin:6px 0}blockquote{margin:16px 0;padding:4px 16px;border-left:4px solid #5fe6d0;background:#201c2c;border-radius:0 8px 8px 0}
+details{background:#201c2c;border:1px solid #2f2a42;border-radius:12px;padding:10px 16px;margin:10px 0}summary{cursor:pointer;font-weight:600}details p{margin:8px 0 4px}
+.toc{display:flex;flex-wrap:wrap;gap:4px 16px;padding:0;list-style:none}
+.cmds td:last-child{color:#a9a6ba}@media(min-width:721px){.cmds td:first-child,.cmds td:last-child{white-space:nowrap}}
+@media(max-width:720px){.cmds thead{display:none}.cmds tr{display:block;padding:8px 0;border-bottom:1px solid #2f2a42}.cmds td{display:block;padding:2px 0;border:0}}</style></head><body><a class="skip" href="#main">Skip to content</a>
+<header><nav class="top" aria-label="Site"><a href="index.html" aria-current="page">Home</a><a href="commands.html">Commands</a><a href="faq.html">FAQ</a><a href="setup.html">Setup guide</a><a href="index.html#servers">Servers</a><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1549234696041271306&amp;scope=bot+applications.commands&amp;permissions=335932662">Add Morphy</a></nav></header>
+<main id="main" tabindex="-1">
 <h1>Morphy</h1>
-<p><strong>The all-in-one Discord bot that becomes yours.</strong> Tickets, welcome cards, staff applications, invite rewards, giveaways, polls, info panels, points and a casino, all running under your server's own name and look.</p>
-<p class="muted">7-day free trial, then $9.99/month per server. Cancel any time.</p>
+<p><strong>The all-in-one Discord bot that becomes yours.</strong> Tickets, welcome cards, staff applications, invite rewards, giveaways, polls, info panels, points and a casino. With Premium it all runs under your server's own name and look.</p>
+<p class="muted">Free plan for every server: welcome messages and picture cards, goodbye messages, auto roles and role menus, with no time limit. Premium adds everything else for $9.99/month or $99.90/year per server. No contract: when Premium ends, the Free plan keeps working and your settings stay.</p>
 <p><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1549234696041271306&amp;scope=bot+applications.commands&amp;permissions=335932662">Add Morphy to your server</a><a class="btn" style="background:#2a2638" href="https://discord.gg/Mp8c7ra6dx">Get help</a></p>
 <h2>Getting started</h2>
-<ul><li>Invite Morphy, then run <code>/setup</code> in your server.</li><li>Run <code>/help</code> to see everything it can do.</li><li>Make it yours with <code>/branding</code>: your server's name, logo and banner.</li></ul>
-<section id="showcase" hidden>
+<ul><li>Invite Morphy, then run <code>/setup</code> in your server.</li><li>Run <code>/help</code> to see everything it can do.</li><li>With Premium, make it yours with <code>/branding</code>: your server's name, logo and banner.</li></ul>
+<div id="servers">
+<section id="showcase">
 <h2>Servers running Morphy</h2>
+<noscript><p class="muted">Turn on JavaScript to see this list.</p></noscript>
+<p id="showcase-note" class="muted" hidden></p>
 <div id="showcase-list" class="servers"></div>
 </section>
-<section id="showcase-trying" class="trying" hidden>
-<h2>Trying Morphy right now</h2>
-<p class="muted">These servers are on the free trial.</p>
-<div id="showcase-trying-list" class="servers"></div>
+<section id="showcase-free" class="free" hidden>
+<h2>Also using Morphy</h2>
+<p class="muted">These servers use Morphy's Free plan.</p>
+<div id="showcase-free-list" class="servers"></div>
 </section>
+</div>
 <script>
 (() => {
   if (!window.fetch) return;
@@ -85,13 +105,13 @@ code{background:#2a2638;padding:1px 6px;border-radius:4px}.btn{display:inline-bl
     }
     return card;
   };
-  // One group into its section. A group with no servers leaves its section hidden.
+  // One group into its section, which shows if it got any servers. Returns how many it got.
   const fill = (sectionId, listId, servers) => {
     const section = document.getElementById(sectionId);
     const list = document.getElementById(listId);
-    if (!section || !list) return;
+    if (!section || !list) return 0;
     const cards = (Array.isArray(servers) ? servers : []).map(serverCard).filter(Boolean);
-    if (!cards.length) return;
+    if (!cards.length) return 0;
     list.append(...cards.slice(0, 12));
     if (cards.length > 12) {
       const more = el("button", "btn", "Show all " + cards.length + " servers");
@@ -103,11 +123,25 @@ code{background:#2a2638;padding:1px 6px;border-radius:4px}.btn{display:inline-bl
       section.append(more);
     }
     section.hidden = false;
+    return cards.length;
   };
-  fetch("https://morphy-production-c1ba.up.railway.app/api/showcase", { referrerPolicy: "no-referrer" }).then((r) => (r.ok ? r.json() : null)).then((data) => {
-    fill("showcase", "showcase-list", data && data.servers);
-    fill("showcase-trying", "showcase-trying-list", data && data.trying);
-  }).catch(() => {});
+  // data: the list, or null if it didn't load.
+  const show = (data) => {
+    const paid = fill("showcase", "showcase-list", data && data.servers);
+    const free = fill("showcase-free", "showcase-free-list", data && data.free);
+    if (!paid && free) {
+      document.getElementById("showcase").hidden = true; // only Free servers: their group is the list
+    } else if (!paid) {
+      const note = document.getElementById("showcase-note");
+      note.textContent = data ? "No servers are listed right now." : "The list didn't load. Refresh the page to try again.";
+      note.hidden = false;
+    }
+    if (location.hash === "#servers" || location.hash === "#showcase") document.getElementById("servers").scrollIntoView();
+  };
+  fetch("https://morphy-production-c1ba.up.railway.app/api/showcase", { referrerPolicy: "no-referrer" })
+    .then((r) => (r.ok ? r.json() : null))
+    .then(show, () => show(null))
+    .catch(() => {});
 })();
 </script>
 <footer><a href="index.html">Morphy</a> · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></footer></main></body></html>

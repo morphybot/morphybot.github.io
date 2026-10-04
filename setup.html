@@ -1,0 +1,223 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#6a5cff">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://morphybot.github.io/setup.html">
+<meta name="description" content="How to set up Morphy in your Discord server, step by step: branding, welcomes, tickets, safety, invites, applications, the casino and paying.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Morphy">
+<meta property="og:title" content="Setup guide | Morphy">
+<meta property="og:description" content="How to set up Morphy in your Discord server, step by step: branding, welcomes, tickets, safety, invites, applications, the casino and paying.">
+<meta property="og:url" content="https://morphybot.github.io/setup.html">
+<meta property="og:image" content="https://morphybot.github.io/og-banner.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta property="og:image:alt" content="Morphy's purple-to-teal slime mascot next to the word Morphy and &quot;The Discord bot that becomes yours&quot;, with eight feature chips (Tickets, Welcome cards, Applications, Invite rewards, Giveaways, Polls, Info panels, Casino) and &quot;7 days free then $9.99/month per server&quot;.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Setup guide | Morphy">
+<meta name="twitter:description" content="How to set up Morphy in your Discord server, step by step: branding, welcomes, tickets, safety, invites, applications, the casino and paying.">
+<meta name="twitter:image" content="https://morphybot.github.io/og-banner.png">
+<title>Setup guide | Morphy</title><style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#16141f;color:#ecebf3;margin:0;padding:0 16px;line-height:1.6}
+main{max-width:760px;margin:0 auto;padding:40px 0 64px}a{color:#8fd3ff}h1{margin-top:0}h2{margin-top:2em;color:#c9b8ff}
+code{background:#2a2638;padding:1px 6px;border-radius:4px}.btn{display:inline-block;background:#6a5cff;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;margin:8px 8px 0 0}
+.muted{color:#a9a6ba}footer{margin-top:48px;color:#a9a6ba;font-size:14px}
+.servers{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:12px;margin-top:16px}
+.server{display:flex;align-items:center;gap:12px;min-width:0;background:#201c2c;border:1px solid #2f2a42;border-radius:12px;padding:12px}
+.server-icon{width:48px;height:48px;flex:none;border-radius:50%;object-fit:cover;background:#2a2638;color:#c9b8ff;display:grid;place-items:center;font-weight:700;font-size:20px}
+.server-info{flex:1;min-width:0}.server-name{font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}.server-members{font-size:14px}
+.server .btn{margin:0;padding:8px 14px;flex:none}button.btn{border:0;cursor:pointer;font-family:inherit;font-size:inherit;margin-top:16px}
+#servers{scroll-margin-top:16px}.free h2{font-size:1.15em;color:#a9a6ba}.free .server{background:none;border-style:dashed}.free .btn{background:#2a2638}
+:focus-visible{outline:3px solid #5fe6d0;outline-offset:2px}main:focus{outline:0}
+.skip{position:absolute;left:-9999px;top:8px;z-index:9;background:#6a5cff;color:#fff;padding:8px 14px;border-radius:8px}.skip:focus{left:16px}
+.top{max-width:760px;margin:0 auto;padding-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+.top a{color:#ecebf3;text-decoration:none}.top a:hover{text-decoration:underline}.top a[aria-current=page]{color:#5fe6d0}
+.top .btn{margin:0 0 0 auto;padding:8px 16px;color:#fff}
+.table{overflow-x:auto}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid #2f2a42}th{color:#c9b8ff}td code{overflow-wrap:anywhere}
+li p{margin:6px 0}blockquote{margin:16px 0;padding:4px 16px;border-left:4px solid #5fe6d0;background:#201c2c;border-radius:0 8px 8px 0}
+details{background:#201c2c;border:1px solid #2f2a42;border-radius:12px;padding:10px 16px;margin:10px 0}summary{cursor:pointer;font-weight:600}details p{margin:8px 0 4px}
+.toc{display:flex;flex-wrap:wrap;gap:4px 16px;padding:0;list-style:none}
+.cmds td:last-child{color:#a9a6ba}@media(min-width:721px){.cmds td:first-child,.cmds td:last-child{white-space:nowrap}}
+@media(max-width:720px){.cmds thead{display:none}.cmds tr{display:block;padding:8px 0;border-bottom:1px solid #2f2a42}.cmds td{display:block;padding:2px 0;border:0}}</style></head><body><a class="skip" href="#main">Skip to content</a>
+<header><nav class="top" aria-label="Site"><a href="index.html">Home</a><a href="commands.html">Commands</a><a href="faq.html">FAQ</a><a href="setup.html" aria-current="page">Setup guide</a><a href="index.html#servers">Servers</a><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1549234696041271306&amp;scope=bot+applications.commands&amp;permissions=335932662">Add Morphy</a></nav></header>
+<main id="main" tabindex="-1"><h1>Getting started with Morphy</h1>
+<p><strong>Morphy is the all-in-one Discord bot that becomes yours.</strong> Tickets, welcomes, invites, giveaways, applications, info panels and a casino, all with your server's name and look.</p>
+<p>Every server gets the Free plan: welcome messages and picture cards, goodbye messages, auto roles and role menus. It costs nothing and doesn't run out. Premium adds everything else, including your server's own name and look for the bot, for $9.99/month (30 days) or $99.90/year (365 days) per server. Steps 2 and 4 to 10 below need Premium.</p>
+<p>Everything is set up with slash commands: type <code>/</code> and pick one. Setup commands only show for staff with the right permission, and every setting only affects <strong>your</strong> server. For the full list of commands, see the <a href="https://morphybot.github.io/commands.html">commands page</a> or type <code>/help</code> in Discord.</p>
+<blockquote><p><strong>Need help?</strong> Open a ticket in the Morphy support server: <a href="https://discord.gg/Mp8c7ra6dx">https://discord.gg/Mp8c7ra6dx</a></p></blockquote>
+<h2>Step 1: Add Morphy and check it's healthy</h2>
+<ol>
+<li>Invite Morphy with the <strong>Add Morphy to your server</strong> button on <a href="https://morphybot.github.io">https://morphybot.github.io</a>. Your server starts on the Free plan, and the server owner gets a DM with how to begin. No card is needed.</li>
+<li>In <strong>Server Settings → Roles</strong>, drag Morphy's role <strong>above</strong> any roles you want it to hand out (auto roles, role menus, application roles). Morphy can only give roles below its own.</li>
+<li>Run <strong><code>/setup</code></strong>. It shows:
+<ul>
+<li>your plan (Free or Premium)</li>
+<li>whether Morphy is missing any permissions</li>
+<li>which features are on or off</li>
+<li>⚠️ next to a feature whose channel was deleted, or where Morphy can't post (it names the channel and the missing permission)</li>
+</ul></li>
+<li>Pick a private staff channel for Morphy's activity log: <code>/setup log_channel:#staff-log</code>.</li>
+</ol>
+<h2>Step 2: Make it look like your server (Premium)</h2>
+<ul>
+<li><code>/branding name</code> sets the bot's name in your server, e.g. &quot;Community Helper&quot;.</li>
+<li><code>/branding avatar</code> and <code>/branding banner</code> upload your logo and banner.</li>
+<li><code>/branding bio</code> sets the About Me.</li>
+<li><code>/branding color</code> sets the color stripe on most of the bot's posts, like <code>/help</code>, tickets, role menus, polls and giveaways. Use a hex code like <code>#FF8800</code>. Casino replies, info panels and announcements keep their own colors.</li>
+<li><code>/branding footer</code> adds a short line at the bottom of <code>/help</code>, tickets, role menus and the other posts that use your color. Polls and giveaways keep their own footer line.</li>
+</ul>
+<p>Members will see your branding, not Morphy's. <code>/branding reset</code> puts it back. If Premium ends, Morphy goes back to its own look in your server and keeps your branding saved. It comes back when Premium starts again.</p>
+<p>Your server also shows up on Morphy's website, <a href="https://morphybot.github.io">https://morphybot.github.io</a>, with its name, icon and member count, on either plan (age-restricted servers are never listed). Servers on the Free plan are in a separate &quot;Also using Morphy&quot; group, below the servers with Premium. <code>/showcase off</code> hides it, <code>/showcase invite</code> adds a Join button, and <code>/showcase status</code> shows what's listed. These work on the Free plan too.</p>
+<h2>Step 3: Welcome new members (Free plan)</h2>
+<ol>
+<li><code>/welcome channel</code> turns welcomes on in your welcome channel.</li>
+<li><code>/welcome message</code> edits the text. You can use placeholders:
+<ul>
+<li><code>{user}</code> pings the new member in the line above the card. Inside the card it shows their name instead, since Discord often shows pings there as a long number.</li>
+<li><code>{username}</code> is their name</li>
+<li><code>{server}</code> is your server's name, <code>{membercount}</code> is the member count</li>
+<li><code>{#rules}</code> becomes a clickable link to that channel</li>
+<li><code>{inviter}</code> is who invited them and <code>{invites}</code> is that person's invite count. These need Premium, since invite tracking is a Premium feature. On the Free plan they show &quot;someone&quot; and 0.</li>
+</ul></li>
+<li><code>/welcome banner</code> adds a banner image to the card (optional). Keep it under 8 MB and 4096 pixels wide or tall.</li>
+<li><code>/welcome card on:True</code> turns on picture cards. Each new member gets their own picture: your banner on top, then their avatar, &quot;Welcome, &lt;name&gt;&quot; and their member number. Picture cards are off until you turn them on. No banner? The picture card uses your welcome color. Animated banners show as a still picture on it.</li>
+<li><code>/welcome test</code> shows a preview using yourself.</li>
+<li>Optional extras:
+<ul>
+<li><code>/goodbye channel</code> posts a message when someone leaves.</li>
+<li><code>/autorole add</code> gives a role to everyone who joins.</li>
+<li><code>/rolemenu create</code>, then <code>/rolemenu add</code> and <code>/rolemenu post</code>, lets members pick their own roles, like ping roles or platforms.</li>
+</ul></li>
+</ol>
+<h2>Step 4: Tickets (Premium)</h2>
+<ol>
+<li><code>/tickets preset</code> loads a ready-made set of ticket types. Pick the one closest to your server:
+<ul>
+<li>a general community set (Support, Partnership, Promotion, Report) that suits most servers</li>
+<li>a game-server set (Discord help, Shop, In-game help, Report, Invite reward, Booster reward)</li>
+</ul>
+<p>You can rename, add or remove any type afterwards, so start with whichever is closer.</p></li>
+<li><code>/tickets staff-add</code> lets your staff roles see and handle tickets.</li>
+<li><code>/tickets settings</code> sets where ticket channels open, where transcripts go, and whether quiet tickets auto-close.</li>
+<li><code>/tickets panel</code> posts the ticket panel in your support channel.</li>
+</ol>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>A member picks a type and answers the form, and a private channel opens for them and your staff.</li>
+<li>Staff press <strong>Claim</strong> to take the ticket (only the claimer can type) and <strong>Staff info</strong> to see the member's history.</li>
+<li>Staff or the member press <strong>Close</strong> to close it. A transcript is saved to your transcript channel. If Morphy can't save it (for example it can't read the ticket's messages or post files in that channel), the ticket stays open and says what to fix, so no conversation is lost.</li>
+<li>Change types with <code>/tickets type-add</code> and <code>/tickets question-add</code>.</li>
+</ul>
+<p><strong>Ping different staff for different ticket types (optional):</strong></p>
+<ul>
+<li><code>/tickets ping-add type:Shop role:@Shop Staff</code> makes new Shop tickets ping only @Shop Staff, and lets that role see, claim and close Shop tickets (not other types).</li>
+<li>A type can ping up to 5 roles. Types without their own ping roles keep the normal staff ping (<code>/tickets settings ping_staff</code>).</li>
+<li><code>/tickets ping-remove</code> takes a role off again, and <code>/tickets list</code> shows who each type pings. Tickets that are already open keep their access; the role just can't claim or close them any more.</li>
+<li>Discord only delivers a role ping if the role has <strong>Allow anyone to @mention this role</strong> turned on (Server Settings › Roles). Morphy tells you when it's off.</li>
+</ul>
+<h2>Step 5: Safety (Premium)</h2>
+<ul>
+<li><code>/honeypot setup</code> turns a channel into a trap for hacked accounts. Anyone who posts there is <strong>banned</strong> (or kicked) automatically and their spam is deleted. Staff with Manage Messages are always safe, and <code>/honeypot exempt-add</code> protects other roles.</li>
+<li><code>/antinuke on</code> (server owner only) stops a hacked or rogue staff account from wrecking the server. If one person deletes 3 channels or roles, bans or kicks 5 members, gives a role Administrator-type permissions, or adds a bot, all within a minute, Morphy removes all their roles (or bans them), takes the dangerous permissions back off, kicks any bot they added, and DMs you. <code>/antinuke status</code> shows the limits and warns you if Morphy's role isn't at the top of the role list (it must be, to stop anyone). Trust co-owners and helper bots with <code>/antinuke trust</code>. Change limits with <code>/antinuke limit</code>.</li>
+<li><code>/purge</code> bulk-deletes recent messages in a channel.</li>
+</ul>
+<h2>Step 6: Community (Premium)</h2>
+<ul>
+<li>Invite tracking shows who invited each new member:
+<ul>
+<li><code>/invites-setup channels</code> picks where &quot;X joined, invited by Y&quot; posts go.</li>
+<li><code>/invites-setup tiers</code> sets rewards, e.g. <code>5 = a custom role</code> or <code>10 = a shout-out in announcements</code>.</li>
+<li>Members check their count with <code>/invites check</code>. Fake (brand-new) accounts and people who leave don't count.</li>
+</ul></li>
+<li><code>/boosts setup</code> turns on booster thank-yous, then <code>/boosts text</code> sets the message and reward.</li>
+<li><code>/suggestions setup</code> picks the suggestions channel. Members use <code>/suggest</code> and vote with buttons.</li>
+<li><code>/poll create</code> makes a poll with buttons and an auto-close timer.</li>
+<li><code>/autoreact add</code> reacts with up to 3 emojis to every post in a channel, to posts with a word or phrase, or to that word in one channel only. Words inside links and emoji names don't count. <code>/autoreact list</code> shows them and <code>/autoreact remove</code> stops one. A server can have up to 25. In a very busy chat Morphy skips some reactions so the rest don't show up late.</li>
+</ul>
+<h2>Step 7: Announcements, giveaways and info panels (Premium)</h2>
+<ul>
+<li><strong>Announcements:</strong>
+<ul>
+<li><code>/announce send</code> starts from a ready-made template: Event, Update, Maintenance, Alert, General and more.</li>
+<li>A form opens so you can fill in the <code>[brackets]</code>. Morphy won't post until they're filled.</li>
+<li>Make your own templates with <code>/announce template-edit</code>.</li>
+</ul></li>
+<li><strong>Giveaways:</strong>
+<ul>
+<li><code>/giveaway start</code> starts one. Members press <strong>Enter</strong>, and winners are drawn automatically when time's up.</li>
+<li><code>/giveaway reroll</code> picks new winners.</li>
+<li>If Morphy couldn't post the winner ping (or isn't sure it did), it won't ping twice. Your log channel gets a note and <code>/giveaway list</code> shows it for a week, so you can ping the winners yourself. The giveaway post always shows who won.</li>
+<li>Save your usual giveaways with <code>/giveaway template-edit</code>.</li>
+</ul></li>
+<li><strong>Info panels:</strong>
+<ul>
+<li><code>/panel edit</code> fills in a starter panel: Rules, FAQ, Server info, Links and more.</li>
+<li><code>/panel post</code> posts it.</li>
+<li>Editing a posted panel updates it instantly, and posting again moves it to the bottom of the channel.</li>
+<li>Staff can also type <code>!</code> plus the panel name, e.g. <code>!rules</code>, to drop a copy into any channel.</li>
+</ul></li>
+<li><strong>Payment links:</strong>
+<ul>
+<li><code>/payments add method:Cash App link:$yourtag</code> adds a way for members to pay you (Cash App, PayPal, Venmo, Stripe…). The emoji is optional, but it has to be a real one: pick it from Discord's emoji picker, or use one of your server's own, which looks like <code>&lt;:paypal:123456789012345678&gt;</code>. Anything else is refused instead of breaking the panel.</li>
+<li><code>/payments post</code> posts the panel. Members pick a method from the menu and get your link privately.</li>
+<li>Staff can type <code>!payments</code> in any channel to post it.</li>
+<li><strong>About <code>!links</code>:</strong> once you have at least one payment method, <code>!links</code> posts the <strong>payment</strong> panel, not the <strong>Links</strong> info panel, and Morphy says so when it does. For the info panel use <code>/panel post</code>, and for the payment panel use <code>!payments</code>. With no payment methods set, <code>!links</code> posts the Links info panel as usual.</li>
+</ul></li>
+</ul>
+<h2>Step 8: Staff applications (Premium)</h2>
+<ol>
+<li><code>/applications create name:Staff review_channel:#staff-apps</code> creates the form. You can also set a role to give accepted applicants and a role allowed to review.</li>
+<li><code>/applications questions</code> changes the 5 starter questions. End a question with &quot;(optional)&quot; to make it skippable.</li>
+<li><code>/applications panel</code> posts the <strong>Apply</strong> button.</li>
+</ol>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Members press Apply (or use <code>/apply</code>), and their answers arrive in the review channel.</li>
+<li>Reviewers press <strong>Accept</strong> or <strong>Deny</strong> (with an optional reason).</li>
+<li>The applicant gets a DM, and the role is given automatically on accept.</li>
+<li>Denied members can re-apply after the cooldown (7 days by default, change it with <code>/applications settings</code>).</li>
+<li>If Morphy can't post in the review channel (missing permissions), the application is kept, your log channel gets a note, and Morphy tries again every 5 minutes. <code>/applications resend id:&lt;number&gt;</code> posts it right away, or replaces a card that was deleted by mistake.</li>
+</ul>
+<h2>Step 9: Casino and economy (Premium, optional)</h2>
+<p>Make-believe server money: it can't be bought or cashed out.</p>
+<ol>
+<li><code>/economy currency</code> names your money, e.g. <code>Coins 🪙</code> or <code>Gems 💎</code>.</li>
+<li><code>/economy payout</code>, <code>/economy cooldown</code> and <code>/economy bet-limit</code> tune how fast people earn and how much they can bet.</li>
+<li><code>/economy toggle</code> turns each game on or off, plus two earn commands that start switched off. <code>/economy settings</code> shows what's on.</li>
+<li><code>/economy channel-add</code> limits the casino to certain channels.</li>
+<li><code>/economy role-income-add</code> pays roles like boosters or VIPs on a timer.</li>
+</ol>
+<p>Members can:</p>
+<ul>
+<li>earn with <code>/work</code>, <code>/crime</code> and any other earn commands you switch on</li>
+<li>move money with <code>/deposit</code>, <code>/withdraw</code> and <code>/give-money</code></li>
+<li>play <code>/blackjack</code>, <code>/slot-machine</code>, <code>/roulette</code>, <code>/higher-lower</code>, <code>/russian-roulette</code> and more</li>
+<li>check balances with <code>/money</code> and <code>/leaderboard</code></li>
+</ul>
+<p>Everything above also works as a text command:</p>
+<ul>
+<li><code>!bal</code>, <code>!dep all</code>, <code>!with 500</code>, <code>!give @member 100</code></li>
+<li><code>!work</code>, <code>!crime</code>, <code>!collect</code>, <code>!lb</code></li>
+<li><code>!bj all</code>, <code>!slots 100</code>, <code>!roulette 100 red</code>, <code>!hl 100</code>, <code>!rr 100</code></li>
+</ul>
+<p>Change the <code>!</code> with <code>/economy prefix</code>, or type <code>off</code> to turn text commands off.</p>
+<p>Don't want anyone going below 0? <code>/economy toggle feature:negative balances enabled:False</code> makes fines only take the cash a member has.</p>
+<h2>Step 10: Points (Premium, optional)</h2>
+<p>Points staff hand out for events, competitions or good behavior, with your own name, e.g. <strong>Server points</strong>.</p>
+<ol>
+<li><code>/points setup name:Server points</code> names them (and optionally picks a log channel).</li>
+<li><code>/points staff-add</code> lets a role give points. Anyone with Manage Server can already.</li>
+<li>Staff use <code>/points add</code>, <code>/points remove</code> and <code>/points add-role</code> (for a whole team or role), each with an optional reason.</li>
+</ol>
+<p>Members check their points with <code>/points check</code> and see the top members with <code>/points leaderboard</code>. Staff see a member's full history with <code>/points history</code>.</p>
+<h2>Step 11: Get Premium</h2>
+<p>Every server has the Free plan, with no time limit. Premium is $9.99/month (30 days) or $99.90/year (365 days) per server.</p>
+<ul>
+<li>Run <strong><code>/subscribe</code></strong> (needs Manage Server) to see what Premium adds and how to pay. Right now that's Cash App, Venmo or PayPal.</li>
+<li>Put your <strong>server name</strong> in the payment note, then open a <strong>Billing &amp; payments</strong> ticket in the Morphy support server (<a href="https://discord.gg/Mp8c7ra6dx">https://discord.gg/Mp8c7ra6dx</a>) so we can switch you on.</li>
+<li>Each payment covers 30 days, or 365 days for the yearly price. You get a DM when Premium is on. Renewing early doesn't cost you days: the new days start when your current paid time ends.</li>
+<li>The server owner gets a DM, and your log channel gets a post, 3 days before, 1 day before, the same day, and when paid time ends. Premium doesn't renew by itself, so keep your DMs open.</li>
+<li>When paid time ends, Premium stays on for 3 more days so a late payment doesn't switch anything off. A payment made during those 3 days is still added to the old end date, so paying on the second of them leaves you about 28 days, not 30.</li>
+<li>After that the server goes back to the Free plan. Welcome and goodbye messages, auto roles and role menus keep working. The Premium features pause, anti-nuke and the do-not-post trap included, and the bot's name, picture, banner and About Me go back to Morphy's own look. All your settings, your branding included, are kept, and everything comes back when you pay again.</li>
+</ul>
+<h2>Troubleshooting</h2>
+<div class="table"><table><thead><tr><th>Problem</th><th>Fix</th></tr></thead><tbody><tr><td>A command doesn't show up</td><td>Press <strong>Ctrl+R</strong> to refresh Discord. Setup commands only show for staff.</td></tr><tr><td>&quot;Morphy is missing … permission&quot;</td><td>Give Morphy's role that permission, or allow it in that channel's settings.</td></tr><tr><td>Morphy can't give a role</td><td>Drag Morphy's role above that role in Server Settings → Roles.</td></tr><tr><td>Nothing happens in a channel</td><td>Check the channel doesn't block Morphy (channel settings → Permissions).</td></tr><tr><td>A feature stopped after you changed channels or roles</td><td>Run <code>/setup</code> again. It marks any channel that was deleted or that Morphy can't post in, and names the missing permission.</td></tr><tr><td>&quot;This is a Morphy Premium feature.&quot;</td><td>Your server is on the Free plan. Run <code>/setup</code> to see your plan, then <code>/subscribe</code>.</td></tr></tbody></table></div>
+<footer><a href="index.html">Morphy</a> · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></footer></main></body></html>

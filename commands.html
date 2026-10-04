@@ -1,0 +1,282 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#6a5cff">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://morphybot.github.io/commands.html">
+<meta name="description" content="Every Morphy command, grouped the way /help groups them: 49 commands, 164 counting subcommands, and who can use each one.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Morphy">
+<meta property="og:title" content="Commands | Morphy">
+<meta property="og:description" content="Every Morphy command, grouped the way /help groups them: 49 commands, 164 counting subcommands, and who can use each one.">
+<meta property="og:url" content="https://morphybot.github.io/commands.html">
+<meta property="og:image" content="https://morphybot.github.io/og-banner.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta property="og:image:alt" content="Morphy's purple-to-teal slime mascot next to the word Morphy and &quot;The Discord bot that becomes yours&quot;, with eight feature chips (Tickets, Welcome cards, Applications, Invite rewards, Giveaways, Polls, Info panels, Casino) and &quot;7 days free then $9.99/month per server&quot;.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Commands | Morphy">
+<meta name="twitter:description" content="Every Morphy command, grouped the way /help groups them: 49 commands, 164 counting subcommands, and who can use each one.">
+<meta name="twitter:image" content="https://morphybot.github.io/og-banner.png">
+<title>Commands | Morphy</title><style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#16141f;color:#ecebf3;margin:0;padding:0 16px;line-height:1.6}
+main{max-width:760px;margin:0 auto;padding:40px 0 64px}a{color:#8fd3ff}h1{margin-top:0}h2{margin-top:2em;color:#c9b8ff}
+code{background:#2a2638;padding:1px 6px;border-radius:4px}.btn{display:inline-block;background:#6a5cff;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;margin:8px 8px 0 0}
+.muted{color:#a9a6ba}footer{margin-top:48px;color:#a9a6ba;font-size:14px}
+.servers{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:12px;margin-top:16px}
+.server{display:flex;align-items:center;gap:12px;min-width:0;background:#201c2c;border:1px solid #2f2a42;border-radius:12px;padding:12px}
+.server-icon{width:48px;height:48px;flex:none;border-radius:50%;object-fit:cover;background:#2a2638;color:#c9b8ff;display:grid;place-items:center;font-weight:700;font-size:20px}
+.server-info{flex:1;min-width:0}.server-name{font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}.server-members{font-size:14px}
+.server .btn{margin:0;padding:8px 14px;flex:none}button.btn{border:0;cursor:pointer;font-family:inherit;font-size:inherit;margin-top:16px}
+#servers{scroll-margin-top:16px}.free h2{font-size:1.15em;color:#a9a6ba}.free .server{background:none;border-style:dashed}.free .btn{background:#2a2638}
+:focus-visible{outline:3px solid #5fe6d0;outline-offset:2px}main:focus{outline:0}
+.skip{position:absolute;left:-9999px;top:8px;z-index:9;background:#6a5cff;color:#fff;padding:8px 14px;border-radius:8px}.skip:focus{left:16px}
+.top{max-width:760px;margin:0 auto;padding-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+.top a{color:#ecebf3;text-decoration:none}.top a:hover{text-decoration:underline}.top a[aria-current=page]{color:#5fe6d0}
+.top .btn{margin:0 0 0 auto;padding:8px 16px;color:#fff}
+.table{overflow-x:auto}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid #2f2a42}th{color:#c9b8ff}td code{overflow-wrap:anywhere}
+li p{margin:6px 0}blockquote{margin:16px 0;padding:4px 16px;border-left:4px solid #5fe6d0;background:#201c2c;border-radius:0 8px 8px 0}
+details{background:#201c2c;border:1px solid #2f2a42;border-radius:12px;padding:10px 16px;margin:10px 0}summary{cursor:pointer;font-weight:600}details p{margin:8px 0 4px}
+.toc{display:flex;flex-wrap:wrap;gap:4px 16px;padding:0;list-style:none}
+.cmds td:last-child{color:#a9a6ba}@media(min-width:721px){.cmds td:first-child,.cmds td:last-child{white-space:nowrap}}
+@media(max-width:720px){.cmds thead{display:none}.cmds tr{display:block;padding:8px 0;border-bottom:1px solid #2f2a42}.cmds td{display:block;padding:2px 0;border:0}}</style></head><body><a class="skip" href="#main">Skip to content</a>
+<header><nav class="top" aria-label="Site"><a href="index.html">Home</a><a href="commands.html" aria-current="page">Commands</a><a href="faq.html">FAQ</a><a href="setup.html">Setup guide</a><a href="index.html#servers">Servers</a><a class="btn" href="https://discord.com/oauth2/authorize?client_id=1549234696041271306&amp;scope=bot+applications.commands&amp;permissions=335932662">Add Morphy</a></nav></header>
+<main id="main" tabindex="-1">
+<h1>Commands</h1>
+<p>Morphy has 49 commands. Counting each subcommand, like <code>/welcome channel</code>, there are 164. Type <code>/</code> in any channel to use them, or run <code>/help</code> in your server to see the ones you can use.</p>
+<p class="muted">Staff commands need the Discord permission shown, and everything else works for every member. Settings only change your own server.</p>
+<p class="muted">A few casino commands aren't listed here. Some start switched off, and staff can turn them on with <code>/economy toggle</code>.</p>
+<ul class="toc"><li><a href="#cmd-start">Getting started</a></li><li><a href="#cmd-welcome">Welcome &amp; roles</a></li><li><a href="#cmd-tickets">Tickets</a></li><li><a href="#cmd-safety">Safety &amp; moderation</a></li><li><a href="#cmd-community">Community</a></li><li><a href="#cmd-announce">Announcements &amp; giveaways</a></li><li><a href="#cmd-applications">Applications</a></li><li><a href="#cmd-points">Points</a></li><li><a href="#cmd-payments">Payment links</a></li><li><a href="#cmd-panels">Info panels</a></li><li><a href="#cmd-rewards">Rewards</a></li><li><a href="#cmd-casino">Casino games</a></li><li><a href="#cmd-money">Money &amp; income</a></li><li><a href="#cmd-branding">Branding</a></li><li><a href="#cmd-showcase">Website listing</a></li></ul>
+<h2 id="cmd-start">Getting started</h2>
+<p>Check the bot's status and plan, and see what Premium adds.</p>
+<p class="muted">Free on every server.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/setup</code></td><td>Check Morphy's status in this server and set the log channel.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/subscribe</code></td><td>See what Premium adds, the price, and how to pay for this server.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/help</code></td><td>See everything the bot can do.</td><td>Everyone</td></tr>
+</tbody></table></div>
+<h2 id="cmd-welcome">Welcome &amp; roles</h2>
+<p>Greet new members with a message or their own picture card, and hand out roles.</p>
+<p class="muted">Free on every server.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/welcome channel</code></td><td>Turn welcomes on and pick the channel.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/welcome message</code></td><td>Edit the welcome card text, footer and optional DM.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/welcome color</code></td><td>Set the color strip on the welcome card.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/welcome banner</code></td><td>Set or remove the welcome banner image.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/welcome card</code></td><td>Give each new member their own picture card with their name and avatar.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/welcome test</code></td><td>Preview the welcome message using yourself.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/welcome off</code></td><td>Turn welcome messages off.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/goodbye channel</code></td><td>Turn goodbyes on and pick the channel.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/goodbye off</code></td><td>Turn goodbye messages off.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/autorole add</code></td><td>Give this role to everyone who joins.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/autorole remove</code></td><td>Stop giving this role on join.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/autorole list</code></td><td>Show the roles given on join.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/rolemenu create</code></td><td>Create a new role menu.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/rolemenu add</code></td><td>Add a role to a menu.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/rolemenu remove</code></td><td>Remove a role from a menu.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/rolemenu post</code></td><td>Post (or re-post) a menu in a channel.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/rolemenu delete</code></td><td>Delete a menu.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/rolemenu list</code></td><td>Show all role menus.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+<h2 id="cmd-tickets">Tickets</h2>
+<p>Private support channels with claim, close and transcripts. Each ticket type can ping its own staff role.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/tickets panel</code></td><td>Post (or re-post) the ticket panel and turn tickets on.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/tickets settings</code></td><td>Where tickets open, where transcripts go, limits.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/tickets staff-add</code></td><td>Let a role see and handle tickets.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/tickets staff-remove</code></td><td>Stop a role handling tickets.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/tickets type-add</code></td><td>Add a ticket type, e.g. Support, Invite Reward, Shop.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/tickets type-remove</code></td><td>Remove a ticket type.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/tickets question-add</code></td><td>Ask members a question before the ticket opens (max 5).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/tickets question-clear</code></td><td>Remove all questions from a ticket type.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/tickets ping-add</code></td><td>Ping a role when this ticket type opens. The role can also see and handle those tickets.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/tickets ping-remove</code></td><td>Stop pinging a role for a ticket type.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/tickets preset</code></td><td>Replace all ticket types with a ready-made set.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/tickets list</code></td><td>Show the ticket setup.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/tickets off</code></td><td>Stop new tickets from opening.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/ticket add</code></td><td>Let someone else see this ticket.</td><td>Staff (Ticket staff)</td></tr>
+<tr><td><code>/ticket remove</code></td><td>Remove someone from this ticket.</td><td>Staff (Ticket staff)</td></tr>
+<tr><td><code>/ticket close</code></td><td>Close this ticket and save the transcript.</td><td>Everyone</td></tr>
+</tbody></table></div>
+<h2 id="cmd-safety">Safety &amp; moderation</h2>
+<p>Stop scammers, hacked staff and server nukes, and clean up chat.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/antinuke status</code></td><td>Show anti-nuke settings and anything that needs fixing.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/antinuke on</code></td><td>Turn anti-nuke on (server owner only).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/antinuke off</code></td><td>Turn anti-nuke off (server owner only).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/antinuke punishment</code></td><td>What happens to someone who goes over a limit (server owner only).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/antinuke limit</code></td><td>Change a limit (server owner only).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/antinuke trust</code></td><td>Never act against this person or bot (server owner only).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/antinuke untrust</code></td><td>Remove someone from the trusted list (server owner only).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/honeypot setup</code></td><td>Turn the trap on in a channel and post the warning.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/honeypot exempt-add</code></td><td>Never punish this role (staff with Manage Messages are always safe).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/honeypot exempt-remove</code></td><td>Stop protecting a role.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/honeypot status</code></td><td>Show the trap setup.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/honeypot off</code></td><td>Turn the trap off.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/purge</code></td><td>Delete recent messages in this channel.</td><td>Staff (Manage Messages)</td></tr>
+</tbody></table></div>
+<h2 id="cmd-community">Community</h2>
+<p>Polls, suggestions, invite tracking and auto reactions.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/poll create</code></td><td>Create a poll in this channel (opens a form).</td><td>Staff (Manage Messages)</td></tr>
+<tr><td><code>/poll end</code></td><td>Close a poll now and show the result.</td><td>Staff (Manage Messages)</td></tr>
+<tr><td><code>/suggest</code></td><td>Send a suggestion for the server.</td><td>Everyone</td></tr>
+<tr><td><code>/suggestions setup</code></td><td>Turn suggestions on and pick the channel.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/suggestions off</code></td><td>Turn suggestions off.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/invites check</code></td><td>How many people you (or someone) invited.</td><td>Everyone</td></tr>
+<tr><td><code>/invites leaderboard</code></td><td>Top inviters in this server.</td><td>Everyone</td></tr>
+<tr><td><code>/autoreact add</code></td><td>React to every post in a channel, to posts with a word, or both.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/autoreact remove</code></td><td>Stop one auto reaction.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/autoreact list</code></td><td>Show this server's auto reactions.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+<h2 id="cmd-announce">Announcements &amp; giveaways</h2>
+<p>Post from templates and run giveaways.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/announce send</code></td><td>Write an announcement from a template (opens a form to edit first).</td><td>Staff (Manage Messages)</td></tr>
+<tr><td><code>/announce templates</code></td><td>List this server's announcement templates.</td><td>Staff (Manage Messages)</td></tr>
+<tr><td><code>/announce template-edit</code></td><td>Edit a template, or type a new name to create one.</td><td>Staff (Manage Messages)</td></tr>
+<tr><td><code>/announce template-delete</code></td><td>Delete a template.</td><td>Staff (Manage Messages)</td></tr>
+<tr><td><code>/giveaway start</code></td><td>Start a giveaway (opens a form, filled from a template if you pick one).</td><td>Staff (Manage Messages)</td></tr>
+<tr><td><code>/giveaway end</code></td><td>End a giveaway now and draw the winners.</td><td>Staff (Manage Messages)</td></tr>
+<tr><td><code>/giveaway reroll</code></td><td>Pick new winners for an ended giveaway.</td><td>Staff (Manage Messages)</td></tr>
+<tr><td><code>/giveaway list</code></td><td>Show running giveaways, and winner pings that need checking.</td><td>Staff (Manage Messages)</td></tr>
+<tr><td><code>/giveaway templates</code></td><td>List this server's giveaway templates.</td><td>Staff (Manage Messages)</td></tr>
+<tr><td><code>/giveaway template-edit</code></td><td>Edit a template, or type a new name to create one.</td><td>Staff (Manage Messages)</td></tr>
+<tr><td><code>/giveaway template-delete</code></td><td>Delete a template.</td><td>Staff (Manage Messages)</td></tr>
+</tbody></table></div>
+<h2 id="cmd-applications">Applications</h2>
+<p>Staff, partner or team applications with a form and Accept/Deny review.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/apply</code></td><td>Apply for staff (or another team) in this server.</td><td>Everyone</td></tr>
+<tr><td><code>/applications create</code></td><td>Create an application form (starts with staff questions you can change).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/applications questions</code></td><td>Edit the questions (up to 5).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/applications messages</code></td><td>Edit the panel text and the accept/deny DMs.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/applications settings</code></td><td>Change the review channel, roles, cooldown or open/closed.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/applications panel</code></td><td>Post the Apply button (replaces the old panel).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/applications panel-all</code></td><td>Post ONE panel with an Apply button for every form (replaces the old one).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/applications list</code></td><td>Show this server's application forms.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/applications resend</code></td><td>Post an application to staff again if its card never arrived or was deleted.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/applications delete</code></td><td>Delete a form and its panel (past applications stay in the review channel).</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+<h2 id="cmd-points">Points</h2>
+<p>Staff-awarded points with your own name (e.g. Server points) and a leaderboard.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/points check</code></td><td>See your points (or someone else's).</td><td>Everyone</td></tr>
+<tr><td><code>/points leaderboard</code></td><td>Top point holders.</td><td>Everyone</td></tr>
+<tr><td><code>/points add</code></td><td>Give points to a member.</td><td>Staff (Points staff)</td></tr>
+<tr><td><code>/points remove</code></td><td>Take points from a member.</td><td>Staff (Points staff)</td></tr>
+<tr><td><code>/points add-role</code></td><td>Give points to everyone with a role (e.g. a team).</td><td>Staff (Points staff)</td></tr>
+<tr><td><code>/points history</code></td><td>Recent point changes for a member.</td><td>Staff (Points staff)</td></tr>
+<tr><td><code>/points setup</code></td><td>Name the points and pick a log channel (Manage Server).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/points staff-add</code></td><td>Let a role give and take points (Manage Server).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/points staff-remove</code></td><td>Stop a role giving points (Manage Server).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/points reset</code></td><td>Reset one member's points, or everyone's (Manage Server).</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+<h2 id="cmd-payments">Payment links</h2>
+<p>A panel where members pick Cash App, PayPal, Venmo, Stripe and more and get your link. Staff can type !links to post it anywhere.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/payments add</code></td><td>Add or update a payment method.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/payments remove</code></td><td>Remove a payment method.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/payments list</code></td><td>Show your payment methods and links.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/payments text</code></td><td>Edit the panel title and message.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/payments post</code></td><td>Post the payment panel (replaces the old one).</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+<h2 id="cmd-panels">Info panels</h2>
+<p>Rules, FAQ, server info, schedule and link posts you can edit and repost. Staff can also type the panel name with ! (e.g. !links) to drop it into any channel.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/panel post</code></td><td>Post a panel (moves it to the bottom if it was already posted).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/panel edit</code></td><td>Edit a panel, or type a new name to create one. Posted panels update instantly.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/panel list</code></td><td>List this server's panels and where they're posted.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/panel delete</code></td><td>Delete a panel (and its posted message).</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+<h2 id="cmd-rewards">Rewards</h2>
+<p>Invite reward tiers and booster thank-yous.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/invites-setup channels</code></td><td>Turn invite posts on and pick where they go.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/invites-setup tiers</code></td><td>Edit all reward tiers at once in a form (one per line).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/invites-setup tier-add</code></td><td>Add a reward, e.g. 5 invites → a custom role.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/invites-setup tier-remove</code></td><td>Remove a reward tier.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/invites-setup bonus</code></td><td>Add or remove invites for someone (use a negative number to remove).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/invites-setup reset</code></td><td>Reset someone's invites to zero.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/invites-setup new-account-days</code></td><td>Accounts younger than this don't count as real invites.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/invites-setup status</code></td><td>Show invite settings and reward tiers.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/invites-setup off</code></td><td>Stop invite posts (counting continues).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/boosts setup</code></td><td>Turn booster announcements on.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/boosts text</code></td><td>Edit the thank-you message and reward in a form.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/boosts test</code></td><td>Preview the booster announcement using yourself.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/boosts off</code></td><td>Turn booster announcements off.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+<h2 id="cmd-casino">Casino games</h2>
+<p>Bet your server money on games. Text commands work too: !bj all, !slots 100, !roulette 100 red, !hl 100, !rr 100.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/blackjack</code></td><td>Play blackjack against the dealer.</td><td>Everyone</td></tr>
+<tr><td><code>/slot-machine</code></td><td>Spin the slots. Three in a row on the middle line wins.</td><td>Everyone</td></tr>
+<tr><td><code>/roulette</code></td><td>Start a roulette table or place a bet on the one running.</td><td>Everyone</td></tr>
+<tr><td><code>/higher-lower</code></td><td>Guess if the next card is higher, lower or the same.</td><td>Everyone</td></tr>
+<tr><td><code>/russian-roulette</code></td><td>Start or join a game of russian roulette. The loser's bet is split between survivors.</td><td>Everyone</td></tr>
+</tbody></table></div>
+<h2 id="cmd-money">Money &amp; income</h2>
+<p>Balances, earning and the leaderboard (make-believe money). Text commands work too: !bal, !dep all, !with 500, !give @member 100, !work, !crime, !collect, !lb.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/money</code></td><td>Check your balance and leaderboard spot.</td><td>Everyone</td></tr>
+<tr><td><code>/leaderboard</code></td><td>See the richest members in this server.</td><td>Everyone</td></tr>
+<tr><td><code>/deposit</code></td><td>Put cash into your bank (safe from robbers).</td><td>Everyone</td></tr>
+<tr><td><code>/withdraw</code></td><td>Take money out of your bank.</td><td>Everyone</td></tr>
+<tr><td><code>/give-money</code></td><td>Give some of your cash to another member.</td><td>Everyone</td></tr>
+<tr><td><code>/work</code></td><td>Work for some safe, steady cash.</td><td>Everyone</td></tr>
+<tr><td><code>/crime</code></td><td>Commit a crime for a bigger payout, but you might get fined.</td><td>Everyone</td></tr>
+<tr><td><code>/collect-income</code></td><td>Collect income from your roles.</td><td>Everyone</td></tr>
+<tr><td><code>/add-money</code></td><td>Add money to a member.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/remove-money</code></td><td>Remove money from a member.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/add-money-role</code></td><td>Add money to everyone with a role.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/remove-money-role</code></td><td>Remove money from everyone with a role.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy settings</code></td><td>Show every economy setting.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy currency</code></td><td>Name and symbol of the money, e.g. coins.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy prefix</code></td><td>Text command prefix, e.g. ! for !bj all and !dep all (off to disable).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy start-balance</code></td><td>Money new members start with in the bank.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy bet-limit</code></td><td>Smallest and largest bet allowed in games.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy game-cooldown</code></td><td>How many games a member can play per time window.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy payout</code></td><td>Min/max money from /work, /crime and the other earn commands.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy fail-rate</code></td><td>Chance that /crime or another earn command ends in a fine.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy fine-amount</code></td><td>Min/max fine when /crime or another earn command fails.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy cooldown</code></td><td>Wait time between uses of /work, /crime and the other earn commands.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy toggle</code></td><td>Turn a game or command on or off.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy blackjack-decks</code></td><td>Decks used in blackjack (1–10).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy channel-add</code></td><td>Only allow the casino in certain channels (add one).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy channel-remove</code></td><td>Remove a casino channel (none left = any channel).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy role-income-add</code></td><td>Pay members of a role on a timer (they use /collect-income).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy role-income-remove</code></td><td>Stop a role's income.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy log-channel</code></td><td>Where staff money changes are logged.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/economy reset</code></td><td>Reset EVERYONE's money to zero (asks to confirm).</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+<h2 id="cmd-branding">Branding</h2>
+<p>Make the bot look like your server.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/branding avatar</code></td><td>Set the bot's profile picture in this server (square images look best).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/branding banner</code></td><td>Set the bot's profile banner in this server (wide images look best).</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/branding name</code></td><td>Set the bot's name in this server.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/branding bio</code></td><td>Set the bot's About Me in this server.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/branding color</code></td><td>Set the color stripe on most of the bot's posts here, like /help, tickets and role menus.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/branding footer</code></td><td>Add a short line at the bottom of most of the bot's posts here, like /help and tickets.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/branding reset</code></td><td>Go back to the default Morphy look.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+<h2 id="cmd-showcase">Website listing</h2>
+<p>Your server on Morphy's website: name, icon and member count. Hide it or add a Join button. Servers on the Free plan show in a separate &quot;Also using Morphy&quot; group.</p>
+<p class="muted">Free on every server.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr><td><code>/showcase off</code></td><td>Hide this server from the list on Morphy's website.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/showcase on</code></td><td>List this server on Morphy's website again.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/showcase invite</code></td><td>Add or change the Join button on your listing.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/showcase invite-remove</code></td><td>Take the Join button off your listing.</td><td>Staff (Manage Server)</td></tr>
+<tr><td><code>/showcase status</code></td><td>See whether this server is listed and what the listing shows.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+<footer><a href="index.html">Morphy</a> · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></footer></main></body></html>
