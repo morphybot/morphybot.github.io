@@ -140,7 +140,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </div></header>
 <main id="main" tabindex="-1"><div class="wrap doc">
 <h1>Commands</h1>
-<p>Morphy has 61 commands. Counting each subcommand, like <code>/welcome channel</code>, there are 205. Type <code>/</code> in any channel to use them, or run <code>/help</code> in your server to see the ones you can use.</p>
+<p>Morphy has 73 commands. Counting each subcommand, like <code>/welcome channel</code>, there are 277. Type <code>/</code> in any channel to use them, or run <code>/help</code> in your server to see the ones you can use.</p>
 <p class="muted">Staff commands need the Discord permission shown, and everything else works for every member. Settings only change your own server.</p>
 <p class="muted">Commands tagged Free work on every server. Commands tagged Premium need Morphy Premium on that server.</p>
 <p class="muted">A few casino commands aren't listed here. Some start switched off, and staff can turn them on with <code>/economy toggle</code>.</p>
@@ -153,7 +153,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <div class="cmd-none" id="cmd-none" hidden><button type="button" class="btn btn-ghost btn-sm" id="cmd-clear">Clear search</button></div>
 </div>
 <p class="sr-only" id="cmd-live" role="status"></p>
-<ul class="toc"><li><a href="#cmd-moderation">Member moderation</a></li><li><a href="#cmd-start">Getting started</a></li><li><a href="#cmd-welcome">Welcome &amp; roles</a></li><li><a href="#cmd-custom">Custom commands</a></li><li><a href="#cmd-levels">XP &amp; levels</a></li><li><a href="#cmd-tickets">Tickets</a></li><li><a href="#cmd-safety">Safety &amp; moderation</a></li><li><a href="#cmd-community">Community</a></li><li><a href="#cmd-announce">Announcements &amp; giveaways</a></li><li><a href="#cmd-applications">Applications</a></li><li><a href="#cmd-points">Points</a></li><li><a href="#cmd-payments">Payment links</a></li><li><a href="#cmd-panels">Info panels</a></li><li><a href="#cmd-rewards">Rewards</a></li><li><a href="#cmd-casino">Casino games</a></li><li><a href="#cmd-money">Money &amp; income</a></li><li><a href="#cmd-branding">Branding</a></li><li><a href="#cmd-ark">ARK server tracking</a></li><li><a href="#cmd-showcase">Website listing</a></li><li><a href="#cmd-nitrado">Nitrado servers</a></li></ul>
+<ul class="toc"><li><a href="#cmd-moderation">Member moderation</a></li><li><a href="#cmd-start">Getting started</a></li><li><a href="#cmd-templates">Server templates</a></li><li><a href="#cmd-welcome">Welcome &amp; roles</a></li><li><a href="#cmd-custom">Custom commands</a></li><li><a href="#cmd-stats">Server stats</a></li><li><a href="#cmd-levels">XP &amp; levels</a></li><li><a href="#cmd-pets">Pets</a></li><li><a href="#cmd-tickets">Tickets</a></li><li><a href="#cmd-safety">Safety &amp; moderation</a></li><li><a href="#cmd-community">Community</a></li><li><a href="#cmd-announce">Announcements, embeds &amp; giveaways</a></li><li><a href="#cmd-applications">Applications</a></li><li><a href="#cmd-points">Points</a></li><li><a href="#cmd-payments">Payment links</a></li><li><a href="#cmd-panels">Info panels</a></li><li><a href="#cmd-rewards">Rewards</a></li><li><a href="#cmd-events">Guessing events</a></li><li><a href="#cmd-casino">Casino games</a></li><li><a href="#cmd-money">Money &amp; income</a></li><li><a href="#cmd-shop">Coin shop</a></li><li><a href="#cmd-branding">Branding</a></li><li><a href="#cmd-ark">ARK server tracking</a></li><li><a href="#cmd-showcase">Website listing</a></li><li><a href="#cmd-nitrado">Nitrado servers</a></li></ul>
 <div class="cmd-group">
 <h2 id="cmd-moderation">Member moderation</h2>
 <p>Warn, time out, kick or ban members. Configure warning actions and allowed link domains. Free.</p>
@@ -178,6 +178,16 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <tr data-plan="free"><td><span class="cmd"><code>/setup</code><span class="tag tag-free">Free</span></span></td><td>Check Morphy's status in this server and set the log channel.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="free"><td><span class="cmd"><code>/subscribe</code><span class="tag tag-free">Free</span></span></td><td>See what Premium adds, the price, and how to pay for this server.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="free"><td><span class="cmd"><code>/help</code><span class="tag tag-free">Free</span></span></td><td>See everything the bot can do.</td><td>Everyone</td></tr>
+</tbody></table></div>
+</div>
+<div class="cmd-group">
+<h2 id="cmd-templates">Server templates</h2>
+<p>Add ready-made roles and channels. Community, Support server or ARK cluster, and only what's missing.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr data-plan="premium"><td><span class="cmd"><code>/server-template preview</code><span class="tag tag-premium">Premium</span></span></td><td>See what a template would add, then confirm.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/server-template list</code><span class="tag tag-premium">Premium</span></span></td><td>Show the templates and what's in each.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/server-template history</code><span class="tag tag-premium">Premium</span></span></td><td>Show the last templates added in this server.</td><td>Staff (Manage Server)</td></tr>
 </tbody></table></div>
 </div>
 <div class="cmd-group">
@@ -219,6 +229,16 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </tbody></table></div>
 </div>
 <div class="cmd-group">
+<h2 id="cmd-stats">Server stats</h2>
+<p>Daily members, joins, leaves, messages, commands, welcomes and voice joins. Compare weeks and download a CSV. Free.</p>
+<p class="muted">Free on every server.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr data-plan="free"><td><span class="cmd"><code>/stats week</code><span class="tag tag-free">Free</span></span></td><td>This week's numbers, day by day, compared with last week.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/stats export</code><span class="tag tag-free">Free</span></span></td><td>Download the daily numbers as a CSV file.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/stats tracking</code><span class="tag tag-free">Free</span></span></td><td>Turn counting on or off for this server.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+</div>
+<div class="cmd-group">
 <h2 id="cmd-levels">XP &amp; levels</h2>
 <p>Members earn XP for chatting, level up and get level roles. All-time and weekly leaderboards.</p>
 <p class="muted">Free on every server.</p>
@@ -244,8 +264,31 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </tbody></table></div>
 </div>
 <div class="cmd-group">
+<h2 id="cmd-pets">Pets</h2>
+<p>Members adopt a virtual pet, feed it, play with it and level it up. Adopting one is free; the rest needs Premium.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr data-plan="premium"><td><span class="cmd"><code>/pet adopt</code><span class="tag tag-premium">Premium</span></span></td><td>Adopt your pet (one per member).</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pet view</code><span class="tag tag-premium">Premium</span></span></td><td>See your pet, or someone else's.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pet feed</code><span class="tag tag-premium">Premium</span></span></td><td>Feed your pet for XP.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pet play</code><span class="tag tag-premium">Premium</span></span></td><td>Play with your pet for XP.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pet buy-food</code><span class="tag tag-premium">Premium</span></span></td><td>Buy pet food with casino coins.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pet rename</code><span class="tag tag-premium">Premium</span></span></td><td>Give your pet a new name.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pet leaderboard</code><span class="tag tag-premium">Premium</span></span></td><td>The pets with the most XP.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pet release</code><span class="tag tag-premium">Premium</span></span></td><td>Let your pet go. Its level and XP are deleted.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup view</code><span class="tag tag-premium">Premium</span></span></td><td>Show the pet settings.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup on</code><span class="tag tag-premium">Premium</span></span></td><td>Turn pets on.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup off</code><span class="tag tag-premium">Premium</span></span></td><td>Turn pets off. Every pet is kept.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup cards</code><span class="tag tag-premium">Premium</span></span></td><td>Where pet cards post: adoptions and level-ups.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup cooldowns</code><span class="tag tag-premium">Premium</span></span></td><td>How often members can feed and play.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup food</code><span class="tag tag-premium">Premium</span></span></td><td>Make pet food cost casino coins, or make it free.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup remove</code><span class="tag tag-premium">Premium</span></span></td><td>Delete one member's pet (for example, a name you don't want).</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup remove-all</code><span class="tag tag-premium">Premium</span></span></td><td>Delete every pet in this server, for a fresh start.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+</div>
+<div class="cmd-group">
 <h2 id="cmd-tickets">Tickets</h2>
-<p>Private support channels with claim, close and transcripts. Each ticket type can ping its own staff role.</p>
+<p>Private support channels with claim, close and transcripts. Each ticket type can ping its own staff role. Staff pay adds up what each staff member handled.</p>
 <p class="muted">Needs Morphy Premium.</p>
 <div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
 <tr data-plan="premium"><td><span class="cmd"><code>/tickets panel</code><span class="tag tag-premium">Premium</span></span></td><td>Post (or re-post) the ticket panel and turn tickets on.</td><td>Staff (Manage Server)</td></tr>
@@ -264,6 +307,12 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <tr data-plan="premium"><td><span class="cmd"><code>/ticket add</code><span class="tag tag-premium">Premium</span></span></td><td>Let someone else see this ticket.</td><td>Staff (Ticket staff)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/ticket remove</code><span class="tag tag-premium">Premium</span></span></td><td>Remove someone from this ticket.</td><td>Staff (Ticket staff)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/ticket close</code><span class="tag tag-premium">Premium</span></span></td><td>Close this ticket and save the transcript.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/staffpay summary</code><span class="tag tag-premium">Premium</span></span></td><td>Tickets and applications each staff member handled in a month, with pay.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/staffpay mine</code><span class="tag tag-premium">Premium</span></span></td><td>Your own tickets and applications for a month.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/staffpay tiers</code><span class="tag tag-premium">Premium</span></span></td><td>Show the pay tiers, the currency and where the monthly summary goes.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/staffpay tier-set</code><span class="tag tag-premium">Premium</span></span></td><td>Set what a role earns per ticket, per ticket type or per application.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/staffpay tier-remove</code><span class="tag tag-premium">Premium</span></span></td><td>Remove a role's tier, or only its rate for one ticket type.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/staffpay setup</code><span class="tag tag-premium">Premium</span></span></td><td>Currency label and the channel for the monthly summary.</td><td>Staff (Manage Server)</td></tr>
 </tbody></table></div>
 </div>
 <div class="cmd-group">
@@ -304,14 +353,22 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </tbody></table></div>
 </div>
 <div class="cmd-group">
-<h2 id="cmd-announce">Announcements &amp; giveaways</h2>
-<p>Post from templates and run giveaways.</p>
+<h2 id="cmd-announce">Announcements, embeds &amp; giveaways</h2>
+<p>Post from templates, build embeds with a live preview and link buttons, and run giveaways.</p>
 <p class="muted">Needs Morphy Premium.</p>
 <div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
 <tr data-plan="premium"><td><span class="cmd"><code>/announce send</code><span class="tag tag-premium">Premium</span></span></td><td>Write an announcement from a template (opens a form to edit first).</td><td>Staff (Manage Messages)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/announce templates</code><span class="tag tag-premium">Premium</span></span></td><td>List this server's announcement templates.</td><td>Staff (Manage Messages)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/announce template-edit</code><span class="tag tag-premium">Premium</span></span></td><td>Edit a template, or type a new name to create one.</td><td>Staff (Manage Messages)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/announce template-delete</code><span class="tag tag-premium">Premium</span></span></td><td>Delete a template.</td><td>Staff (Manage Messages)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/embed create</code><span class="tag tag-premium">Premium</span></span></td><td>Open the embed builder: your draft, a blank one, or a saved template.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/embed edit</code><span class="tag tag-premium">Premium</span></span></td><td>Change a post Morphy made with /embed. Paste its message link.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/embed post</code><span class="tag tag-premium">Premium</span></span></td><td>Post a saved template in a channel.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/embed template-save</code><span class="tag tag-premium">Premium</span></span></td><td>Save your current draft as a template.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/embed template-list</code><span class="tag tag-premium">Premium</span></span></td><td>List this server's saved embed templates.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/embed template-delete</code><span class="tag tag-premium">Premium</span></span></td><td>Delete a saved embed template.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/embed import</code><span class="tag tag-premium">Premium</span></span></td><td>Load message JSON from another embed tool into your draft.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/embed export</code><span class="tag tag-premium">Premium</span></span></td><td>Get your draft or a saved template as JSON.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/giveaway start</code><span class="tag tag-premium">Premium</span></span></td><td>Start a giveaway (opens a form, filled from a template if you pick one).</td><td>Staff (Manage Messages)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/giveaway end</code><span class="tag tag-premium">Premium</span></span></td><td>End a giveaway now and draw the winners.</td><td>Staff (Manage Messages)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/giveaway reroll</code><span class="tag tag-premium">Premium</span></span></td><td>Pick new winners for an ended giveaway.</td><td>Staff (Manage Messages)</td></tr>
@@ -380,7 +437,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </div>
 <div class="cmd-group">
 <h2 id="cmd-rewards">Rewards</h2>
-<p>Invite reward tiers and booster thank-yous.</p>
+<p>Invite reward tiers, booster thank-yous and hype rewards. Hype gives coins or a role for a name keyword, the server tag, boosts and invites.</p>
 <p class="muted">Needs Morphy Premium.</p>
 <div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
 <tr data-plan="premium"><td><span class="cmd"><code>/invites-setup channels</code><span class="tag tag-premium">Premium</span></span></td><td>Turn invite posts on and pick where they go.</td><td>Staff (Manage Server)</td></tr>
@@ -396,6 +453,27 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <tr data-plan="premium"><td><span class="cmd"><code>/boosts text</code><span class="tag tag-premium">Premium</span></span></td><td>Edit the thank-you message and reward in a form.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/boosts test</code><span class="tag tag-premium">Premium</span></span></td><td>Preview the booster announcement using yourself.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/boosts off</code><span class="tag tag-premium">Premium</span></span></td><td>Turn booster announcements off.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/hype view</code><span class="tag tag-premium">Premium</span></span></td><td>Show the hype reward settings and this season's numbers.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/hype channel</code><span class="tag tag-premium">Premium</span></span></td><td>Where reward posts go, and whether they ping the member.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/hype name</code><span class="tag tag-premium">Premium</span></span></td><td>Reward members who put a keyword in their name here.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/hype tag</code><span class="tag tag-premium">Premium</span></span></td><td>Reward members who wear this server's tag.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/hype boost</code><span class="tag tag-premium">Premium</span></span></td><td>Reward boosters and thank them.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/hype invite</code><span class="tag tag-premium">Premium</span></span></td><td>Reward members for each invite the invite tracker counts.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/hype check</code><span class="tag tag-premium">Premium</span></span></td><td>Check one member's name, tag and boost now and give what's due.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/hype reset</code><span class="tag tag-premium">Premium</span></span></td><td>Start a new season: everyone can earn each reward again.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+</div>
+<div class="cmd-group">
+<h2 id="cmd-events">Guessing events</h2>
+<p>Number, word and vault code guessing games in one channel. The first right answer wins casino coins, and the prize grows as wrong guesses come in.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr data-plan="premium"><td><span class="cmd"><code>/event start</code><span class="tag tag-premium">Premium</span></span></td><td>Start a guessing event in the guess channel (event hosts).</td><td>Staff (Event hosts)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/event stop</code><span class="tag tag-premium">Premium</span></span></td><td>Stop the running event and show the answer (event hosts).</td><td>Staff (Event hosts)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/event status</code><span class="tag tag-premium">Premium</span></span></td><td>The running event, its prize and wrong guesses so far.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/event setup</code><span class="tag tag-premium">Premium</span></span></td><td>Guess channel, ping role and prizes (Manage Server). No options shows the settings.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/event hosts</code><span class="tag tag-premium">Premium</span></span></td><td>Roles that can start and stop events (Manage Server).</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/event words</code><span class="tag tag-premium">Premium</span></span></td><td>The answer list for word events (Manage Server).</td><td>Staff (Manage Server)</td></tr>
 </tbody></table></div>
 </div>
 <div class="cmd-group">
@@ -448,6 +526,28 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </tbody></table></div>
 </div>
 <div class="cmd-group">
+<h2 id="cmd-shop">Coin shop</h2>
+<p>Members spend make-believe coins on items and roles staff add. Coupons, stock, limits, an order log and refunds.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop</code><span class="tag tag-premium">Premium</span></span></td><td>See what's for sale in the coin shop.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/buy</code><span class="tag tag-premium">Premium</span></span></td><td>Buy an item from the coin shop.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup add</code><span class="tag tag-premium">Premium</span></span></td><td>Add an item to the shop.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup edit</code><span class="tag tag-premium">Premium</span></span></td><td>Change an item. Leave a field empty to keep it.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup remove</code><span class="tag tag-premium">Premium</span></span></td><td>Take an item out of the shop. Its orders are kept.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup items</code><span class="tag tag-premium">Premium</span></span></td><td>List every item, hidden ones too, with stock and sales.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup coupon-add</code><span class="tag tag-premium">Premium</span></span></td><td>Add a coupon code. Each member can use a coupon once.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup coupon-remove</code><span class="tag tag-premium">Premium</span></span></td><td>Delete a coupon code.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup coupons</code><span class="tag tag-premium">Premium</span></span></td><td>List coupon codes and how often they were used.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup orders</code><span class="tag tag-premium">Premium</span></span></td><td>See recent orders.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup refund</code><span class="tag tag-premium">Premium</span></span></td><td>Give a member's coins back for an order.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup export</code><span class="tag tag-premium">Premium</span></span></td><td>Download every order as a CSV file.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup settings</code><span class="tag tag-premium">Premium</span></span></td><td>Open or close the shop, name it, pick its log channel.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup channel</code><span class="tag tag-premium">Premium</span></span></td><td>Limit where members can buy. No channels = anywhere.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/shop-setup post</code><span class="tag tag-premium">Premium</span></span></td><td>Post a shop panel with an Open the shop button.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+</div>
+<div class="cmd-group">
 <h2 id="cmd-branding">Branding</h2>
 <p>Make the bot look like your server.</p>
 <p class="muted">Needs Morphy Premium.</p>
@@ -487,12 +587,19 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </div>
 <div class="cmd-group">
 <h2 id="cmd-nitrado">Nitrado servers</h2>
-<p>Link your Nitrado account to see your game servers, players and activity log. Read-only, and the token is saved encrypted.</p>
+<p>Link Nitrado to see your game servers and post their log lines in channels. Read-only, and the token is saved encrypted.</p>
 <p class="muted">Needs Morphy Premium.</p>
 <div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
 <tr data-plan="premium"><td><span class="cmd"><code>/nitrado link</code><span class="tag tag-premium">Premium</span></span></td><td>Paste a Nitrado long-life token in a private form. Morphy saves it encrypted.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/nitrado unlink</code><span class="tag tag-premium">Premium</span></span></td><td>Delete the saved Nitrado token and server list.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/nitrado status</code><span class="tag tag-premium">Premium</span></span></td><td>See the linked Nitrado servers and how they're doing.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/gamelogs channel</code><span class="tag tag-premium">Premium</span></span></td><td>Pick the channel for one kind of log line (or all of them).</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/gamelogs remove</code><span class="tag tag-premium">Premium</span></span></td><td>Stop posting one kind of log line (or all of them).</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/gamelogs limit</code><span class="tag tag-premium">Premium</span></span></td><td>Set how many lines Morphy posts an hour for this server.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/gamelogs server</code><span class="tag tag-premium">Premium</span></span></td><td>Turn posting on or off for one linked game server.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/gamelogs pause</code><span class="tag tag-premium">Premium</span></span></td><td>Stop all game log posts. Your channels stay saved.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/gamelogs resume</code><span class="tag tag-premium">Premium</span></span></td><td>Start game log posts again.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/gamelogs status</code><span class="tag tag-premium">Premium</span></span></td><td>See where game log lines go and when each server was last read.</td><td>Staff (Manage Server)</td></tr>
 </tbody></table></div>
 </div>
 </div></main>

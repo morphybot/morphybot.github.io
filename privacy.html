@@ -105,7 +105,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <details class="menu"><summary aria-label="Menu"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></summary><nav class="menu-panel" aria-label="Menu"><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a><a href="index.html#servers">Servers</a><a href="commands.html">Commands</a><a href="setup.html">Setup guide</a><a href="faq.html">FAQ</a><a href="https://morphy-production-c1ba.up.railway.app/dashboard">Dashboard</a></nav></details>
 </div></header>
 <main id="main" tabindex="-1"><div class="wrap doc"><h1>Morphy Privacy Policy</h1>
-<p><em>Last updated: October 4, 2026</em></p>
+<p><em>Last updated: October 5, 2026</em></p>
 <p>This policy explains what information <strong>Morphy</strong>, a Discord bot, collects, why, and what you can do about it. &quot;We&quot; and &quot;us&quot; mean the people who run Morphy.</p>
 <h2>1. What we collect</h2>
 <p>Morphy only keeps what it needs to work in your server.</p>
@@ -115,7 +115,8 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>Plan status (Free or Premium) and dates, and a log of each time we add, change or end Premium by hand.</li>
 <li>Payment reports: when staff press I've paid in <code>/subscribe</code>, we keep who sent it (their Discord user ID and name), the plan, how they paid and the name or note on the payment, so we can match it to the payment. The report is also sent to us in a Discord message.</li>
 <li>ARK game servers your staff add with <code>/servers</code> (Premium): the server's address and port, and what the game server shows to anyone who asks: whether it's online, its name, map, player count, player limit and version, checked every 2 minutes. We keep a history of whether it was online and how many players it had for 30 days. For ARK: Survival Evolved servers, <code>/servers players</code> asks the game server for the names of the players on it and shows them in Discord. <strong>We don't save player names.</strong></li>
-<li>Nitrado link, only if your staff link one with <code>/nitrado link</code>: the Nitrado token, saved encrypted and never shown again to anyone, your staff included (only Morphy's code opens it, to ask Nitrado); the game servers it can see (ID, name, game and slot count); the token's scopes and expiry date; and who linked it and when. Server status, player names and activity logs are read from Nitrado when they're shown, kept in memory for a few minutes at most, and not saved.</li>
+<li>Nitrado link, only if your staff link one with <code>/nitrado link</code>: the Nitrado token, saved encrypted and never shown again to anyone, your staff included (only Morphy's code opens it, to ask Nitrado); the game servers it can see (ID, name, game and slot count); the token's scopes and expiry date; and who linked it and when. Server status, player names and activity logs are read from Nitrado when they're shown, kept in memory for a few minutes at most, and not saved. With game logs on (<code>/gamelogs</code>), every 5 minutes Morphy also reads Nitrado's activity log and the newest part of each ARK server's ShooterGame.log file (joins, leaves, chat, kills and admin commands), and posts the new lines in the channels your staff picked, with player IDs (Steam, Epic, ARK IDs) cut out. Morphy saves only a fingerprint (a hash) of each line it handled, kept 30 days so a line is never posted twice, and how far into the file it has read. The lines themselves aren't saved, apart from the posts in your channels. Morphy reads no other file on your game server.</li>
+<li>Daily server stats: how many members the server had, and how many joins, leaves, messages, commands, welcome messages and voice channel joins it had each day. These are counts only, with no message text and nothing about who did what. They're kept for 400 days, and staff can stop the counting with <code>/stats tracking</code>.</li>
 <li>If we add card payments later, <strong>Stripe</strong> will handle them and we'll only receive a customer or subscription reference. <strong>We'd never see or store card numbers.</strong></li>
 </ul>
 <p><strong>About members</strong> (stored by Discord user ID)</p>
@@ -149,7 +150,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><strong>Railway</strong> (our hosting and database provider), which stores the data above for us.</li>
 <li><strong>Stripe</strong>, if we add card payments later, to process them.</li>
 <li><strong>Google</strong> (Gmail), which holds emails sent to our support address.</li>
-<li><strong>Nitrado</strong>, only if your staff link a Nitrado account: Morphy sends Nitrado your token to read your game servers' status, players and activity log. Morphy never changes anything on Nitrado.</li>
+<li><strong>Nitrado</strong>, only if your staff link a Nitrado account: Morphy sends Nitrado your token to read your game servers' status, players and activity log, and, with game logs on, the end of ShooterGame.log. That file is downloaded from Nitrado's file server through a one-time link, and your token isn't sent with it. Morphy never changes anything on Nitrado.</li>
 <li>Anyone who visits our website, which shows the server list in section 4 (name, icon, member count, whether it has Premium or the Free plan, and a Join link if your staff add one).</li>
 <li>To check a tracked ARK server, Morphy asks the game server directly over the internet, and for ARK: Survival Ascended it downloads <strong>Studio Wildcard</strong>'s public server list. We don't send either of them anything about your Discord server or its members.</li>
 <li>Anyone the law requires us to share with.</li>
@@ -164,6 +165,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>A Nitrado link (the encrypted token and the saved server list) is deleted when staff run <code>/nitrado unlink</code>, which works on the Free plan too, or when Morphy is removed from the server.</li>
 <li>If you'd like your server's data deleted, open a ticket in the Morphy support server or email us (section 10), and we'll remove it.</li>
 <li>A tracked ARK server's history is kept for 30 days. Removing the server with <code>/servers remove</code> deletes it and its history right away.</li>
+<li>Daily server stats are kept for 400 days, then deleted.</li>
 <li>Casino money, points and similar data can also be reset by your server's staff at any time.</li>
 </ul>
 <h2>6. Your choices</h2>

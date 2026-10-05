@@ -122,6 +122,17 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </ul></li>
 <li>Pick a private staff channel for Morphy's activity log: <code>/setup log_channel:#staff-log</code>.</li>
 </ol>
+<h3>Start from a server template (Premium)</h3>
+<p><code>/server-template preview</code> adds a ready-made set of roles, categories and channels: Community, Support server or ARK cluster. <code>/server-template list</code> shows what's in each one.</p>
+<ul>
+<li>The preview shows what Morphy would make and what's already there. Nothing changes until you press Confirm.</li>
+<li>Morphy only adds what's missing. It never deletes, renames or moves a channel or role. A channel already counts as there when it has the same name, emojis and case aside, like <code>rules</code> for <code>📜│rules</code>.</li>
+<li>New roles go at the bottom of your role list with no permissions. Give them the permissions you want in Server Settings, Roles.</li>
+<li>Staff-only categories are hidden from everyone except the template's staff role (Moderators, Support Team or Admins).</li>
+<li>If Morphy's role is missing Manage Channels or Manage Roles, the preview names it and doesn't offer Confirm.</li>
+<li>If you don't have a log channel yet, the template's <code>morphy-logs</code> channel becomes it.</li>
+<li><code>/server-template history</code> shows the last templates added and who added them.</li>
+</ul>
 <h2>Step 2: Make it look like your server (Premium)</h2>
 <ul>
 <li><code>/branding name</code> sets the bot's name in your server, e.g. &quot;Community Helper&quot;.</li>
@@ -164,6 +175,23 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>Members use <code>/rank</code> for their level card and <code>/levels leaderboard</code> for all time or this week. Staff use <code>/xp give</code>, <code>/xp remove</code> and <code>/xp reset</code>. XP staff give doesn't count toward the weekly board.</li>
 </ol>
 <p>Going from level L to the next takes 5 x L x L + 50 x L + 100 XP: 100 XP for level 1, 1,150 XP in all for level 5, 4,675 XP in all for level 10.</p>
+<h3>Server stats (every server)</h3>
+<p>Morphy counts a few numbers for your server each day: members, joins, leaves, messages, commands used, welcomes sent and voice joins. It counts only how many, never what was said or who did it. Staff with Manage Server can see them:</p>
+<ol>
+<li><code>/stats week</code> shows the last 7 days, day by day, with each total compared with the week before.</li>
+<li><code>/stats export</code> sends a CSV file of the daily numbers, 30 days by default and up to 400 (<code>/stats export days:90</code>).</li>
+<li><code>/stats tracking on:False</code> stops the counting for your server, and <code>on:True</code> starts it again.</li>
+</ol>
+<p>Days are US Central time, and new activity shows up within about 5 minutes. Numbers are kept for 400 days.</p>
+<h3>Pets (adopting is free, the rest is Premium)</h3>
+<p>Members adopt a virtual pet, feed it, play with it and level it up. Pets are on unless you turn them off.</p>
+<ol>
+<li>Members use <code>/pet adopt</code> to pick a kind (slime, cat, dog, fox and more) and a name. Each member can have one pet. <code>/pet view</code> shows it, and <code>/pet release</code> deletes it. These work on every plan.</li>
+<li>With Premium, <code>/pet feed</code> (+10 XP, once an hour by default) and <code>/pet play</code> (+15 XP, once every 30 minutes) level the pet up, and the card has Feed and Play buttons for its owner. A pet gets hungry and bored over time if nobody looks after it, but it never runs away. Level 2 takes 50 XP, level 5 takes 500 XP in all and level 10 takes 2,250. <code>/pet leaderboard</code> shows the pets with the most XP, and <code>/pet rename</code> changes a name.</li>
+<li><code>/pets-setup cards</code> picks a channel for pet cards: one when someone adopts a pet and one when a pet levels up. Nobody is pinged. <code>/pets-setup cooldowns</code> changes how often members can feed and play.</li>
+<li><code>/pets-setup food price:25</code> makes each feed use one food that members buy with casino coins (<code>/pet buy-food</code>). A pet holds up to 50 food. The price is 0 by default, which means feeding is free.</li>
+<li><code>/pets-setup off</code> turns pets off and keeps every pet. <code>/pets-setup remove</code> deletes one member's pet (for a name you don't want), and <code>/pets-setup remove-all</code> deletes every pet for a fresh start. These work on every plan.</li>
+</ol>
 <h2>Step 4: Tickets (Premium)</h2>
 <ol>
 <li><code>/tickets preset</code> loads a ready-made set of ticket types. Pick the one closest to your server:
@@ -190,6 +218,16 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/tickets ping-remove</code> takes a role off again, and <code>/tickets list</code> shows who each type pings. Tickets that are already open keep their access; the role just can't claim or close them any more.</li>
 <li>Discord only delivers a role ping if the role has <strong>Allow anyone to @mention this role</strong> turned on (Server Settings › Roles). Morphy tells you when it's off.</li>
 </ul>
+<p><strong>Staff pay (optional):</strong></p>
+<p>Morphy counts what each staff member handled in a month and adds up what that comes to under your own pay rates. It only does the math. It never sends, holds or asks for money.</p>
+<ol>
+<li><code>/staffpay setup currency:$</code> sets the label amounts show with (<code>$</code>, <code>€</code>, <code>USD</code> or your coin name). Add <code>channel:</code> to pick a text or forum channel for the monthly summary. A forum gets one post a month.</li>
+<li><code>/staffpay tier-set role:@Staff amount:0.20</code> pays @Staff 0.20 per ticket. Add <code>ticket-type:Shop</code> to set a different rate for one type, and <code>per-application:</code> to pay for reviewed applications. A member with more than one tier role is paid by the highest one in your role list.</li>
+<li><code>/staffpay summary</code> shows this month so far, or pick another month. You get a CSV file with every number. Add <code>post:true</code> to post it in the summary channel.</li>
+<li>On the 1st of each month Morphy posts last month's summary in that channel by itself. Turn that off with <code>/staffpay setup auto-post:false</code>.</li>
+<li>Staff use <code>/staffpay mine</code> to see their own numbers.</li>
+</ol>
+<p>A ticket counts for the staff member who claimed it. A ticket closed without a claim counts for whoever closed it, unless the member closed it themselves or it closed automatically.</p>
 <h2>Step 5: Safety (Premium)</h2>
 <ul>
 <li><code>/honeypot setup</code> turns a channel into a trap for hacked accounts. Anyone who posts there is <strong>banned</strong> (or kicked) automatically and their spam is deleted. Staff with Manage Messages are always safe, and <code>/honeypot exempt-add</code> protects other roles.</li>
@@ -205,6 +243,17 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>Members check their count with <code>/invites check</code>. Fake (brand-new) accounts and people who leave don't count.</li>
 </ul></li>
 <li><code>/boosts setup</code> turns on booster thank-yous, then <code>/boosts text</code> sets the message and reward.</li>
+<li>Hype rewards give casino coins, a role, or both:
+<ul>
+<li><code>/hype name</code> rewards members who put a keyword (like your server name) in their name here.</li>
+<li><code>/hype tag</code> rewards members who wear your server tag. Your server needs a tag first (Server Settings, Server Tag).</li>
+<li><code>/hype boost</code> rewards boosters and posts a thank-you.</li>
+<li><code>/hype invite</code> rewards members for each invite the invite tracker counts. Fake accounts and rejoins don't count, and each new member counts once.</li>
+<li><code>/hype channel</code> picks where the posts go. They don't ping anyone unless you turn ping on.</li>
+<li>The cooldown is the hours before the same member can earn that reward again. 0 means once per season. <code>/hype reset</code> starts a new season; coins and roles from earlier seasons stay.</li>
+<li>The name, tag and boost roles stay only while the member qualifies. The invite role stays for good.</li>
+<li><code>/hype check</code> looks at one member now. Members who already qualified before you turned a reward on get it the next time their name, tag or boost changes.</li>
+</ul></li>
 <li><code>/suggestions setup</code> picks the suggestions channel. Members use <code>/suggest</code> and vote with buttons.</li>
 <li><code>/poll create</code> makes a poll with buttons and an auto-close timer.</li>
 <li><code>/autoreact add</code> reacts with up to 3 emojis to every post in a channel, to posts with a word or phrase, or to that word in one channel only. Words inside links and emoji names don't count. <code>/autoreact list</code> shows them and <code>/autoreact remove</code> stops one. A server can have up to 25. In a very busy chat Morphy skips some reactions so the rest don't show up late.</li>
@@ -215,6 +264,18 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/announce send</code> starts from a ready-made template: Event, Update, Maintenance, Alert, General and more.</li>
 <li>A form opens so you can fill in the <code>[brackets]</code>. Morphy won't post until they're filled.</li>
 <li>Make your own templates with <code>/announce template-edit</code>.</li>
+</ul>
+<h3>Embed builder</h3>
+<ul>
+<li><code>/embed create</code> opens a private preview of your post with buttons: <strong>Title &amp; text</strong>, <strong>Author &amp; footer</strong>, <strong>Pictures</strong>, <strong>Add field</strong>, <strong>Add link button</strong> and <strong>Text &amp; pings</strong>. The preview changes as you fill in each form.</li>
+<li>A post can have up to 10 embeds and 5 link buttons. Use <strong>More</strong> to add another embed, remove one, import or export JSON, or start over.</li>
+<li>Fill-ins: <code>{server}</code>, <code>{membercount}</code> and <code>{#channel-name}</code>.</li>
+<li>Nothing pings unless you say so in <strong>Text &amp; pings</strong>: <code>none</code>, or any of <code>users</code>, <code>roles</code>, <code>everyone</code> and role IDs. Only the text above the embeds can ping. Pinging everyone needs the Mention @everyone permission in that channel.</li>
+<li>Picture links must be from an image host. Discord file links stop working after about a day, so Morphy refuses them.</li>
+<li>Press <strong>Post</strong> and pick a channel to post it once. Press <strong>Save template</strong> to keep it for later: <code>/embed post</code> posts a saved template, <code>/embed template-list</code> lists them (up to 25 per server).</li>
+<li><code>/embed edit</code> with a message link loads a post Morphy made with <code>/embed</code> back into the builder. <strong>Save changes</strong> updates that post.</li>
+<li><code>/embed import</code> reads message JSON from other embed tools, and <code>/embed export</code> gives you a JSON file.</li>
+<li>Your draft is saved, so you can close the preview and pick it up later with <code>/embed create</code>.</li>
 </ul>
 <h3>Giveaways</h3>
 <ul>
@@ -275,6 +336,28 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </ul>
 <p>Change the <code>!</code> with <code>/economy prefix</code>, or type <code>off</code> to turn text commands off.</p>
 <p>Don't want anyone going below 0? <code>/economy toggle feature:negative balances enabled:False</code> makes fines only take the cash a member has.</p>
+<h3>Coin shop</h3>
+<p>Members spend their coins on things you sell: a role, a perk you hand out by hand, or anything else. Coins come out of their cash, never real money.</p>
+<ol>
+<li><code>/shop-setup add</code> adds an item: a name, a price in coins, and if you want a description, a category, a role Morphy gives on buy, how many you have in stock, and the most one member can buy. Morphy won't sell a role with staff permissions or one above its own role.</li>
+<li><code>/shop-setup coupon-add</code> makes a code for percent or coins off. You can cap its uses, end it after a time like <code>7d</code>, set a minimum spend or tie it to one item. Each member can use a coupon once.</li>
+<li><code>/shop-setup settings</code> names the shop, opens or closes it and picks the channel where every order and refund is posted. <code>/shop-setup channel</code> limits where members can buy.</li>
+<li><code>/shop-setup post</code> posts a shop panel with an Open the shop button.</li>
+</ol>
+<p>Members use <code>/shop</code> to look, and <code>/buy</code> or the menu under <code>/shop</code> to buy. Each buy shows the price first and needs a Buy press. <code>/shop my-orders:True</code> shows their own orders.</p>
+<p>Staff see orders with <code>/shop-setup orders</code>, give coins back with <code>/shop-setup refund</code> (by default the stock and the coupon use come back and the role comes off), and download every order with <code>/shop-setup export</code>. If Discord won't give an item's role, the member gets their coins back right away.</p>
+<h3>Guessing events</h3>
+<p>A guessing event runs in one channel. The first member to type the right answer wins casino coins. There are three kinds: a number (1 to 1000 unless you pick another range), a word or short phrase, and a vault code of 3 to 8 digits.</p>
+<ol>
+<li><code>/event setup channel:#guess-here</code> picks the guess channel. Add <code>ping-role</code> to ping a role when an event starts. Discord only pings it if the role has &quot;Allow anyone to @mention this role&quot; turned on.</li>
+<li><code>/event setup</code> also sets the prize: <code>prize</code> is the base, the pot grows by <code>grow-by</code> every <code>grow-every</code> wrong guesses (0 means it never grows), and <code>top-prize</code> is the most it can reach. <code>cooldown</code> is how many seconds a member waits between guesses (3 by default). <code>/event setup</code> with no options shows the settings.</li>
+<li><code>/event hosts action:Add role:@Event Team</code> lets a role start and stop events. Members with Manage Server can always host.</li>
+<li><code>/event words action:Add text:raptor, rex, giga</code> saves answers for word events. Morphy picks one at random when a host starts a word event without typing an answer.</li>
+<li>A host runs <code>/event start kind:Number</code>. Leave <code>answer</code> empty for a random answer that nobody sees, or type one. Only the host sees the command. The host's own guesses don't count.</li>
+<li>Members type their guesses in the guess channel. Messages that don't look like a guess, like chat in a word event, aren't counted as wrong guesses. Morphy posts when the pot grows and when someone wins.</li>
+<li><code>/event status</code> shows the prize and the number of wrong guesses. <code>/event stop</code> ends the event and shows the answer, and nobody wins. <code>/event stop</code> works even if the server's Premium has ended.</li>
+</ol>
+<p>One event runs at a time in a server. The guess channel can't change while an event runs in it. Hosts can't start an event with a prize above the top prize.</p>
 <h2>Step 10: Points (Premium, optional)</h2>
 <p>Points staff hand out for events, competitions or good behavior, with your own name, e.g. <strong>Server points</strong>.</p>
 <ol>
@@ -296,6 +379,14 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/servers list</code> shows everyone how the servers are doing, and <code>/servers players</code> shows who's on an ASE server. ASA's public list only has the player count, not names.</li>
 </ol>
 <p>A server shows as offline after 2 checks in a row with no answer, so one lost packet doesn't flip it. If Morphy itself can't check (for example Wildcard's list is down), the panel says &quot;Can't check right now&quot; instead of offline. A Discord server can track up to 20 game servers. <code>/servers remove</code> stops one and deletes its history (Morphy keeps 30 days of online and player counts for each server). Without Premium, the checks stop and the panel says tracking is paused.</p>
+<h3>Game logs from Nitrado (Premium, optional)</h3>
+<p>If your game server is on Nitrado, Morphy can post its log lines in Discord channels. This needs a Nitrado link first: run <code>/nitrado link</code> and read the note it shows before you paste a token.</p>
+<ol>
+<li><code>/gamelogs channel</code> (needs Manage Server). Pick a kind of line and a channel: joins, leaves, chat, kills, admin commands, server activity, or all of them. Several kinds can share one channel.</li>
+<li><code>/gamelogs status</code> shows where each kind goes and when each game server was last read.</li>
+<li><code>/gamelogs limit</code> sets how many lines Morphy posts an hour for your server (10 to 600, 120 to start). <code>/gamelogs server</code> turns one linked game server on or off, and <code>/gamelogs pause</code> and <code>/gamelogs resume</code> stop and start all of it.</li>
+</ol>
+<p>Morphy reads Nitrado every 5 minutes and posts only lines that are new since it started reading, so turning it on never floods a channel with old lines. Posts never ping anyone, and player IDs (Steam, Epic, ARK IDs) are cut out. Morphy reads two things, both read-only: Nitrado's activity log for the server (restarts, settings and file changes, and who made them), which lands under server activity, and the newest part of an ARK server's ShooterGame.log, which gives joins, leaves, chat, kills and admin commands. Morphy reads no other file. If <code>/gamelogs status</code> says it couldn't find ShooterGame.log, check that the server is an ARK server on Nitrado and has been started at least once.</p>
 <h2>Step 12: Get Premium</h2>
 <p>Every server has the Free plan, with no time limit. Premium is $9.99 USD a month (30 days) or $99.90 USD a year (365 days) per server.</p>
 <ul>
