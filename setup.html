@@ -106,13 +106,13 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </div></header>
 <main id="main" tabindex="-1"><div class="wrap doc"><h1>Getting started with Morphy</h1>
 <p><strong>Morphy is the all-in-one Discord bot that becomes yours.</strong> Welcomes and roles are free. Premium adds tickets, invites, giveaways, applications, info panels, community games with make-believe coins, and the bot in your server's own name and look.</p>
-<p>Every server gets the Free plan: welcome messages and picture cards, goodbye messages, auto roles and role menus. It costs nothing and doesn't run out. Premium adds everything else, including your server's own name and look for the bot, for $9.99 USD a month (30 days) or $99.90 USD a year (365 days) per server. Steps 2 and 4 to 10 below need Premium.</p>
+<p>Every server gets the Free plan: welcome messages and picture cards, goodbye messages, auto roles, role menus and XP levels. It costs nothing and doesn't run out. Premium adds everything else, including your server's own name and look for the bot, for $9.99 USD a month (30 days) or $99.90 USD a year (365 days) per server. Steps 2 and 4 to 10 below need Premium.</p>
 <p>Everything is set up with slash commands: type <code>/</code> and pick one. Setup commands only show for staff with the right permission, and every setting only affects <strong>your</strong> server. For the full list of commands, see the <a href="https://morphybot.github.io/commands.html">commands page</a> or type <code>/help</code> in Discord.</p>
 <blockquote><p><strong>Need help?</strong> Open a ticket in the Morphy support server: <a href="https://discord.gg/Mp8c7ra6dx">https://discord.gg/Mp8c7ra6dx</a></p></blockquote>
 <h2>Step 1: Add Morphy and check it's healthy</h2>
 <ol>
 <li>Invite Morphy with the <strong>Add Morphy free</strong> button on <a href="https://morphybot.github.io">https://morphybot.github.io</a>. Your server starts on the Free plan, and the server owner gets a DM with how to begin. No card is needed.</li>
-<li>In <strong>Server Settings → Roles</strong>, drag Morphy's role <strong>above</strong> any roles you want it to hand out (auto roles, role menus, application roles). Morphy can only give roles below its own.</li>
+<li>In <strong>Server Settings → Roles</strong>, drag Morphy's role <strong>above</strong> any roles you want it to hand out (auto roles, role menus, level roles, application roles). Morphy can only give roles below its own.</li>
 <li>Run <strong><code>/setup</code></strong>. It shows:
 <ul>
 <li>your plan (Free or Premium)</li>
@@ -153,6 +153,17 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/rolemenu create</code>, then <code>/rolemenu add</code> and <code>/rolemenu post</code>, lets members pick their own roles, like ping roles or platforms.</li>
 </ul></li>
 </ol>
+<h3>XP and levels (Free plan)</h3>
+<p>Members earn XP when they chat and level up. It's off until you turn it on.</p>
+<ol>
+<li><code>/levels-setup on</code> turns it on. By default each message gives 15 to 25 XP, once a minute per member. <code>/levels-setup xp</code> changes the amounts and the wait. Bots never earn XP.</li>
+<li><code>/levels-setup level-up</code> picks where level-ups are posted (a channel, or where the member typed), turns the post off, or changes its text. You can use {user} {username} {level} {server}. Members aren't pinged unless you turn on ping.</li>
+<li><code>/levels-setup ignore-add</code> stops XP in a channel (or a whole category) or for members with a role, like a bot-commands channel.</li>
+<li><code>/levels-setup role-add level:10 role:@Regular</code> gives a role at a level. <code>/levels-setup role-mode</code> picks whether members keep their lower level roles or only the highest one. Morphy's role must be above these roles, and a level role can't also be an auto role or in a role menu, since Morphy takes level roles away again.</li>
+<li><code>/levels-setup weekly</code> turns on a weekly board of the top 3. Pick the reset day (Monday by default, at midnight US Central), the channel, and rewards: Off, Manual (staff press Give on a card in the log channel) or Automatic. A reward can be a role for 7 days, casino coins (Premium only), or both. The first board posts after the first reset. Manual rewards can also be given or skipped with <code>/levels-setup rewards</code>.</li>
+<li>Members use <code>/rank</code> for their level card and <code>/levels leaderboard</code> for all time or this week. Staff use <code>/xp give</code>, <code>/xp remove</code> and <code>/xp reset</code>. XP staff give doesn't count toward the weekly board.</li>
+</ol>
+<p>Going from level L to the next takes 5 x L x L + 50 x L + 100 XP: 100 XP for level 1, 1,150 XP in all for level 5, 4,675 XP in all for level 10.</p>
 <h2>Step 4: Tickets (Premium)</h2>
 <ol>
 <li><code>/tickets preset</code> loads a ready-made set of ticket types. Pick the one closest to your server:
@@ -272,7 +283,20 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>Staff use <code>/points add</code>, <code>/points remove</code> and <code>/points add-role</code> (for a whole team or role), each with an optional reason.</li>
 </ol>
 <p>Members check their points with <code>/points check</code> and see the top members with <code>/points leaderboard</code>. Staff see a member's full history with <code>/points history</code>.</p>
-<h2>Step 11: Get Premium</h2>
+<h2>Step 11: ARK server tracking (Premium, optional)</h2>
+<p>A live panel with your ARK servers: online or offline, map, players and version. Morphy only reads what the servers show publicly. It never asks for a game password, RCON or a host login.</p>
+<ol>
+<li><code>/servers add</code> (needs Manage Server). Pick the game:
+<ul>
+<li>For ARK: Survival Ascended, start typing the server's name and pick it from the list, or type its IP and game port, like <code>1.2.3.4:7777</code>. Morphy finds it on Studio Wildcard's public list of unofficial servers, so the server has to be on that list (official servers aren't covered).</li>
+<li>For ARK: Survival Evolved (PC, Steam), type the IP and the query port, like <code>1.2.3.4:27015</code>. If you leave the port out, Morphy tries 27015. Console servers can't be added this way.</li>
+<li>Add a <code>label</code> to give it a shorter name on the panel.</li>
+</ul></li>
+<li><code>/servers panel</code> posts the panel in the channel you pick. Morphy edits that same post when something changes, at most every 2 minutes. Posting it again moves it and removes the old one.</li>
+<li><code>/servers list</code> shows everyone how the servers are doing, and <code>/servers players</code> shows who's on an ASE server. ASA's public list only has the player count, not names.</li>
+</ol>
+<p>A server shows as offline after 2 checks in a row with no answer, so one lost packet doesn't flip it. If Morphy itself can't check (for example Wildcard's list is down), the panel says &quot;Can't check right now&quot; instead of offline. A Discord server can track up to 20 game servers. <code>/servers remove</code> stops one and deletes its history (Morphy keeps 30 days of online and player counts for each server). Without Premium, the checks stop and the panel says tracking is paused.</p>
+<h2>Step 12: Get Premium</h2>
 <p>Every server has the Free plan, with no time limit. Premium is $9.99 USD a month (30 days) or $99.90 USD a year (365 days) per server.</p>
 <ul>
 <li>Run <strong><code>/subscribe</code></strong> (needs Manage Server) to see what Premium adds and how to pay. Right now that's Cash App, Venmo or PayPal.</li>
@@ -280,7 +304,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>Each payment covers 30 days, or 365 days for the yearly price. You get a DM when Premium is on. Renewing early doesn't cost you days: the new days start when your current Premium time ends. That includes Premium time Morphy gave you for free.</li>
 <li>The server owner gets a DM, and your log channel gets a post, 3 days before, 1 day before, the same day, and when paid time ends. Premium doesn't renew by itself, so keep your DMs open.</li>
 <li>When paid time ends, Premium stays on for 3 more days so a late payment doesn't switch anything off. A payment made during those 3 days is still added to the old end date, so paying on the second of them leaves you about 28 days, not 30. If you press I've paid during those 3 days, that holds even when we check the payment after they're over. If we take longer than 24 hours to check it, the days start when we check it instead (or at the end date, if Premium is still on then).</li>
-<li>After that the server goes back to the Free plan. Welcome messages and picture cards, goodbye messages, auto roles and role menus keep working. The Premium features pause, anti-nuke and the do-not-post trap included, and the bot's name, picture, banner and About Me go back to Morphy's own look. All your settings are kept. When you pay again, the Premium features come back and Morphy puts back the branding it saved.</li>
+<li>After that the server goes back to the Free plan. Welcome messages and picture cards, goodbye messages, auto roles, role menus and XP levels keep working. The Premium features pause, anti-nuke and the do-not-post trap included, and the bot's name, picture, banner and About Me go back to Morphy's own look. All your settings are kept. When you pay again, the Premium features come back and Morphy puts back the branding it saved.</li>
 </ul>
 <h2>Troubleshooting</h2>
 <div class="table"><table><thead><tr><th>Problem</th><th>Fix</th></tr></thead><tbody><tr><td>A command doesn't show up</td><td>Press <strong>Ctrl+R</strong> to refresh Discord. Setup commands only show for staff.</td></tr><tr><td>&quot;Morphy is missing … permission&quot;</td><td>Give Morphy's role that permission, or allow it in that channel's settings.</td></tr><tr><td>Morphy can't give a role</td><td>Drag Morphy's role above that role in Server Settings → Roles.</td></tr><tr><td>Nothing happens in a channel</td><td>Check the channel doesn't block Morphy (channel settings → Permissions).</td></tr><tr><td>A feature stopped after you changed channels or roles</td><td>Run <code>/setup</code> again. It marks any channel that was deleted or that Morphy can't post in, and names the missing permission.</td></tr><tr><td>&quot;This is a Morphy Premium feature.&quot;</td><td>Your server is on the Free plan. Run <code>/setup</code> to see your plan, then <code>/subscribe</code>.</td></tr></tbody></table></div>

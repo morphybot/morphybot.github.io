@@ -114,6 +114,8 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>Server ID and name, and the settings your staff choose (channels, roles, messages, templates, images you upload for welcome cards or branding).</li>
 <li>Plan status (Free or Premium) and dates, and a log of each time we add, change or end Premium by hand.</li>
 <li>Payment reports: when staff press I've paid in <code>/subscribe</code>, we keep who sent it (their Discord user ID and name), the plan, how they paid and the name or note on the payment, so we can match it to the payment. The report is also sent to us in a Discord message.</li>
+<li>ARK game servers your staff add with <code>/servers</code> (Premium): the server's address and port, and what the game server shows to anyone who asks: whether it's online, its name, map, player count, player limit and version, checked every 2 minutes. We keep a history of whether it was online and how many players it had for 30 days. For ARK: Survival Evolved servers, <code>/servers players</code> asks the game server for the names of the players on it and shows them in Discord. <strong>We don't save player names.</strong></li>
+<li>Nitrado link, only if your staff link one with <code>/nitrado link</code>: the Nitrado token, saved encrypted and never shown again to anyone, your staff included (only Morphy's code opens it, to ask Nitrado); the game servers it can see (ID, name, game and slot count); the token's scopes and expiry date; and who linked it and when. Server status, player names and activity logs are read from Nitrado when they're shown, kept in memory for a few minutes at most, and not saved.</li>
 <li>If we add card payments later, <strong>Stripe</strong> will handle them and we'll only receive a customer or subscription reference. <strong>We'd never see or store card numbers.</strong></li>
 </ul>
 <p><strong>About members</strong> (stored by Discord user ID)</p>
@@ -122,11 +124,12 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>Answers to staff applications, and who accepted or denied each one.</li>
 <li>Who invited whom, when people joined or left, and whether an account looked brand new (the invite tracker).</li>
 <li>Casino coin balances, point totals, cooldown times and a history of changes.</li>
+<li>XP totals, this week's XP, when each member last earned XP, and weekly XP rewards (if staff turn XP and levels on).</li>
 <li>Poll votes, giveaway entries and suggestions.</li>
 </ul>
 <p><strong>Messages</strong></p>
 <ul>
-<li>Morphy reads messages in your server only to run features you turn on, for example the do-not-post trap, and text commands like <code>!bj</code> or <code>!links</code>. <strong>We don't store message content</strong>, except what's included in ticket transcripts, which are posted to your own server.</li>
+<li>Morphy reads messages in your server only to run features you turn on, for example the do-not-post trap, XP for chatting, and text commands like <code>!bj</code> or <code>!links</code>. <strong>We don't store message content</strong>, except what's included in ticket transcripts, which are posted to your own server.</li>
 </ul>
 <p><strong>Email</strong></p>
 <ul>
@@ -144,7 +147,9 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><strong>Railway</strong> (our hosting and database provider), which stores the data above for us.</li>
 <li><strong>Stripe</strong>, if we add card payments later, to process them.</li>
 <li><strong>Google</strong> (Gmail), which holds emails sent to our support address.</li>
+<li><strong>Nitrado</strong>, only if your staff link a Nitrado account: Morphy sends Nitrado your token to read your game servers' status, players and activity log. Morphy never changes anything on Nitrado.</li>
 <li>Anyone who visits our website, which shows the server list in section 4 (name, icon, member count, whether it has Premium or the Free plan, and a Join link if your staff add one).</li>
+<li>To check a tracked ARK server, Morphy asks the game server directly over the internet, and for ARK: Survival Ascended it downloads <strong>Studio Wildcard</strong>'s public server list. We don't send either of them anything about your Discord server or its members.</li>
 <li>Anyone the law requires us to share with.</li>
 </ul>
 <h2>4. The server list on our website</h2>
@@ -154,7 +159,9 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <ul>
 <li>Server settings and member data are kept until you ask us to delete them, including after Morphy leaves your server. Premium settings stay saved while the server is on the Free plan, so you don't lose your setup if Premium starts again.</li>
 <li>Payment reports and the log of Premium time we add by hand are kept the same way, so we can answer billing questions.</li>
+<li>A Nitrado link (the encrypted token and the saved server list) is deleted when staff run <code>/nitrado unlink</code>, which works on the Free plan too, or when Morphy is removed from the server.</li>
 <li>If you'd like your server's data deleted, open a ticket in the Morphy support server or email us (section 10), and we'll remove it.</li>
+<li>A tracked ARK server's history is kept for 30 days. Removing the server with <code>/servers remove</code> deletes it and its history right away.</li>
 <li>Casino money, points and similar data can also be reset by your server's staff at any time.</li>
 </ul>
 <h2>6. Your choices</h2>
@@ -166,7 +173,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <h2>7. Children</h2>
 <p>Morphy is for people old enough to use Discord under Discord's own rules. We don't knowingly collect information from anyone younger.</p>
 <h2>8. Security</h2>
-<p>Data is stored with our hosting provider and access is limited to running Morphy. No system is perfectly secure, but we take reasonable steps to protect it.</p>
+<p>Data is stored with our hosting provider and access is limited to running Morphy. Nitrado tokens are encrypted with AES-256-GCM, using a key kept only in our hosting settings, apart from the database. No system is perfectly secure, but we take reasonable steps to protect it.</p>
 <h2>9. Changes</h2>
 <p>We may update this policy. If the changes are important, we'll let server owners know.</p>
 <h2>10. Contact</h2>

@@ -140,7 +140,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </div></header>
 <main id="main" tabindex="-1"><div class="wrap doc">
 <h1>Commands</h1>
-<p>Morphy has 49 commands. Counting each subcommand, like <code>/welcome channel</code>, there are 164. Type <code>/</code> in any channel to use them, or run <code>/help</code> in your server to see the ones you can use.</p>
+<p>Morphy has 55 commands. Counting each subcommand, like <code>/welcome channel</code>, there are 190. Type <code>/</code> in any channel to use them, or run <code>/help</code> in your server to see the ones you can use.</p>
 <p class="muted">Staff commands need the Discord permission shown, and everything else works for every member. Settings only change your own server.</p>
 <p class="muted">Commands tagged Free work on every server. Commands tagged Premium need Morphy Premium on that server.</p>
 <p class="muted">A few casino commands aren't listed here. Some start switched off, and staff can turn them on with <code>/economy toggle</code>.</p>
@@ -153,7 +153,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <div class="cmd-none" id="cmd-none" hidden><button type="button" class="btn btn-ghost btn-sm" id="cmd-clear">Clear search</button></div>
 </div>
 <p class="sr-only" id="cmd-live" role="status"></p>
-<ul class="toc"><li><a href="#cmd-start">Getting started</a></li><li><a href="#cmd-welcome">Welcome &amp; roles</a></li><li><a href="#cmd-tickets">Tickets</a></li><li><a href="#cmd-safety">Safety &amp; moderation</a></li><li><a href="#cmd-community">Community</a></li><li><a href="#cmd-announce">Announcements &amp; giveaways</a></li><li><a href="#cmd-applications">Applications</a></li><li><a href="#cmd-points">Points</a></li><li><a href="#cmd-payments">Payment links</a></li><li><a href="#cmd-panels">Info panels</a></li><li><a href="#cmd-rewards">Rewards</a></li><li><a href="#cmd-casino">Casino games</a></li><li><a href="#cmd-money">Money &amp; income</a></li><li><a href="#cmd-branding">Branding</a></li><li><a href="#cmd-showcase">Website listing</a></li></ul>
+<ul class="toc"><li><a href="#cmd-start">Getting started</a></li><li><a href="#cmd-welcome">Welcome &amp; roles</a></li><li><a href="#cmd-levels">XP &amp; levels</a></li><li><a href="#cmd-tickets">Tickets</a></li><li><a href="#cmd-safety">Safety &amp; moderation</a></li><li><a href="#cmd-community">Community</a></li><li><a href="#cmd-announce">Announcements &amp; giveaways</a></li><li><a href="#cmd-applications">Applications</a></li><li><a href="#cmd-points">Points</a></li><li><a href="#cmd-payments">Payment links</a></li><li><a href="#cmd-panels">Info panels</a></li><li><a href="#cmd-rewards">Rewards</a></li><li><a href="#cmd-casino">Casino games</a></li><li><a href="#cmd-money">Money &amp; income</a></li><li><a href="#cmd-branding">Branding</a></li><li><a href="#cmd-ark">ARK server tracking</a></li><li><a href="#cmd-showcase">Website listing</a></li><li><a href="#cmd-nitrado">Nitrado servers</a></li></ul>
 <div class="cmd-group">
 <h2 id="cmd-start">Getting started</h2>
 <p>Check the bot's status and plan, and see what Premium adds.</p>
@@ -187,6 +187,31 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <tr data-plan="free"><td><span class="cmd"><code>/rolemenu post</code><span class="tag tag-free">Free</span></span></td><td>Post (or re-post) a menu in a channel.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="free"><td><span class="cmd"><code>/rolemenu delete</code><span class="tag tag-free">Free</span></span></td><td>Delete a menu.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="free"><td><span class="cmd"><code>/rolemenu list</code><span class="tag tag-free">Free</span></span></td><td>Show all role menus.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+</div>
+<div class="cmd-group">
+<h2 id="cmd-levels">XP &amp; levels</h2>
+<p>Members earn XP for chatting, level up and get level roles. All-time and weekly leaderboards.</p>
+<p class="muted">Free on every server.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr data-plan="free"><td><span class="cmd"><code>/rank</code><span class="tag tag-free">Free</span></span></td><td>See your level, XP and rank, or someone else's.</td><td>Everyone</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels leaderboard</code><span class="tag tag-free">Free</span></span></td><td>Top members by XP, all time or this week.</td><td>Everyone</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels roles</code><span class="tag tag-free">Free</span></span></td><td>The roles members get at each level.</td><td>Everyone</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels-setup view</code><span class="tag tag-free">Free</span></span></td><td>Show the XP and level settings.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels-setup on</code><span class="tag tag-free">Free</span></span></td><td>Turn XP and levels on.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels-setup off</code><span class="tag tag-free">Free</span></span></td><td>Turn XP and levels off. Everyone's XP is kept.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels-setup xp</code><span class="tag tag-free">Free</span></span></td><td>How much XP a message gives, and how often.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels-setup level-up</code><span class="tag tag-free">Free</span></span></td><td>The post when someone levels up.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels-setup ignore-add</code><span class="tag tag-free">Free</span></span></td><td>No XP in a channel, or for members with a role.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels-setup ignore-remove</code><span class="tag tag-free">Free</span></span></td><td>Let a channel or role earn XP again.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels-setup role-add</code><span class="tag tag-free">Free</span></span></td><td>Give a role when members reach a level.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels-setup role-remove</code><span class="tag tag-free">Free</span></span></td><td>Stop giving a level role. Members who have it keep it.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels-setup role-mode</code><span class="tag tag-free">Free</span></span></td><td>Keep lower level roles, or only the highest one.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels-setup rewards</code><span class="tag tag-free">Free</span></span></td><td>Give or skip the weekly rewards that are waiting (Manual mode).</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/levels-setup weekly</code><span class="tag tag-free">Free</span></span></td><td>The weekly XP board and rewards for the top 3.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/xp give</code><span class="tag tag-free">Free</span></span></td><td>Give a member XP. It doesn't count toward the weekly board.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/xp remove</code><span class="tag tag-free">Free</span></span></td><td>Take XP from a member.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/xp reset</code><span class="tag tag-free">Free</span></span></td><td>Set a member's XP back to 0.</td><td>Staff (Manage Server)</td></tr>
 </tbody></table></div>
 </div>
 <div class="cmd-group">
@@ -408,6 +433,18 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </tbody></table></div>
 </div>
 <div class="cmd-group">
+<h2 id="cmd-ark">ARK server tracking</h2>
+<p>A live panel with your ARK servers: online or offline, map, players and version. Read-only, no game password needed.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr data-plan="premium"><td><span class="cmd"><code>/servers add</code><span class="tag tag-premium">Premium</span></span></td><td>Track an ARK server on the panel.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/servers remove</code><span class="tag tag-premium">Premium</span></span></td><td>Stop tracking a server.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/servers list</code><span class="tag tag-premium">Premium</span></span></td><td>Show the tracked ARK servers and how they're doing.</td><td>Everyone</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/servers panel</code><span class="tag tag-premium">Premium</span></span></td><td>Post the live server panel. Morphy keeps it up to date.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/servers players</code><span class="tag tag-premium">Premium</span></span></td><td>See who's online on a tracked ASE server.</td><td>Everyone</td></tr>
+</tbody></table></div>
+</div>
+<div class="cmd-group">
 <h2 id="cmd-showcase">Website listing</h2>
 <p>Your server on Morphy's website: name, icon and member count. Hide it or add a Join button. Servers on the Free plan show in a separate &quot;Also using Morphy&quot; group.</p>
 <p class="muted">Free on every server.</p>
@@ -417,6 +454,16 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <tr data-plan="free"><td><span class="cmd"><code>/showcase invite</code><span class="tag tag-free">Free</span></span></td><td>Add or change the Join button on your listing.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="free"><td><span class="cmd"><code>/showcase invite-remove</code><span class="tag tag-free">Free</span></span></td><td>Take the Join button off your listing.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="free"><td><span class="cmd"><code>/showcase status</code><span class="tag tag-free">Free</span></span></td><td>See whether this server is listed and what the listing shows.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+</div>
+<div class="cmd-group">
+<h2 id="cmd-nitrado">Nitrado servers</h2>
+<p>Link your Nitrado account to see your game servers, players and activity log. Read-only, and the token is saved encrypted.</p>
+<p class="muted">Needs Morphy Premium.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr data-plan="premium"><td><span class="cmd"><code>/nitrado link</code><span class="tag tag-premium">Premium</span></span></td><td>Paste a Nitrado long-life token in a private form. Morphy saves it encrypted.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/nitrado unlink</code><span class="tag tag-premium">Premium</span></span></td><td>Delete the saved Nitrado token and server list.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="premium"><td><span class="cmd"><code>/nitrado status</code><span class="tag tag-premium">Premium</span></span></td><td>See the linked Nitrado servers and how they're doing.</td><td>Staff (Manage Server)</td></tr>
 </tbody></table></div>
 </div>
 </div></main>
