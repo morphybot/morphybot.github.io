@@ -135,12 +135,12 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <header class="top"><div class="wrap top-in">
 <a class="brand" href="index.html"><img src="mascot-face-128.webp" width="36" height="36" alt=""><span>Morphy</span></a>
 <nav class="nav" aria-label="Main"><ul><li><a href="index.html#features">Features</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="commands.html" aria-current="page">Commands</a></li><li><a href="setup.html">Setup guide</a></li><li><a href="faq.html">FAQ</a></li></ul></nav>
-<a class="btn btn-primary btn-sm nav-cta" href="https://discord.com/oauth2/authorize?client_id=1549234696041271306&amp;scope=bot+applications.commands&amp;permissions=335932662">Add Morphy free</a>
+<a class="btn btn-primary btn-sm nav-cta" href="https://discord.com/oauth2/authorize?client_id=1549234696041271306&amp;scope=bot+applications.commands&amp;permissions=1099847560438">Add Morphy free</a>
 <details class="menu"><summary aria-label="Menu"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></summary><nav class="menu-panel" aria-label="Menu"><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a><a href="index.html#servers">Servers</a><a href="commands.html" aria-current="page">Commands</a><a href="setup.html">Setup guide</a><a href="faq.html">FAQ</a></nav></details>
 </div></header>
 <main id="main" tabindex="-1"><div class="wrap doc">
 <h1>Commands</h1>
-<p>Morphy has 55 commands. Counting each subcommand, like <code>/welcome channel</code>, there are 190. Type <code>/</code> in any channel to use them, or run <code>/help</code> in your server to see the ones you can use.</p>
+<p>Morphy has 61 commands. Counting each subcommand, like <code>/welcome channel</code>, there are 205. Type <code>/</code> in any channel to use them, or run <code>/help</code> in your server to see the ones you can use.</p>
 <p class="muted">Staff commands need the Discord permission shown, and everything else works for every member. Settings only change your own server.</p>
 <p class="muted">Commands tagged Free work on every server. Commands tagged Premium need Morphy Premium on that server.</p>
 <p class="muted">A few casino commands aren't listed here. Some start switched off, and staff can turn them on with <code>/economy toggle</code>.</p>
@@ -153,7 +153,23 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <div class="cmd-none" id="cmd-none" hidden><button type="button" class="btn btn-ghost btn-sm" id="cmd-clear">Clear search</button></div>
 </div>
 <p class="sr-only" id="cmd-live" role="status"></p>
-<ul class="toc"><li><a href="#cmd-start">Getting started</a></li><li><a href="#cmd-welcome">Welcome &amp; roles</a></li><li><a href="#cmd-levels">XP &amp; levels</a></li><li><a href="#cmd-tickets">Tickets</a></li><li><a href="#cmd-safety">Safety &amp; moderation</a></li><li><a href="#cmd-community">Community</a></li><li><a href="#cmd-announce">Announcements &amp; giveaways</a></li><li><a href="#cmd-applications">Applications</a></li><li><a href="#cmd-points">Points</a></li><li><a href="#cmd-payments">Payment links</a></li><li><a href="#cmd-panels">Info panels</a></li><li><a href="#cmd-rewards">Rewards</a></li><li><a href="#cmd-casino">Casino games</a></li><li><a href="#cmd-money">Money &amp; income</a></li><li><a href="#cmd-branding">Branding</a></li><li><a href="#cmd-ark">ARK server tracking</a></li><li><a href="#cmd-showcase">Website listing</a></li><li><a href="#cmd-nitrado">Nitrado servers</a></li></ul>
+<ul class="toc"><li><a href="#cmd-moderation">Member moderation</a></li><li><a href="#cmd-start">Getting started</a></li><li><a href="#cmd-welcome">Welcome &amp; roles</a></li><li><a href="#cmd-custom">Custom commands</a></li><li><a href="#cmd-levels">XP &amp; levels</a></li><li><a href="#cmd-tickets">Tickets</a></li><li><a href="#cmd-safety">Safety &amp; moderation</a></li><li><a href="#cmd-community">Community</a></li><li><a href="#cmd-announce">Announcements &amp; giveaways</a></li><li><a href="#cmd-applications">Applications</a></li><li><a href="#cmd-points">Points</a></li><li><a href="#cmd-payments">Payment links</a></li><li><a href="#cmd-panels">Info panels</a></li><li><a href="#cmd-rewards">Rewards</a></li><li><a href="#cmd-casino">Casino games</a></li><li><a href="#cmd-money">Money &amp; income</a></li><li><a href="#cmd-branding">Branding</a></li><li><a href="#cmd-ark">ARK server tracking</a></li><li><a href="#cmd-showcase">Website listing</a></li><li><a href="#cmd-nitrado">Nitrado servers</a></li></ul>
+<div class="cmd-group">
+<h2 id="cmd-moderation">Member moderation</h2>
+<p>Warn, time out, kick or ban members. Configure warning actions and allowed link domains. Free.</p>
+<p class="muted">Free on every server.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr data-plan="free"><td><span class="cmd"><code>/warn</code><span class="tag tag-free">Free</span></span></td><td>Record a staff warning.</td><td>Staff (Manage Messages)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/timeout</code><span class="tag tag-free">Free</span></span></td><td>Temporarily stop a member from chatting.</td><td>Staff (Moderate Members)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/kick</code><span class="tag tag-free">Free</span></span></td><td>Remove a member from this server.</td><td>Staff (Kick Members)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/ban</code><span class="tag tag-free">Free</span></span></td><td>Ban a member without deleting their old messages.</td><td>Staff (Ban Members)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/moderation setup</code><span class="tag tag-free">Free</span></span></td><td>Choose an automatic warning action and a mod-log channel.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/moderation links</code><span class="tag tag-free">Free</span></span></td><td>Turn the link filter on or off and choose its allowed domains.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/moderation status</code><span class="tag tag-free">Free</span></span></td><td>Show the current policy and mod-log channel.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/moderation warnings</code><span class="tag tag-free">Free</span></span></td><td>Show the warning count and latest 20 warnings.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/moderation clear</code><span class="tag tag-free">Free</span></span></td><td>Clear current warnings and begin a new warning cycle.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+</div>
 <div class="cmd-group">
 <h2 id="cmd-start">Getting started</h2>
 <p>Check the bot's status and plan, and see what Premium adds.</p>
@@ -187,6 +203,19 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <tr data-plan="free"><td><span class="cmd"><code>/rolemenu post</code><span class="tag tag-free">Free</span></span></td><td>Post (or re-post) a menu in a channel.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="free"><td><span class="cmd"><code>/rolemenu delete</code><span class="tag tag-free">Free</span></span></td><td>Delete a menu.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="free"><td><span class="cmd"><code>/rolemenu list</code><span class="tag tag-free">Free</span></span></td><td>Show all role menus.</td><td>Staff (Manage Server)</td></tr>
+</tbody></table></div>
+</div>
+<div class="cmd-group">
+<h2 id="cmd-custom">Custom commands</h2>
+<p>Create text or embed replies with your own prefix.</p>
+<p class="muted">Free on every server.</p>
+<div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
+<tr data-plan="free"><td><span class="cmd"><code>/custom-command prefix</code><span class="tag tag-free">Free</span></span></td><td>Set the custom command prefix.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/custom-command text</code><span class="tag tag-free">Free</span></span></td><td>Add or replace a text reply.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/custom-command embed</code><span class="tag tag-free">Free</span></span></td><td>Add or replace an embed reply.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/custom-command remove</code><span class="tag tag-free">Free</span></span></td><td>Remove a saved command.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/custom-command preview</code><span class="tag tag-free">Free</span></span></td><td>Preview a reply privately.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/custom-command list</code><span class="tag tag-free">Free</span></span></td><td>List saved commands and their prefix.</td><td>Staff (Manage Server)</td></tr>
 </tbody></table></div>
 </div>
 <div class="cmd-group">
