@@ -265,25 +265,25 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </div>
 <div class="cmd-group">
 <h2 id="cmd-pets">Pets</h2>
-<p>Members adopt a virtual pet, feed it, play with it and level it up. Adopting one is free; the rest needs Premium.</p>
-<p class="muted">Needs Morphy Premium.</p>
+<p>Adopt, view or release a virtual pet on the Free plan. Feeding, playing and other commands marked Premium need Premium.</p>
+<p class="muted">Some commands need Premium. Check each command's label.</p>
 <div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
-<tr data-plan="premium"><td><span class="cmd"><code>/pet adopt</code><span class="tag tag-premium">Premium</span></span></td><td>Adopt your pet (one per member).</td><td>Everyone</td></tr>
-<tr data-plan="premium"><td><span class="cmd"><code>/pet view</code><span class="tag tag-premium">Premium</span></span></td><td>See your pet, or someone else's.</td><td>Everyone</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/pet adopt</code><span class="tag tag-free">Free</span></span></td><td>Adopt your pet (one per member).</td><td>Everyone</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/pet view</code><span class="tag tag-free">Free</span></span></td><td>See your pet, or someone else's.</td><td>Everyone</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/pet feed</code><span class="tag tag-premium">Premium</span></span></td><td>Feed your pet for XP.</td><td>Everyone</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/pet play</code><span class="tag tag-premium">Premium</span></span></td><td>Play with your pet for XP.</td><td>Everyone</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/pet buy-food</code><span class="tag tag-premium">Premium</span></span></td><td>Buy pet food with casino coins.</td><td>Everyone</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/pet rename</code><span class="tag tag-premium">Premium</span></span></td><td>Give your pet a new name.</td><td>Everyone</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/pet leaderboard</code><span class="tag tag-premium">Premium</span></span></td><td>The pets with the most XP.</td><td>Everyone</td></tr>
-<tr data-plan="premium"><td><span class="cmd"><code>/pet release</code><span class="tag tag-premium">Premium</span></span></td><td>Let your pet go. Its level and XP are deleted.</td><td>Everyone</td></tr>
-<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup view</code><span class="tag tag-premium">Premium</span></span></td><td>Show the pet settings.</td><td>Staff (Manage Server)</td></tr>
-<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup on</code><span class="tag tag-premium">Premium</span></span></td><td>Turn pets on.</td><td>Staff (Manage Server)</td></tr>
-<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup off</code><span class="tag tag-premium">Premium</span></span></td><td>Turn pets off. Every pet is kept.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/pet release</code><span class="tag tag-free">Free</span></span></td><td>Let your pet go. Its level and XP are deleted.</td><td>Everyone</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/pets-setup view</code><span class="tag tag-free">Free</span></span></td><td>Show the pet settings.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/pets-setup on</code><span class="tag tag-free">Free</span></span></td><td>Turn pets on.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/pets-setup off</code><span class="tag tag-free">Free</span></span></td><td>Turn pets off. Every pet is kept.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/pets-setup cards</code><span class="tag tag-premium">Premium</span></span></td><td>Where pet cards post: adoptions and level-ups.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/pets-setup cooldowns</code><span class="tag tag-premium">Premium</span></span></td><td>How often members can feed and play.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/pets-setup food</code><span class="tag tag-premium">Premium</span></span></td><td>Make pet food cost casino coins, or make it free.</td><td>Staff (Manage Server)</td></tr>
-<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup remove</code><span class="tag tag-premium">Premium</span></span></td><td>Delete one member's pet (for example, a name you don't want).</td><td>Staff (Manage Server)</td></tr>
-<tr data-plan="premium"><td><span class="cmd"><code>/pets-setup remove-all</code><span class="tag tag-premium">Premium</span></span></td><td>Delete every pet in this server, for a fresh start.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/pets-setup remove</code><span class="tag tag-free">Free</span></span></td><td>Delete one member's pet (for example, a name you don't want).</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/pets-setup remove-all</code><span class="tag tag-free">Free</span></span></td><td>Delete every pet in this server, for a fresh start.</td><td>Staff (Manage Server)</td></tr>
 </tbody></table></div>
 </div>
 <div class="cmd-group">
@@ -466,10 +466,10 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <div class="cmd-group">
 <h2 id="cmd-events">Guessing events</h2>
 <p>Number, word and vault code guessing games in one channel. The first right answer wins casino coins, and the prize grows as wrong guesses come in.</p>
-<p class="muted">Needs Morphy Premium.</p>
+<p class="muted">Some commands need Premium. Check each command's label.</p>
 <div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
 <tr data-plan="premium"><td><span class="cmd"><code>/event start</code><span class="tag tag-premium">Premium</span></span></td><td>Start a guessing event in the guess channel (event hosts).</td><td>Staff (Event hosts)</td></tr>
-<tr data-plan="premium"><td><span class="cmd"><code>/event stop</code><span class="tag tag-premium">Premium</span></span></td><td>Stop the running event and show the answer (event hosts).</td><td>Staff (Event hosts)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/event stop</code><span class="tag tag-free">Free</span></span></td><td>Stop the running event and show the answer (event hosts).</td><td>Staff (Event hosts)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/event status</code><span class="tag tag-premium">Premium</span></span></td><td>The running event, its prize and wrong guesses so far.</td><td>Everyone</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/event setup</code><span class="tag tag-premium">Premium</span></span></td><td>Guess channel, ping role and prizes (Manage Server). No options shows the settings.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/event hosts</code><span class="tag tag-premium">Premium</span></span></td><td>Roles that can start and stop events (Manage Server).</td><td>Staff (Manage Server)</td></tr>
@@ -588,10 +588,10 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <div class="cmd-group">
 <h2 id="cmd-nitrado">Nitrado servers</h2>
 <p>Link Nitrado to see your game servers and post their log lines in channels. Read-only, and the token is saved encrypted.</p>
-<p class="muted">Needs Morphy Premium.</p>
+<p class="muted">Some commands need Premium. Check each command's label.</p>
 <div class="table"><table class="cmds"><thead><tr><th>Command</th><th>What it does</th><th>Who</th></tr></thead><tbody>
 <tr data-plan="premium"><td><span class="cmd"><code>/nitrado link</code><span class="tag tag-premium">Premium</span></span></td><td>Paste a Nitrado long-life token in a private form. Morphy saves it encrypted.</td><td>Staff (Manage Server)</td></tr>
-<tr data-plan="premium"><td><span class="cmd"><code>/nitrado unlink</code><span class="tag tag-premium">Premium</span></span></td><td>Delete the saved Nitrado token and server list.</td><td>Staff (Manage Server)</td></tr>
+<tr data-plan="free"><td><span class="cmd"><code>/nitrado unlink</code><span class="tag tag-free">Free</span></span></td><td>Delete the saved Nitrado token and server list.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/nitrado status</code><span class="tag tag-premium">Premium</span></span></td><td>See the linked Nitrado servers and how they're doing.</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/gamelogs channel</code><span class="tag tag-premium">Premium</span></span></td><td>Pick the channel for one kind of log line (or all of them).</td><td>Staff (Manage Server)</td></tr>
 <tr data-plan="premium"><td><span class="cmd"><code>/gamelogs remove</code><span class="tag tag-premium">Premium</span></span></td><td>Stop posting one kind of log line (or all of them).</td><td>Staff (Manage Server)</td></tr>

@@ -140,7 +140,17 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </ul>
 <p><strong>Website visitors</strong></p>
 <ul>
-<li>Our website sets no cookies and has no trackers. It's hosted on GitHub Pages, and its home page loads the server list from Morphy's server on Railway and the server icons from Discord, so GitHub, Railway and Discord see your IP address, like any website you visit. Discord's image server may also set a short-lived cookie of its own.</li>
+<li>Our website, morphybot.github.io, sets no cookies and has no trackers. It's hosted on GitHub Pages, and its home page loads the server list from Morphy's server on Railway and the server icons from Discord, so GitHub, Railway and Discord see your IP address, like any website you visit. Discord's image server may also set a short-lived cookie of its own.</li>
+</ul>
+<p><strong>Dashboard</strong></p>
+<p>The dashboard is a separate site on Morphy's server on Railway, where staff sign in with Discord to change their server's settings. It isn't part of the website above. Like any website, Railway sees your IP address when you use it.</p>
+<ul>
+<li>When you sign in, Discord tells us your Discord user ID, your name, your profile picture and the list of servers you're in, with your permissions in each. We save your user ID, name and picture, and the IDs of the servers on that list where Morphy is and you're the owner or have Manage Server. The rest of the list isn't saved. The access token Discord gives us is used once to read these and is never saved.</li>
+<li>The dashboard sets three cookies it needs to work, and none for tracking or ads. <code>__Host-morphy_session</code> keeps you signed in. <code>__Host-morphy_csrf</code> proves that a change came from the dashboard's own page. <code>__Host-morphy_oauth</code> only exists while you sign in and lasts 10 minutes. We save only a scrambled copy (a hash) of each, never the cookies themselves.</li>
+<li>You're signed out after 8 hours without using the dashboard, or 7 days after you signed in, whichever comes first. Sign out ends the session on that device, and Sign out on every device ends all of them.</li>
+<li>For each sign-in, sign-out and change, the dashboard's change history keeps who did it (Discord user ID), the server, the page, what kind of change it was, when, whether it worked, the names of the settings changed, and the IDs of the roles, channels, members or items it touched. It never keeps what the settings were set to, any text you typed, pictures or tokens. Staff with Manage Server can see their server's history on the Activity page.</li>
+<li>To limit how often someone can sign in or load pages, we count requests for a few minutes at a time. Sign-in counts use a scrambled copy (a hash) of your IP address made with a random key that changes every day, so the address itself isn't saved. Other counts go by session, Discord user ID and server.</li>
+<li>Pictures you upload on the dashboard wait 10 minutes for you to save them, and are deleted if you don't.</li>
 </ul>
 <h2>2. How we use it</h2>
 <p>Only to run Morphy's features for your server, keep your Premium working, match payment reports to payments, list your server on our website (see section 4), prevent abuse, fix problems, and contact people about their plan (for example Premium renewal reminders to server owners by DM, or a note to whoever sent a payment report). <strong>We don't sell your information, and apart from the server list in section 4, we don't use it for advertising.</strong></p>
@@ -166,6 +176,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>If you'd like your server's data deleted, open a ticket in the Morphy support server or email us (section 10), and we'll remove it.</li>
 <li>A tracked ARK server's history is kept for 30 days. Removing the server with <code>/servers remove</code> deletes it and its history right away.</li>
 <li>Daily server stats are kept for 400 days, then deleted.</li>
+<li>Dashboard records are deleted on their own: the change history after 90 days, a session a day after it ends, request counts once their few minutes are up, and each day's IP key the day after. Morphy clears these out when it starts and then once an hour, so a record can stay up to an hour past its time.</li>
 <li>Casino money, points and similar data can also be reset by your server's staff at any time.</li>
 </ul>
 <h2>6. Your choices</h2>

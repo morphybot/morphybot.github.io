@@ -78,7 +78,7 @@ main:focus{outline:0}
 @media (max-width:760px){.nav{display:none}.menu{display:block}}
 @media (max-width:620px){.top-in{height:60px;gap:8px}.brand{font-size:1.12rem;gap:8px}.brand img{width:32px;height:32px}.nav-cta{padding:8px 12px;font-size:.86rem;min-height:40px}}
 @media (max-width:374px){.brand{font-size:1.02rem;gap:6px}.brand img{width:28px;height:28px}.nav-cta{padding:8px 10px;font-size:.8rem}.menu summary{width:40px;height:40px}}
-.hero{position:relative;overflow:hidden;padding:34px 0 40px;isolation:isolate}
+.control-room{padding:36px 0;border-top:1px solid rgba(167,139,250,.18)}.control-room .split{align-items:center}.control-room figure{margin:0}.control-room .lnk{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:12px;font-weight:600}.hero{position:relative;overflow:hidden;padding:34px 0 40px;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(40% 50% at 8% 10%,rgba(99,102,241,.13),transparent 70%),linear-gradient(180deg,#0b0b28 0%,#0a0a23 70%)}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.55;background-image:radial-gradient(1.2px 1.2px at 12% 22%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 28% 64%,#cfc6ff 50%,transparent 51%),radial-gradient(1.4px 1.4px at 46% 14%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 55% 88%,#b9fff0 50%,transparent 51%),radial-gradient(1.2px 1.2px at 88% 12%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 94% 58%,#cfc6ff 50%,transparent 51%),radial-gradient(1px 1px at 6% 82%,#fff 50%,transparent 51%),radial-gradient(1.3px 1.3px at 38% 40%,#e9e4ff 50%,transparent 51%)}
 .hero-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center;gap:28px}
@@ -302,7 +302,7 @@ a.server-add:hover{background:rgba(45,212,191,.1)}
 .final h2{font-size:clamp(1.7rem,1.2rem + 1.6vw,2.4rem)}
 .final p{margin-top:10px;color:var(--soft)}
 .final-btns{display:flex;flex-wrap:wrap;gap:12px}
-@media (prefers-reduced-motion:no-preference){.f-msg{animation:drift 9s ease-in-out infinite}.f-ticket{animation:drift 11s ease-in-out -4s infinite}.halo{animation:breathe 10s ease-in-out infinite}.cell,.faq summary .ic{transition:background-color .2s,border-color .2s,filter .2s,color .2s,transform .2s}@keyframes drift{50%{translate:0 -10px}}@keyframes breathe{50%{opacity:.75}}}
+@media (prefers-reduced-motion:no-preference){.hero-copy{animation:hero-enter .45s cubic-bezier(.2,0,0,1) both}.scene{animation:hero-enter .6s cubic-bezier(.2,0,0,1) both}@keyframes hero-enter{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}.cell,.faq summary .ic{transition:background-color .2s,border-color .2s,filter .2s,color .2s,transform .2s}}
 @media (min-width:921px) and (max-height:860px){.hero{padding:28px 0 32px}.hero h1{font-size:clamp(2.3rem,1rem + 3.3vw,3.5rem);margin-top:18px}.lede{margin-top:18px}.actions{margin-top:24px}.stage{height:556px}.mascot{width:min(480px,84%);top:29%}.f-msg{width:min(460px,88%);font-size:.84rem}.f-ticket{top:24px;width:236px;font-size:.84rem}.facts{margin-top:22px}}
 @media (max-width:1120px) and (min-width:921px){.f-msg{font-size:.84rem}.mascot{left:66%;width:min(440px,86%)}.f-ticket{width:216px;top:16px;font-size:.8rem}.f-ticket .mb{padding:5px 8px}.btn-lg{padding:14px 18px;font-size:1rem}.actions{gap:10px}}
 @media (max-width:1080px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.cell{grid-column:span 1}.c-wide{grid-column:span 2}.c-free{grid-column:span 2;grid-row:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto auto 1fr;column-gap:28px;align-items:start}.c-free .chips{align-self:end}.c-free>*{grid-column:1}.c-free .mini{grid-column:2;grid-row:1 / span 4;margin:0}.checks.two{grid-template-columns:1fr}.facts{justify-content:flex-start}}
@@ -324,9 +324,9 @@ a.server-add:hover{background:rgba(45,212,191,.1)}
 <div class="wrap hero-in">
 <div class="hero-copy">
 <p class="kicker hero-kicker">A Discord bot for community servers</p>
-<h1 id="hero-title"><span>Give every new member</span> <span class="grad-text">a real welcome.</span></h1>
-<p class="lede">Morphy greets each new member with their own picture card and hands out roles. That part is free on every server. Premium adds tickets, applications, giveaways, safety tools, community games with <span class="nw">make-believe</span> coins and your server's own bot name and look.</p>
-<div class="actions"><a class="btn btn-primary btn-lg" href="https://discord.com/oauth2/authorize?client_id=1549234696041271306&amp;scope=bot+applications.commands&amp;permissions=1099847560438"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Add Morphy free</a><a class="btn btn-ghost btn-lg" href="#features">See what it does<svg class="ic" aria-hidden="true"><use href="#i-arrow-down"/></svg></a></div>
+<h1 id="hero-title"><span>Your community.</span> <span class="grad-text">Your kind of bot.</span></h1>
+<p class="lede">Welcomes, roles, XP levels, custom commands and moderation are free on every server. Premium adds tickets, <span class="nw">make-believe</span> coin games and your own bot name and look.</p>
+<div class="actions"><a class="btn btn-primary btn-lg" href="https://discord.com/oauth2/authorize?client_id=1549234696041271306&amp;scope=bot+applications.commands&amp;permissions=1099847560438"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Add Morphy free</a><a class="btn btn-ghost btn-lg" href="https://morphy-production-c1ba.up.railway.app/dashboard">Open dashboard<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
 <p class="price-line">$0 on the Free plan, no card. Premium is <span class="nw">$9.99 USD a month</span> or <span class="nw">$99.90 USD a year, per server.</span></p>
 </div>
 <figure class="scene">
@@ -356,12 +356,17 @@ a.server-add:hover{background:rgba(45,212,191,.1)}
 <div class="wrap"><ul class="facts"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Nitrado link optional, read-only</li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Never asks for Administrator</li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Set up with slash commands</li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Settings stay saved if Premium ends</li></ul></div>
 </section>
 
+<section class="control-room wrap" aria-labelledby="control-title"><div class="split">
+<div><p class="kicker">Dashboard</p><h2 id="control-title">Set up Morphy from your browser</h2><p>Change welcomes, roles, levels, tickets and your plan on servers where you have Manage Server.</p><a class="lnk" href="https://morphy-production-c1ba.up.railway.app/dashboard">Sign in with Discord<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></div>
+<figure><figcaption class="cap">Illustrative overview</figcaption><div class="dc"><ul class="rows"><li><b>Welcomes</b><span>Free</span></li><li><b>Branding</b><span>Premium</span></li></ul></div></figure>
+</div></section>
+
 <section class="sec" id="features" aria-labelledby="features-title">
 <div class="wrap">
 <div class="sec-head">
 <p class="kicker">What it does</p>
 <h2 id="features-title">Less busywork for your staff</h2>
-<p class="sec-sub">Welcomes and roles are free on every server. Everything else comes with Premium, one server at a time.</p>
+<p class="sec-sub">Custom commands, moderation, welcome messages and picture cards, goodbye messages, auto roles, role menus and XP levels are free on every server. Premium adds the rest.</p>
 </div>
 <div class="bento">
 <article class="cell c-free">
@@ -536,7 +541,7 @@ a.server-add:hover{background:rgba(45,212,191,.1)}
 <div class="sec-head">
 <p class="kicker">Setup</p>
 <h2 id="setup-title">Ready in a few minutes</h2>
-<p class="sec-sub">Everything happens inside Discord with slash commands. There's no website to sign in to.</p>
+<p class="sec-sub">Add Morphy, then configure your server in the dashboard or with Discord slash commands.</p>
 </div>
 <ol class="steps">
 <li class="step"><span class="num" aria-hidden="true">1</span><h3>Add Morphy</h3><p>Pick your server and approve the permissions. Morphy asks only for what its features use, and never for Administrator.</p><a class="lnk" href="https://discord.com/oauth2/authorize?client_id=1549234696041271306&amp;scope=bot+applications.commands&amp;permissions=1099847560438">Add Morphy free<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></a></li>
@@ -583,7 +588,7 @@ a.server-add:hover{background:rgba(45,212,191,.1)}
 <details><summary>Does each server pay on its own?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes. Premium is per server, so two servers need two plans. Paying for one doesn't change the other.</p></details>
 <details><summary>What happens when Premium ends?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Premium tools pause, and the bot goes back to Morphy's own name and look until you renew. The Free plan keeps working and your settings stay saved.</p></details>
 <details><summary>Can I get a refund?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>No refunds for time already paid, except for a billing mistake or where required by law. If something went wrong with a payment, open a ticket in the <a href="https://discord.gg/Mp8c7ra6dx">Morphy Support server</a> or email <a href="mailto:morphybot.support@gmail.com">morphybot.support@gmail.com</a>.</p></details>
-<details><summary>Is there a website dashboard?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>No. You set everything up inside Discord with slash commands like <code>/setup</code>, <code>/welcome</code> and <code>/tickets</code>. Run <code>/help</code> to see them all.</p></details>
+<details><summary>Is there a website dashboard?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes. <a href="https://morphy-production-c1ba.up.railway.app/dashboard">Sign in with Discord</a> to see the servers where you're the owner or have Manage Server. It changes the same settings as the slash commands.</p></details>
 <details><summary>Does Morphy need Administrator?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>No. It asks only for the permissions its features use, and never for Administrator. <a href="faq.html#permissions">See the list</a>.</p></details>
 <details><summary>Does it connect to my game server?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Only if you link a Nitrado account with <code>/nitrado link</code> (Premium). Then Morphy reads your servers' status and players. It can't restart, stop or change them, and the token is saved encrypted and never shown again. Without a link, Morphy works only inside Discord.</p></details>
 <details><summary>Are the games real-money gambling?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>No. Blackjack, slots, roulette and the other games use free, make-believe coins. Nobody can buy coins through Morphy or cash them out, and the Terms don't allow trading coins or winnings for anything of value. The games come with Premium, which pays for the bot. It doesn't buy coins or prizes, and it doesn't change the odds.</p></details>

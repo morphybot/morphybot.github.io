@@ -107,7 +107,8 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <main id="main" tabindex="-1"><div class="wrap doc"><h1>Getting started with Morphy</h1>
 <p><strong>Morphy is the all-in-one Discord bot that becomes yours.</strong> Welcomes and roles are free. Premium adds tickets, invites, giveaways, applications, info panels, community games with make-believe coins, and the bot in your server's own name and look.</p>
 <p>Every server gets the Free plan: custom commands, moderation, welcome messages and picture cards, goodbye messages, auto roles, role menus and XP levels. It costs nothing and doesn't run out. Premium adds everything else, including your server's own name and look for the bot, for $9.99 USD a month (30 days) or $99.90 USD a year (365 days) per server. Steps 2 and 4 to 10 below need Premium.</p>
-<p>Everything is set up with slash commands: type <code>/</code> and pick one. Setup commands only show for staff with the right permission, and every setting only affects <strong>your</strong> server. For the full list of commands, see the <a href="https://morphybot.github.io/commands.html">commands page</a> or type <code>/help</code> in Discord.</p>
+<p>You set things up with slash commands: type <code>/</code> and pick one. Setup commands only show for staff with the right permission, and every setting only affects <strong>your</strong> server. For the full list of commands, see the <a href="https://morphybot.github.io/commands.html">commands page</a> or type <code>/help</code> in Discord.</p>
+<p>You can also use the web dashboard. On <a href="https://morphybot.github.io">https://morphybot.github.io</a>, click Dashboard and sign in with Discord. It lists the servers Morphy is in where you're the owner or have Manage Server, and it changes the same settings as the slash commands. Each step below names its dashboard page. Some things, like posting a giveaway or giving XP, are only in Discord, and the steps say so.</p>
 <blockquote><p><strong>Need help?</strong> Open a ticket in the Morphy support server: <a href="https://discord.gg/Mp8c7ra6dx">https://discord.gg/Mp8c7ra6dx</a></p></blockquote>
 <h2>Step 1: Add Morphy and check it's healthy</h2>
 <ol>
@@ -122,6 +123,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </ul></li>
 <li>Pick a private staff channel for Morphy's activity log: <code>/setup log_channel:#staff-log</code>.</li>
 </ol>
+<p>On the dashboard, the Overview page shows your plan and Morphy's setup checks. The log channel is set in Discord only, with <code>/setup log_channel</code>.</p>
 <h3>Start from a server template (Premium)</h3>
 <p><code>/server-template preview</code> adds a ready-made set of roles, categories and channels: Community, Support server or ARK cluster. <code>/server-template list</code> shows what's in each one.</p>
 <ul>
@@ -132,6 +134,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>If Morphy's role is missing Manage Channels or Manage Roles, the preview names it and doesn't offer Confirm.</li>
 <li>If you don't have a log channel yet, the template's <code>morphy-logs</code> channel becomes it.</li>
 <li><code>/server-template history</code> shows the last templates added and who added them.</li>
+<li>On the dashboard, the Server templates page has the same preview and Confirm.</li>
 </ul>
 <h2>Step 2: Make it look like your server (Premium)</h2>
 <ul>
@@ -141,8 +144,10 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/branding color</code> sets the color stripe on most of the bot's posts, like <code>/help</code>, tickets, role menus, polls and giveaways. Use a hex code like <code>#FF8800</code>. Casino replies, info panels and announcements keep their own colors.</li>
 <li><code>/branding footer</code> adds a short line at the bottom of <code>/help</code>, tickets, role menus and the other posts that use your color. Polls and giveaways keep their own footer line.</li>
 </ul>
+<p>On the dashboard, use the Branding page.</p>
 <p>Members will see your branding, not Morphy's. <code>/branding reset</code> puts it back. If Premium ends, Morphy goes back to its own look in your server and keeps your branding saved. It comes back when Premium starts again.</p>
 <p>Your server also shows up on Morphy's website, <a href="https://morphybot.github.io">https://morphybot.github.io</a>, with its name, icon and member count, on either plan (age-restricted servers are never listed). Servers on the Free plan are in a separate &quot;Also using Morphy&quot; group, below the servers with Premium. <code>/showcase off</code> hides it, <code>/showcase invite</code> adds a Join button, and <code>/showcase status</code> shows what's listed. These work on the Free plan too.</p>
+<p><code>/showcase</code> is in Discord only.</p>
 <h2>Step 3: Welcome new members (Free plan)</h2>
 <ol>
 <li><code>/welcome channel</code> turns welcomes on in your welcome channel.</li>
@@ -156,12 +161,14 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </ul></li>
 <li><code>/welcome banner</code> adds a banner image to the card (optional). Keep it under 8 MB and 4096 pixels wide or tall.</li>
 <li><code>/welcome card on:True</code> turns on picture cards. Each new member gets their own picture: your banner on top, then their avatar, &quot;Welcome, &lt;name&gt;&quot; and their member number. Picture cards are off until you turn them on. No banner? The picture card uses your welcome color. Animated banners show as a still picture on it.</li>
-<li><code>/welcome test</code> shows a preview using yourself.</li>
+<li><code>/welcome test</code> shows a preview using yourself.
+<p>On the dashboard, use the Welcome and goodbye page.</p></li>
 <li>Optional extras:
 <ul>
 <li><code>/goodbye channel</code> posts a message when someone leaves.</li>
 <li><code>/autorole add</code> gives a role to everyone who joins.</li>
 <li><code>/rolemenu create</code>, then <code>/rolemenu add</code> and <code>/rolemenu post</code>, lets members pick their own roles, like ping roles or platforms.</li>
+<li>On the dashboard, auto roles and role menus are on the Roles page.</li>
 </ul></li>
 </ol>
 <h3>XP and levels (Free plan)</h3>
@@ -174,6 +181,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/levels-setup weekly</code> turns on a weekly board of the top 3. Pick the reset day (Monday by default, at midnight US Central), the channel, and rewards: Off, Manual (staff press Give on a card in the log channel) or Automatic. A reward can be a role for 7 days, casino coins (Premium only), or both. The first board posts after the first reset. Manual rewards can also be given or skipped with <code>/levels-setup rewards</code>.</li>
 <li>Members use <code>/rank</code> for their level card and <code>/levels leaderboard</code> for all time or this week. Staff use <code>/xp give</code>, <code>/xp remove</code> and <code>/xp reset</code>. XP staff give doesn't count toward the weekly board.</li>
 </ol>
+<p>On the dashboard, use the XP and levels page for every <code>/levels-setup</code> setting, plus the leaderboards. Giving or skipping weekly rewards and <code>/xp</code> are in Discord only.</p>
 <p>Going from level L to the next takes 5 x L x L + 50 x L + 100 XP: 100 XP for level 1, 1,150 XP in all for level 5, 4,675 XP in all for level 10.</p>
 <h3>Server stats (every server)</h3>
 <p>Morphy counts a few numbers for your server each day: members, joins, leaves, messages, commands used, welcomes sent and voice joins. It counts only how many, never what was said or who did it. Staff with Manage Server can see them:</p>
@@ -183,6 +191,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/stats tracking on:False</code> stops the counting for your server, and <code>on:True</code> starts it again.</li>
 </ol>
 <p>Days are US Central time, and new activity shows up within about 5 minutes. Numbers are kept for 400 days.</p>
+<p>On the dashboard, the Analytics page has a chart, the same CSV and the counting switch.</p>
 <h3>Pets (adopting is free, the rest is Premium)</h3>
 <p>Members adopt a virtual pet, feed it, play with it and level it up. Pets are on unless you turn them off.</p>
 <ol>
@@ -192,6 +201,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/pets-setup food price:25</code> makes each feed use one food that members buy with casino coins (<code>/pet buy-food</code>). A pet holds up to 50 food. The price is 0 by default, which means feeding is free.</li>
 <li><code>/pets-setup off</code> turns pets off and keeps every pet. <code>/pets-setup remove</code> deletes one member's pet (for a name you don't want), and <code>/pets-setup remove-all</code> deletes every pet for a fresh start. These work on every plan.</li>
 </ol>
+<p>On the dashboard, use the Pets page.</p>
 <h2>Step 4: Tickets (Premium)</h2>
 <ol>
 <li><code>/tickets preset</code> loads a ready-made set of ticket types. Pick the one closest to your server:
@@ -204,6 +214,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/tickets settings</code> sets where ticket channels open, where transcripts go, and whether quiet tickets auto-close.</li>
 <li><code>/tickets panel</code> posts the ticket panel in your support channel.</li>
 </ol>
+<p>On the dashboard, the Tickets page has all of these settings and can post or update the panel.</p>
 <p><strong>How it works:</strong></p>
 <ul>
 <li>A member picks a type and answers the form, and a private channel opens for them and your staff.</li>
@@ -227,12 +238,14 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>On the 1st of each month Morphy posts last month's summary in that channel by itself. Turn that off with <code>/staffpay setup auto-post:false</code>.</li>
 <li>Staff use <code>/staffpay mine</code> to see their own numbers.</li>
 </ol>
+<p>On the dashboard, use the Staff pay page.</p>
 <p>A ticket counts for the staff member who claimed it. A ticket closed without a claim counts for whoever closed it, unless the member closed it themselves or it closed automatically.</p>
 <h2>Step 5: Safety (Premium)</h2>
 <ul>
 <li><code>/honeypot setup</code> turns a channel into a trap for hacked accounts. Anyone who posts there is <strong>banned</strong> (or kicked) automatically and their spam is deleted. Staff with Manage Messages are always safe, and <code>/honeypot exempt-add</code> protects other roles.</li>
 <li><code>/antinuke on</code> (server owner only) stops a hacked or rogue staff account from wrecking the server. If one person deletes 3 channels or roles, bans or kicks 5 members, gives a role Administrator-type permissions, or adds a bot, all within a minute, Morphy removes all their roles (or bans them), takes the dangerous permissions back off, kicks any bot they added, and DMs you. <code>/antinuke status</code> shows the limits and warns you if Morphy's role isn't at the top of the role list (it must be, to stop anyone). Trust co-owners and helper bots with <code>/antinuke trust</code>. Change limits with <code>/antinuke limit</code>.</li>
 <li><code>/purge</code> bulk-deletes recent messages in a channel.</li>
+<li>On the dashboard, use the Moderation and safety page. Only the server owner can change anti-nuke there. <code>/purge</code> and actions against members are in Discord only.</li>
 </ul>
 <h2>Step 6: Community (Premium)</h2>
 <ul>
@@ -257,6 +270,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/suggestions setup</code> picks the suggestions channel. Members use <code>/suggest</code> and vote with buttons.</li>
 <li><code>/poll create</code> makes a poll with buttons and an auto-close timer.</li>
 <li><code>/autoreact add</code> reacts with up to 3 emojis to every post in a channel, to posts with a word or phrase, or to that word in one channel only. Words inside links and emoji names don't count. <code>/autoreact list</code> shows them and <code>/autoreact remove</code> stops one. A server can have up to 25. In a very busy chat Morphy skips some reactions so the rest don't show up late.</li>
+<li>On the dashboard, invite tracking and boosts are on the Growth page, hype rewards on Rewards and events, suggestions on Coins and community, and auto reactions on Commands and reactions. Polls are in Discord only.</li>
 </ul>
 <h2>Step 7: Announcements, giveaways and info panels (Premium)</h2>
 <h3>Announcements</h3>
@@ -264,6 +278,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/announce send</code> starts from a ready-made template: Event, Update, Maintenance, Alert, General and more.</li>
 <li>A form opens so you can fill in the <code>[brackets]</code>. Morphy won't post until they're filled.</li>
 <li>Make your own templates with <code>/announce template-edit</code>.</li>
+<li>Announcements are in Discord only.</li>
 </ul>
 <h3>Embed builder</h3>
 <ul>
@@ -276,6 +291,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/embed edit</code> with a message link loads a post Morphy made with <code>/embed</code> back into the builder. <strong>Save changes</strong> updates that post.</li>
 <li><code>/embed import</code> reads message JSON from other embed tools, and <code>/embed export</code> gives you a JSON file.</li>
 <li>Your draft is saved, so you can close the preview and pick it up later with <code>/embed create</code>.</li>
+<li>On the dashboard, use the Embeds page for saved templates and posting them.</li>
 </ul>
 <h3>Giveaways</h3>
 <ul>
@@ -283,6 +299,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/giveaway reroll</code> picks new winners.</li>
 <li>If Morphy couldn't post the winner ping (or isn't sure it did), it won't ping twice. Your log channel gets a note and <code>/giveaway list</code> shows it for a week, so you can ping the winners yourself. The giveaway post always shows who won.</li>
 <li>Save your usual giveaways with <code>/giveaway template-edit</code>.</li>
+<li>On the dashboard, giveaway templates are on the Coins and community page. Starting a giveaway is in Discord only.</li>
 </ul>
 <h3>Info panels</h3>
 <ul>
@@ -290,6 +307,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/panel post</code> posts it.</li>
 <li>Editing a posted panel updates it instantly, and posting again moves it to the bottom of the channel.</li>
 <li>Staff can also type <code>!</code> plus the panel name, e.g. <code>!rules</code>, to drop a copy into any channel.</li>
+<li>On the dashboard, the Growth page edits panels and can update posts Morphy already made.</li>
 </ul>
 <h3>Payment links</h3>
 <ul>
@@ -297,6 +315,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/payments post</code> posts the panel. Members pick a method from the menu and get your link privately.</li>
 <li>Staff can type <code>!payments</code> in any channel to post it.</li>
 <li>Once you have at least one payment method, <code>!links</code> posts the payment panel, not the Links info panel, and Morphy says so when it does. For the info panel use <code>/panel post</code>, and for the payment panel use <code>!payments</code>. With no payment methods set, <code>!links</code> posts the Links info panel as usual.</li>
+<li>On the dashboard, use the Growth page.</li>
 </ul>
 <h2>Step 8: Staff applications (Premium)</h2>
 <ol>
@@ -304,6 +323,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/applications questions</code> changes the 5 starter questions. End a question with &quot;(optional)&quot; to make it skippable.</li>
 <li><code>/applications panel</code> posts the <strong>Apply</strong> button.</li>
 </ol>
+<p>On the dashboard, use the Growth page for the forms. Reviewing applications is in Discord only.</p>
 <p><strong>How it works:</strong></p>
 <ul>
 <li>Members press Apply (or use <code>/apply</code>), and their answers arrive in the review channel.</li>
@@ -336,6 +356,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </ul>
 <p>Change the <code>!</code> with <code>/economy prefix</code>, or type <code>off</code> to turn text commands off.</p>
 <p>Don't want anyone going below 0? <code>/economy toggle feature:negative balances enabled:False</code> makes fines only take the cash a member has.</p>
+<p>On the dashboard, use the Coins and community page for every <code>/economy</code> setting, role income and casino channels.</p>
 <h3>Coin shop</h3>
 <p>Members spend their coins on things you sell: a role, a perk you hand out by hand, or anything else. Coins come out of their cash, never real money.</p>
 <ol>
@@ -346,6 +367,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </ol>
 <p>Members use <code>/shop</code> to look, and <code>/buy</code> or the menu under <code>/shop</code> to buy. Each buy shows the price first and needs a Buy press. <code>/shop my-orders:True</code> shows their own orders.</p>
 <p>Staff see orders with <code>/shop-setup orders</code>, give coins back with <code>/shop-setup refund</code> (by default the stock and the coupon use come back and the role comes off), and download every order with <code>/shop-setup export</code>. If Discord won't give an item's role, the member gets their coins back right away.</p>
+<p>On the dashboard, use the Coin shop page for settings, items, coupons, orders and refunds. Posting the shop panel is in Discord only.</p>
 <h3>Guessing events</h3>
 <p>A guessing event runs in one channel. The first member to type the right answer wins casino coins. There are three kinds: a number (1 to 1000 unless you pick another range), a word or short phrase, and a vault code of 3 to 8 digits.</p>
 <ol>
@@ -358,6 +380,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/event status</code> shows the prize and the number of wrong guesses. <code>/event stop</code> ends the event and shows the answer, and nobody wins. <code>/event stop</code> works even if the server's Premium has ended.</li>
 </ol>
 <p>One event runs at a time in a server. The guess channel can't change while an event runs in it. Hosts can't start an event with a prize above the top prize.</p>
+<p>On the dashboard, use the Rewards and events page for the settings, hosts and answers, and to start or stop an event.</p>
 <h2>Step 10: Points (Premium, optional)</h2>
 <p>Points staff hand out for events, competitions or good behavior, with your own name, e.g. <strong>Server points</strong>.</p>
 <ol>
@@ -366,6 +389,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>Staff use <code>/points add</code>, <code>/points remove</code> and <code>/points add-role</code> (for a whole team or role), each with an optional reason.</li>
 </ol>
 <p>Members check their points with <code>/points check</code> and see the top members with <code>/points leaderboard</code>. Staff see a member's full history with <code>/points history</code>.</p>
+<p>On the dashboard, use the Coins and community page for the name, log channel and staff roles. Giving points is in Discord only.</p>
 <h2>Step 11: ARK server tracking (Premium, optional)</h2>
 <p>A live panel with your ARK servers: online or offline, map, players and version. Morphy only reads what the servers show publicly. It never asks for a game password, RCON or a host login.</p>
 <ol>
@@ -379,6 +403,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/servers list</code> shows everyone how the servers are doing, and <code>/servers players</code> shows who's on an ASE server. ASA's public list only has the player count, not names.</li>
 </ol>
 <p>A server shows as offline after 2 checks in a row with no answer, so one lost packet doesn't flip it. If Morphy itself can't check (for example Wildcard's list is down), the panel says &quot;Can't check right now&quot; instead of offline. A Discord server can track up to 20 game servers. <code>/servers remove</code> stops one and deletes its history (Morphy keeps 30 days of online and player counts for each server). Without Premium, the checks stop and the panel says tracking is paused.</p>
+<p>On the dashboard, the ARK servers page adds and removes servers, posts the panel and shows player charts. Linking Nitrado is in Discord only.</p>
 <h3>Game logs from Nitrado (Premium, optional)</h3>
 <p>If your game server is on Nitrado, Morphy can post its log lines in Discord channels. This needs a Nitrado link first: run <code>/nitrado link</code> and read the note it shows before you paste a token.</p>
 <ol>
@@ -387,11 +412,13 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/gamelogs limit</code> sets how many lines Morphy posts an hour for your server (10 to 600, 120 to start). <code>/gamelogs server</code> turns one linked game server on or off, and <code>/gamelogs pause</code> and <code>/gamelogs resume</code> stop and start all of it.</li>
 </ol>
 <p>Morphy reads Nitrado every 5 minutes and posts only lines that are new since it started reading, so turning it on never floods a channel with old lines. Posts never ping anyone, and player IDs (Steam, Epic, ARK IDs) are cut out. Morphy reads two things, both read-only: Nitrado's activity log for the server (restarts, settings and file changes, and who made them), which lands under server activity, and the newest part of an ARK server's ShooterGame.log, which gives joins, leaves, chat, kills and admin commands. Morphy reads no other file. If <code>/gamelogs status</code> says it couldn't find ShooterGame.log, check that the server is an ARK server on Nitrado and has been started at least once.</p>
+<p>On the dashboard, use the Game logs page.</p>
 <h2>Step 12: Get Premium</h2>
 <p>Every server has the Free plan, with no time limit. Premium is $9.99 USD a month (30 days) or $99.90 USD a year (365 days) per server.</p>
 <ul>
 <li>Run <strong><code>/subscribe</code></strong> (needs Manage Server) to see what Premium adds and how to pay. Right now that's Cash App, Venmo or PayPal.</li>
 <li>Put your <strong>server name</strong> in the payment note. Then run <code>/subscribe</code> again, press I've paid, pick Monthly or Yearly, and say how you paid and the name or note on the payment. We check each payment by hand and switch Premium on within 24 hours. With questions, open a <strong>Billing &amp; payments</strong> ticket in the Morphy support server (<a href="https://discord.gg/Mp8c7ra6dx">https://discord.gg/Mp8c7ra6dx</a>).</li>
+<li>On the dashboard, the Plan page has the same I've paid form.</li>
 <li>Each payment covers 30 days, or 365 days for the yearly price. You get a DM when Premium is on. Renewing early doesn't cost you days: the new days start when your current Premium time ends. That includes Premium time Morphy gave you for free.</li>
 <li>The server owner gets a DM, and your log channel gets a post, 3 days before, 1 day before, the same day, and when paid time ends. Premium doesn't renew by itself, so keep your DMs open.</li>
 <li>When paid time ends, Premium stays on for 3 more days so a late payment doesn't switch anything off. A payment made during those 3 days is still added to the old end date, so paying on the second of them leaves you about 28 days, not 30. If you press I've paid during those 3 days, that holds even when we check the payment after they're over. If we take longer than 24 hours to check it, the days start when we check it instead (or at the end date, if Premium is still on then).</li>
