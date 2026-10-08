@@ -17,86 +17,8 @@
 <meta name="twitter:description" content="How to set up Morphy in your Discord server, step by step: branding, welcomes, tickets, safety, invites, applications, the coin games and paying.">
 <meta name="twitter:image" content="https://morphybot.github.io/og-banner.png?v=cf16220618">
 <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<title>Setup guide | Morphy</title><style>@font-face{font-family:Poppins;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/poppins-600.woff2) format("woff2")}
-@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/poppins-700.woff2) format("woff2")}
-@font-face{font-family:"Poppins fb";src:local("Arial");size-adjust:112%;ascent-override:94%;descent-override:31%;line-gap-override:9%}
-:root{--bg:#0a0a23;--bg-deep:#07071a;--panel:#12132e;--line:rgba(196,181,253,.16);--line-2:rgba(255,255,255,.08);--ink:#f5f3ff;--soft:#c6c4e0;--mute:#a09fbf;--violet:#a78bfa;--teal:#5eead4;--teal-2:#2dd4bf;--grad:linear-gradient(100deg,#c4b5fd 0%,#a5b4fc 40%,#5eead4 100%);--btn:linear-gradient(120deg,#d4c6ff 0%,#a9c1ff 45%,#7ef0dc 100%);--head:Poppins,"Poppins fb",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--r:18px}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:84px;background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body);overflow-x:clip;min-height:100vh;display:flex;flex-direction:column}
-main{flex:1 0 auto}
-img,svg{display:block;max-width:100%}
-a{color:var(--teal)}
-h1,h2,h3,h4{font-family:var(--head);font-weight:700;line-height:1.15;margin:0;letter-spacing:-.01em;text-wrap:balance}
-p{margin:0;text-wrap:pretty}
-code{font:600 .9em/1 var(--mono);background:rgba(167,139,250,.14);border:1px solid rgba(167,139,250,.22);color:#e4dcff;padding:2px 6px;border-radius:6px;white-space:nowrap}
-.wrap{width:min(1200px,calc(100% - 32px));margin-inline:auto}
-.ic{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:10px}
-main:focus{outline:0}
-.skip{position:absolute;left:16px;top:-80px;z-index:100;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-weight:600;text-decoration:none}
-.skip:focus{top:12px}
-[hidden]{display:none!important}
-.sprite{position:absolute;width:0;height:0;overflow:hidden}
-.nw{white-space:nowrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:14px;font:600 1rem/1.2 var(--head);text-decoration:none;border:1px solid transparent;white-space:nowrap;cursor:pointer}
-.btn-primary{background:var(--btn);color:#100d2b;box-shadow:0 10px 30px -10px rgba(139,92,246,.7),0 0 0 1px rgba(255,255,255,.25) inset}
-.btn-primary:hover{filter:brightness(1.06)}
-.btn-ghost{background:rgba(255,255,255,.04);color:var(--ink);border-color:rgba(255,255,255,.16)}
-.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28)}
-.btn-lg{min-height:56px;padding:14px 26px;font-size:1.05rem}
-.btn-sm{min-height:40px;padding:8px 16px;font-size:.92rem;border-radius:12px}
-.top{position:sticky;top:0;z-index:50;background:rgba(10,10,35,.78);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line-2)}
-.top-in{display:flex;align-items:center;gap:20px;height:66px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:700 1.2rem/1 var(--head);margin-right:auto;flex:none}
-.brand img{width:36px;height:36px;border-radius:50%;box-shadow:0 0 0 1px rgba(196,181,253,.4),0 0 18px rgba(139,92,246,.55)}
-.nav ul{display:flex;gap:2px;list-style:none;margin:0;padding:0}
-.nav a{display:block;padding:8px 12px;border-radius:10px;color:var(--soft);text-decoration:none;font-size:.95rem;white-space:nowrap}
-.nav a:hover,.nav a[aria-current=page]{color:var(--ink);background:rgba(255,255,255,.05)}
-.menu{display:none;position:relative}
-.menu summary{list-style:none;cursor:pointer;width:42px;height:42px;display:grid;place-items:center;border-radius:12px;border:1px solid rgba(255,255,255,.14);color:var(--ink)}
-.menu summary::-webkit-details-marker{display:none}
-.menu[open] summary{background:rgba(255,255,255,.08)}
-.menu-panel{position:absolute;right:0;top:calc(100% + 10px);width:220px;background:#15163a;border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 24px 60px -20px rgba(0,0,0,.8)}
-.menu-panel a{display:block;padding:11px 14px;border-radius:10px;color:var(--ink);text-decoration:none}
-.menu-panel a:hover,.menu-panel a[aria-current=page]{background:rgba(255,255,255,.06)}
-.foot{border-top:1px solid var(--line-2);background:var(--bg-deep);padding:34px 0 40px;color:var(--mute);font-size:.92rem}
-.foot-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px}
-.foot-brand{display:flex;align-items:center;gap:10px;color:var(--soft)}
-.foot-brand img{width:28px;height:28px;border-radius:50%}
-.foot-brand b{font:700 1.05rem/1 var(--head);color:var(--ink)}
-.foot nav ul{display:flex;flex-wrap:wrap;gap:4px 10px;list-style:none;margin:0;padding:0}
-.foot nav a{display:inline-flex;align-items:center;min-height:32px;padding:4px 8px;color:var(--soft);text-decoration:none;border-radius:8px}
-.foot nav a:hover{color:var(--ink);text-decoration:underline}
-.foot-note{flex-basis:100%;font-size:.84rem}
-.foot-note a{color:var(--soft)}
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}.btn,.nav a{transition:background-color .2s,border-color .2s,filter .2s,color .2s,transform .2s}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-@media (max-width:860px) and (min-width:761px){.top-in{gap:14px}.nav a{padding:8px 9px}}
-@media (max-width:760px){.nav{display:none}.menu{display:block}}
-@media (max-width:620px){.top-in{height:60px;gap:8px}.brand{font-size:1.12rem;gap:8px}.brand img{width:32px;height:32px}.nav-cta{padding:8px 12px;font-size:.86rem;min-height:40px}}
-@media (max-width:374px){.brand{font-size:1.02rem;gap:6px}.brand img{width:28px;height:28px}.nav-cta{padding:8px 10px;font-size:.8rem}.menu summary{width:40px;height:40px}}
-.doc{max-width:780px;padding:48px 0 80px}
-.doc h1{font-size:clamp(2rem,1.3rem + 2.4vw,2.9rem);letter-spacing:-.02em;margin:0 0 22px}
-.doc h2{font-size:clamp(1.3rem,1.1rem + .8vw,1.6rem);margin:2.2em 0 .6em;color:#ddd6fe}
-.doc h3{font-size:1.12rem;font-weight:600;margin:1.6em 0 .5em}
-.doc p{margin:0 0 1em}.doc ul,.doc ol{margin:0 0 1em;padding-left:1.4em}.doc li{margin:.35em 0}.doc li p{margin:.4em 0}
-.doc code{white-space:normal;overflow-wrap:anywhere}
-.doc strong{color:#fff}
-.muted{color:var(--mute)}
-.doc .btn{margin:8px 8px 0 0}
-.table{overflow-x:auto;margin:12px 0 1.4em}table{border-collapse:collapse;width:100%}th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line-2)}th{color:#c4b5fd;font-family:var(--head);font-weight:600}td code{overflow-wrap:anywhere}
-blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--teal);background:rgba(255,255,255,.035);border-radius:0 12px 12px 0}blockquote p:last-child{margin:0}
-.doc details{border-bottom:1px solid var(--line-2)}
-.doc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 4px;font:600 1.05rem/1.4 var(--head);color:var(--ink)}
-.doc summary::-webkit-details-marker{display:none}
-.doc summary .ic{color:var(--violet)}
-.doc details[open] summary .ic{transform:rotate(45deg)}
-.doc details p{margin:0;padding:0 4px 20px;color:var(--soft)}
-@media (prefers-reduced-motion:no-preference){.doc summary .ic{transition:transform .2s}}
-.toc{display:flex;flex-wrap:wrap;gap:6px 16px;padding:0;list-style:none}
-.cmds td:last-child{color:var(--mute)}@media(min-width:721px){.cmds td:first-child,.cmds td:last-child{white-space:nowrap}}
-@media(max-width:720px){.cmds thead{display:none}.cmds tr{display:block;padding:8px 0;border-bottom:1px solid var(--line-2)}.cmds td{display:block;padding:2px 0;border:0}}</style></head><body><a class="skip" href="#main">Skip to content</a>
+<title>Setup guide | Morphy</title><style>@font-face{font-family:Poppins;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/poppins-600.woff2) format("woff2")}@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/poppins-700.woff2) format("woff2")}@font-face{font-family:"Poppins fb";src:local("Arial");size-adjust:112%;ascent-override:94%;descent-override:31%;line-gap-override:9%}:root{--bg:#0a0a23;--bg-deep:#07071a;--panel:#12132e;--line:rgba(196,181,253,.16);--line-2:rgba(255,255,255,.08);--ink:#f5f3ff;--soft:#c6c4e0;--mute:#a09fbf;--violet:#a78bfa;--teal:#5eead4;--teal-2:#2dd4bf;--grad:linear-gradient(100deg,#c4b5fd 0%,#a5b4fc 40%,#5eead4 100%);--btn:linear-gradient(120deg,#d4c6ff 0%,#a9c1ff 45%,#7ef0dc 100%);--head:Poppins,"Poppins fb",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--r:18px}*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-top:84px;background:var(--bg)}body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body);overflow-x:clip;min-height:100vh;display:flex;flex-direction:column}main{flex:1 0 auto}img,svg{display:block;max-width:100%}a{color:var(--teal)}h1,h2,h3,h4{font-family:var(--head);font-weight:700;line-height:1.15;margin:0;letter-spacing:-.01em;text-wrap:balance}p{margin:0;text-wrap:pretty}code{font:600 .9em/1 var(--mono);background:rgba(167,139,250,.14);border:1px solid rgba(167,139,250,.22);color:#e4dcff;padding:2px 6px;border-radius:6px;white-space:nowrap}.wrap{width:min(1200px,calc(100% - 32px));margin-inline:auto}.ic{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:10px}main:focus{outline:0}.skip{position:absolute;left:16px;top:-80px;z-index:100;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-weight:600;text-decoration:none}.skip:focus{top:12px}[hidden]{display:none!important}.sprite{position:absolute;width:0;height:0;overflow:hidden}.nw{white-space:nowrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:14px;font:600 1rem/1.2 var(--head);text-decoration:none;border:1px solid transparent;white-space:nowrap;cursor:pointer}.btn-primary{background:var(--btn);color:#100d2b;box-shadow:0 10px 30px -10px rgba(139,92,246,.7),0 0 0 1px rgba(255,255,255,.25) inset}.btn-primary:hover{filter:brightness(1.06)}.btn-ghost{background:rgba(255,255,255,.04);color:var(--ink);border-color:rgba(255,255,255,.16)}.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28)}.btn-lg{min-height:56px;padding:14px 26px;font-size:1.05rem}.btn-sm{min-height:40px;padding:8px 16px;font-size:.92rem;border-radius:12px}.top{position:sticky;top:0;z-index:50;background:rgba(10,10,35,.78);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line-2)}.top-in{display:flex;align-items:center;gap:20px;height:66px}.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:700 1.2rem/1 var(--head);margin-right:auto;flex:none}.brand img{width:36px;height:36px;border-radius:50%;box-shadow:0 0 0 1px rgba(196,181,253,.4),0 0 18px rgba(139,92,246,.55)}.nav ul{display:flex;gap:2px;list-style:none;margin:0;padding:0}.nav a{display:block;padding:8px 12px;border-radius:10px;color:var(--soft);text-decoration:none;font-size:.95rem;white-space:nowrap}.nav a:hover,.nav a[aria-current=page]{color:var(--ink);background:rgba(255,255,255,.05)}.menu{display:none;position:relative}.menu summary{list-style:none;cursor:pointer;width:42px;height:42px;display:grid;place-items:center;border-radius:12px;border:1px solid rgba(255,255,255,.14);color:var(--ink)}.menu summary::-webkit-details-marker{display:none}.menu[open] summary{background:rgba(255,255,255,.08)}.menu-panel{position:absolute;right:0;top:calc(100% + 10px);width:220px;background:#15163a;border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 24px 60px -20px rgba(0,0,0,.8)}.menu-panel a{display:block;padding:11px 14px;border-radius:10px;color:var(--ink);text-decoration:none}.menu-panel a:hover,.menu-panel a[aria-current=page]{background:rgba(255,255,255,.06)}.foot{border-top:1px solid var(--line-2);background:var(--bg-deep);padding:34px 0 40px;color:var(--mute);font-size:.92rem}.foot-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px}.foot-brand{display:flex;align-items:center;gap:10px;color:var(--soft)}.foot-brand img{width:28px;height:28px;border-radius:50%}.foot-brand b{font:700 1.05rem/1 var(--head);color:var(--ink)}.foot nav ul{display:flex;flex-wrap:wrap;gap:4px 10px;list-style:none;margin:0;padding:0}.foot nav a{display:inline-flex;align-items:center;min-height:32px;padding:4px 8px;color:var(--soft);text-decoration:none;border-radius:8px}.foot nav a:hover{color:var(--ink);text-decoration:underline}.foot-note{flex-basis:100%;font-size:.84rem}.foot-note a{color:var(--soft)}@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}.btn,.nav a{transition:background-color .2s,border-color .2s,filter .2s,color .2s,transform .2s}}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}@media (max-width:860px) and (min-width:761px){.top-in{gap:14px}.nav a{padding:8px 9px}}@media (max-width:760px){.nav{display:none}.menu{display:block}}@media (max-width:620px){.top-in{height:60px;gap:8px}.brand{font-size:1.12rem;gap:8px}.brand img{width:32px;height:32px}.nav-cta{padding:8px 12px;font-size:.86rem;min-height:40px}}@media (max-width:374px){.brand{font-size:1.02rem;gap:6px}.brand img{width:28px;height:28px}.nav-cta{padding:8px 10px;font-size:.8rem}.menu summary{width:40px;height:40px}}
+.doc{max-width:780px;padding:48px 0 80px}.doc h1{font-size:clamp(2rem,1.3rem + 2.4vw,2.9rem);letter-spacing:-.02em;margin:0 0 22px}.doc h2{font-size:clamp(1.3rem,1.1rem + .8vw,1.6rem);margin:2.2em 0 .6em;color:#ddd6fe}.doc h3{font-size:1.12rem;font-weight:600;margin:1.6em 0 .5em}.doc p{margin:0 0 1em}.doc ul,.doc ol{margin:0 0 1em;padding-left:1.4em}.doc li{margin:.35em 0}.doc li p{margin:.4em 0}.doc code{white-space:normal;overflow-wrap:anywhere}.doc strong{color:#fff}.muted{color:var(--mute)}.doc .btn{margin:8px 8px 0 0}.table{overflow-x:auto;margin:12px 0 1.4em}table{border-collapse:collapse;width:100%}th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line-2)}th{color:#c4b5fd;font-family:var(--head);font-weight:600}td code{overflow-wrap:anywhere}blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--teal);background:rgba(255,255,255,.035);border-radius:0 12px 12px 0}blockquote p:last-child{margin:0}.doc details{border-bottom:1px solid var(--line-2)}.doc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 4px;font:600 1.05rem/1.4 var(--head);color:var(--ink)}.doc summary::-webkit-details-marker{display:none}.doc summary .ic{color:var(--violet)}.doc details[open] summary .ic{transform:rotate(45deg)}.doc details p{margin:0;padding:0 4px 20px;color:var(--soft)}@media (prefers-reduced-motion:no-preference){.doc summary .ic{transition:transform .2s}}.toc{display:flex;flex-wrap:wrap;gap:6px 16px;padding:0;list-style:none}.cmds td:last-child{color:var(--mute)}@media(min-width:721px){.cmds td:first-child,.cmds td:last-child{white-space:nowrap}}@media(max-width:720px){.cmds thead{display:none}.cmds tr{display:block;padding:8px 0;border-bottom:1px solid var(--line-2)}.cmds td{display:block;padding:2px 0;border:0}}</style></head><body><a class="skip" href="#main">Skip to content</a>
 <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></symbol></svg>
 <header class="top"><div class="wrap top-in">
 <a class="brand" href="index.html"><img src="mascot-face-128.webp" width="36" height="36" alt=""><span>Morphy</span></a>
@@ -106,7 +28,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </div></header>
 <main id="main" tabindex="-1"><div class="wrap doc"><h1>Getting started with Morphy</h1>
 <p><strong>Morphy is the all-in-one Discord bot that becomes yours.</strong> Welcomes and roles are free. Premium adds tickets, invites, giveaways, applications, info panels, community games with make-believe coins, and the bot in your server's own name and look.</p>
-<p>Every server gets the Free plan: custom commands, moderation, welcome messages and picture cards, goodbye messages, auto roles, role menus and XP levels. It costs nothing and doesn't run out. Premium adds everything else, including your server's own name and look for the bot, for $9.99 USD a month (30 days) or $99.90 USD a year (365 days) per server. Steps 2 and 4 to 10 below need Premium.</p>
+<p>Every server gets the Free plan: custom commands, moderation and Automod, welcome messages and picture cards, goodbye messages, auto roles, role menus, chat and voice XP levels, a server log, reminders, birthdays, sticky roles and sticky messages. It costs nothing and doesn't run out. Premium adds everything else, including your server's own name and look for the bot, for $9.99 USD a month (30 days) or $99.90 USD a year (365 days) per server. Steps 2 and 4 to 10 below need Premium.</p>
 <p>You set things up with slash commands: type <code>/</code> and pick one. Setup commands only show for staff with the right permission, and every setting only affects <strong>your</strong> server. For the full list of commands, see the <a href="https://morphybot.github.io/commands.html">commands page</a> or type <code>/help</code> in Discord.</p>
 <p>You can also use the web dashboard. On <a href="https://morphybot.github.io">https://morphybot.github.io</a>, click Dashboard and sign in with Discord. It lists the servers Morphy is in where you're the owner or have Manage Server, and it changes the same settings as the slash commands. Each step below names its dashboard page. Some things, like posting a giveaway or giving XP, are only in Discord, and the steps say so.</p>
 <blockquote><p><strong>Need help?</strong> Open a ticket in the Morphy support server: <a href="https://discord.gg/Mp8c7ra6dx">https://discord.gg/Mp8c7ra6dx</a></p></blockquote>
@@ -169,8 +91,15 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/autorole add</code> gives a role to everyone who joins.</li>
 <li><code>/rolemenu create</code>, then <code>/rolemenu add</code> and <code>/rolemenu post</code>, lets members pick their own roles, like ping roles or platforms.</li>
 <li>On the dashboard, auto roles and role menus are on the Roles page.</li>
+<li><code>/autorole sticky mode:on</code> gives members their old roles back when they rejoin within 90 days. Roles with staff permissions, roles from bots and roles above Morphy's are never given back.</li>
 </ul></li>
 </ol>
+<h3>Reminders, birthdays and sticky messages (Free plan)</h3>
+<ul>
+<li>Any member can type <code>/remindme in time:2h text:...</code> or <code>/remindme at time:18:30 text:...</code> (US Central). The reminder comes back in that channel, or by DM with <code>where:DM</code>. <code>/reminders list</code> shows the ones waiting and <code>/reminders cancel</code> drops one. Up to 25 per member.</li>
+<li><code>/birthday setup channel:#general</code> turns on birthday posts. Add a message with <code>{user}</code> and <code>{username}</code>, a role members wear for the day, and a time zone name like <code>America/New_York</code> (US Central if you leave it out). Posts go out at midnight in that zone. Members add theirs with <code>/birthday set month:10 day:20</code> (no year is kept) and <code>/birthday list</code> shows the next ones. <code>/birthday off</code> stops the posts.</li>
+<li><code>/sticky set text:...</code> keeps a message at the bottom of the channel: Morphy reposts it after every 5 messages (pick 2 to 50 with <code>every</code>) and deletes its previous copy. One per channel, 10 per server. <code>/sticky remove</code> takes it down.</li>
+</ul>
 <h3>XP and levels (Free plan)</h3>
 <p>Members earn XP when they chat and level up. It's off until you turn it on.</p>
 <ol>
@@ -179,7 +108,9 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/levels-setup ignore-add</code> stops XP in a channel (or a whole category) or for members with a role, like a bot-commands channel.</li>
 <li><code>/levels-setup role-add level:10 role:@Regular</code> gives a role at a level. <code>/levels-setup role-mode</code> picks whether members keep their lower level roles or only the highest one. Morphy's role must be above these roles, and a level role can't also be an auto role or in a role menu, since Morphy takes level roles away again.</li>
 <li><code>/levels-setup weekly</code> turns on a weekly board of the top 3. Pick the reset day (Monday by default, at midnight US Central), the channel, and rewards: Off, Manual (staff press Give on a card in the log channel) or Automatic. A reward can be a role for 7 days, casino coins (Premium only), or both. The first board posts after the first reset. Manual rewards can also be given or skipped with <code>/levels-setup rewards</code>.</li>
-<li>Members use <code>/rank</code> for their level card and <code>/levels leaderboard</code> for all time or this week. Staff use <code>/xp give</code>, <code>/xp remove</code> and <code>/xp reset</code>. XP staff give doesn't count toward the weekly board.</li>
+<li>Members use <code>/rank</code> for their level card and <code>/levels leaderboard</code> for all time, this week or time in voice. Staff use <code>/xp give</code>, <code>/xp remove</code> and <code>/xp reset</code>. XP staff give doesn't count toward the weekly board. <code>/rank</code> also puts on any level role the member's level earns but they don't have, and a member who leaves and comes back gets their level roles again.</li>
+<li>Voice XP is on as soon as levels are on: 5 to 10 XP per minute in a voice channel, for members who aren't muted or deafened, aren't alone (another person, not a bot, must be in the channel) and aren't in the AFK channel. Ignored channels, categories and roles apply here too. <code>/levels-setup voice</code> changes the amounts (1 to 100 a minute) or turns voice XP off.</li>
+<li>With Premium: <code>/levels-setup multiplier-add times:2 role:@Booster</code> or <code>channel:#events</code> gives more (or, below 1, less) XP to a role or in a channel or category, 0.5x to 3x, up to 10 roles and 10 channels; when more than one applies, the highest wins. <code>/levels-setup boost times:2 hours:24</code> doubles XP for the whole server for a day (shown in <code>/rank</code>; <code>off:true</code> ends it early). <code>/levels-setup coins-add level:10 coins:500</code> pays casino coins when a member reaches a level, once per member per level, only for XP earned by chatting or in voice.</li>
 </ol>
 <p>On the dashboard, use the XP and levels page for every <code>/levels-setup</code> setting, plus the leaderboards. Giving or skipping weekly rewards and <code>/xp</code> are in Discord only.</p>
 <p>Going from level L to the next takes 5 x L x L + 50 x L + 100 XP: 100 XP for level 1, 1,150 XP in all for level 5, 4,675 XP in all for level 10.</p>
@@ -192,6 +123,19 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </ol>
 <p>Days are US Central time, and new activity shows up within about 5 minutes. Numbers are kept for 400 days.</p>
 <p>On the dashboard, the Analytics page has a chart, the same CSV and the counting switch.</p>
+<h3>Automatic message rules (Free plan)</h3>
+<p>On the dashboard, open <strong>Moderation and safety</strong> to edit rules, actions and exemptions. The same rules can be changed in Discord.</p>
+<p>Run <code>/automod starter action:delete</code> for a starter word list, or <code>/automod add</code> for words (including * wildcards), spam, duplicate text, mentions, caps, invites or zalgo. Set a mod-log with <code>/moderation setup</code>, then run <code>/automod on</code>. Free servers can add 10 rules; Premium allows 25, regex, attachment rules and exemptions for individual rules. <code>/automod list</code>, <code>/automod pause</code> and <code>/automod remove</code> manage saved rules. Server-wide exemptions are Free. Staff with moderation permissions are exempt. Morphy needs Manage Messages to delete messages and the appropriate permission for a timeout, kick or ban. A refused action is recorded in the mod-log. Regex rules that exceed their execution time limit are skipped. Spam and duplicate windows reset when Morphy restarts.</p>
+<h3>Server log (Free plan)</h3>
+<p>Morphy can post what happens in your server: message edits and deletes (with the deleted text when Morphy still had it), bulk deletes, joins, leaves, nickname changes, member role changes, server roles and channels made, deleted or renamed, voice joins, leaves and moves, bans and unbans, and timeouts. Bans and timeouts show who did it and the reason when Morphy's role has View Audit Log.</p>
+<ol>
+<li>Make a channel only staff and Morphy can see. A forum channel gets one post per event type, so edits, joins and bans each have their own thread. A text channel gets everything in one place.</li>
+<li><code>/logs setup channel:#server-log</code> turns the log on. In a forum, Morphy makes each post the first time that kind of event happens, and makes it again if someone deletes it.</li>
+<li><code>/logs types type:Voice on:False</code> turns one kind of event off. Every kind is on until you turn it off.</li>
+<li><code>/logs ignore channel:#bot-spam</code> skips a channel or a whole category. Run it again to log it again.</li>
+<li><code>/logs status</code> shows the setup, and <code>/logs off</code> turns the log off and keeps your choices.</li>
+</ol>
+<p>Events that happen within 5 seconds are grouped into one message per type, so a raid or a purge is a few posts, not hundreds. Morphy's own messages, other bots' messages and the log channel itself are never logged. Members aren't pinged.</p>
 <h3>Pets (adopting is free, the rest is Premium)</h3>
 <p>Members adopt a virtual pet, feed it, play with it and level it up. Pets are on unless you turn them off.</p>
 <ol>
@@ -244,7 +188,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <ul>
 <li><code>/honeypot setup</code> turns a channel into a trap for hacked accounts. Anyone who posts there is <strong>banned</strong> (or kicked) automatically and their spam is deleted. Staff with Manage Messages are always safe, and <code>/honeypot exempt-add</code> protects other roles.</li>
 <li><code>/antinuke on</code> (server owner only) stops a hacked or rogue staff account from wrecking the server. If one person deletes 3 channels or roles, bans or kicks 5 members, gives a role Administrator-type permissions, or adds a bot, all within a minute, Morphy removes all their roles (or bans them), takes the dangerous permissions back off, kicks any bot they added, and DMs you. <code>/antinuke status</code> shows the limits and warns you if Morphy's role isn't at the top of the role list (it must be, to stop anyone). Trust co-owners and helper bots with <code>/antinuke trust</code>. Change limits with <code>/antinuke limit</code>.</li>
-<li><code>/purge</code> bulk-deletes recent messages in a channel.</li>
+<li><code>/purge</code> bulk-deletes recent messages in a channel. Filters: <code>user</code>, <code>bots</code>, <code>humans</code>, <code>links</code>, <code>files</code> and <code>contains</code> text.</li>
 <li>On the dashboard, use the Moderation and safety page. Only the server owner can change anti-nuke there. <code>/purge</code> and actions against members are in Discord only.</li>
 </ul>
 <h2>Step 6: Community (Premium)</h2>
@@ -267,7 +211,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>The name, tag and boost roles stay only while the member qualifies. The invite role stays for good.</li>
 <li><code>/hype check</code> looks at one member now. Members who already qualified before you turned a reward on get it the next time their name, tag or boost changes.</li>
 </ul></li>
-<li><code>/suggestions setup</code> picks the suggestions channel. Members use <code>/suggest</code> and vote with buttons.</li>
+<li><code>/suggestions setup</code> picks the suggestions channel. Members use <code>/suggest</code> and vote with buttons. <code>/suggestions options</code> turns the DM to the author on a decision off or on, hides who suggested it (anonymous), and pings a staff role once when a suggestion reaches a number of upvotes (the role must allow anyone to @mention it).</li>
 <li><code>/poll create</code> makes a poll with buttons and an auto-close timer.</li>
 <li><code>/autoreact add</code> reacts with up to 3 emojis to every post in a channel, to posts with a word or phrase, or to that word in one channel only. Words inside links and emoji names don't count. <code>/autoreact list</code> shows them and <code>/autoreact remove</code> stops one. A server can have up to 25. In a very busy chat Morphy skips some reactions so the rest don't show up late.</li>
 <li>On the dashboard, invite tracking and boosts are on the Growth page, hype rewards on Rewards and events, suggestions on Coins and community, and auto reactions on Commands and reactions. Polls are in Discord only.</li>
@@ -340,19 +284,21 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li><code>/economy toggle</code> turns each game on or off, plus two earn commands that start switched off. <code>/economy settings</code> shows what's on.</li>
 <li><code>/economy channel-add</code> limits the casino to certain channels.</li>
 <li><code>/economy role-income-add</code> pays roles like boosters or VIPs on a timer.</li>
+<li><code>/economy daily</code> sets what <code>/daily</code> pays and the bonus for claiming every day (the streak resets after a missed Central calendar day). <code>/economy chat-coins enabled:True</code> pays a few coins per message on a cooldown; it's off by default.</li>
 </ol>
 <p>Members can:</p>
 <ul>
-<li>earn with <code>/work</code>, <code>/crime</code> and any other earn commands you switch on</li>
+<li>earn with <code>/work</code>, <code>/daily</code>, <code>/crime</code> and any other earn commands you switch on</li>
 <li>move money with <code>/deposit</code>, <code>/withdraw</code> and <code>/give-money</code></li>
-<li>play <code>/blackjack</code>, <code>/slot-machine</code>, <code>/roulette</code>, <code>/higher-lower</code>, <code>/russian-roulette</code> and more</li>
+<li>play <code>/blackjack</code>, <code>/slot-machine</code>, <code>/roulette</code>, <code>/higher-lower</code>, <code>/russian-roulette</code>, <code>/coinflip</code>, <code>/dice</code>, <code>/rps</code> and more</li>
+<li>challenge a member with <code>/duel</code>: the other member accepts with a button within 60 seconds, both bets are held, and the winner takes both</li>
 <li>check balances with <code>/money</code> and <code>/leaderboard</code></li>
 </ul>
 <p>Everything above also works as a text command:</p>
 <ul>
 <li><code>!bal</code>, <code>!dep all</code>, <code>!with 500</code>, <code>!give @member 100</code></li>
-<li><code>!work</code>, <code>!crime</code>, <code>!collect</code>, <code>!lb</code></li>
-<li><code>!bj all</code>, <code>!slots 100</code>, <code>!roulette 100 red</code>, <code>!hl 100</code>, <code>!rr 100</code></li>
+<li><code>!work</code>, <code>!daily</code>, <code>!crime</code>, <code>!collect</code>, <code>!lb</code></li>
+<li><code>!bj all</code>, <code>!slots 100</code>, <code>!roulette 100 red</code>, <code>!hl 100</code>, <code>!rr 100</code>, <code>!flip 50 heads</code>, <code>!dice 50</code>, <code>!rps 50 rock</code>, <code>!duel @member 100</code></li>
 </ul>
 <p>Change the <code>!</code> with <code>/economy prefix</code>, or type <code>off</code> to turn text commands off.</p>
 <p>Don't want anyone going below 0? <code>/economy toggle feature:negative balances enabled:False</code> makes fines only take the cash a member has.</p>
@@ -360,7 +306,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <h3>Coin shop</h3>
 <p>Members spend their coins on things you sell: a role, a perk you hand out by hand, or anything else. Coins come out of their cash, never real money.</p>
 <ol>
-<li><code>/shop-setup add</code> adds an item: a name, a price in coins, and if you want a description, a category, a role Morphy gives on buy, how many you have in stock, and the most one member can buy. Morphy won't sell a role with staff permissions or one above its own role.</li>
+<li><code>/shop-setup add</code> adds an item: a name, a price in coins, and if you want a description, a category, a role Morphy gives on buy, how many you have in stock, and the most one member can buy. An item can also need an XP level (<code>min-level</code>) or a role (<code>require-role</code>) before a member can buy it; Morphy checks that at the buy. Morphy won't sell a role with staff permissions or one above its own role.</li>
 <li><code>/shop-setup coupon-add</code> makes a code for percent or coins off. You can cap its uses, end it after a time like <code>7d</code>, set a minimum spend or tie it to one item. Each member can use a coupon once.</li>
 <li><code>/shop-setup settings</code> names the shop, opens or closes it and picks the channel where every order and refund is posted. <code>/shop-setup channel</code> limits where members can buy.</li>
 <li><code>/shop-setup post</code> posts a shop panel with an Open the shop button.</li>
@@ -422,10 +368,16 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <li>Each payment covers 30 days, or 365 days for the yearly price. You get a DM when Premium is on. Renewing early doesn't cost you days: the new days start when your current Premium time ends. That includes Premium time Morphy gave you for free.</li>
 <li>The server owner gets a DM, and your log channel gets a post, 3 days before, 1 day before, the same day, and when paid time ends. Premium doesn't renew by itself, so keep your DMs open.</li>
 <li>When paid time ends, Premium stays on for 3 more days so a late payment doesn't switch anything off. A payment made during those 3 days is still added to the old end date, so paying on the second of them leaves you about 28 days, not 30. If you press I've paid during those 3 days, that holds even when we check the payment after they're over. If we take longer than 24 hours to check it, the days start when we check it instead (or at the end date, if Premium is still on then).</li>
-<li>After that the server goes back to the Free plan. Custom commands, moderation, welcome messages and picture cards, goodbye messages, auto roles, role menus and XP levels keep working. The Premium features pause, anti-nuke and the do-not-post trap included, and the bot's name, picture, banner and About Me go back to Morphy's own look. All your settings are kept. When you pay again, the Premium features come back and Morphy puts back the branding it saved.</li>
+<li>After that the server goes back to the Free plan. Custom commands, moderation and Automod, welcome messages and picture cards, goodbye messages, auto roles, role menus, chat and voice XP levels, a server log, reminders, birthdays, sticky roles and sticky messages keep working. The Premium features pause, anti-nuke and the do-not-post trap included, and the bot's name, picture, banner and About Me go back to Morphy's own look. All your settings are kept. When you pay again, the Premium features come back and Morphy puts back the branding it saved.</li>
 </ul>
 <h2>Troubleshooting</h2>
 <div class="table"><table><thead><tr><th>Problem</th><th>Fix</th></tr></thead><tbody><tr><td>A command doesn't show up</td><td>Press <strong>Ctrl+R</strong> to refresh Discord. Setup commands only show for staff.</td></tr><tr><td>&quot;Morphy is missing … permission&quot;</td><td>Give Morphy's role that permission, or allow it in that channel's settings.</td></tr><tr><td>Morphy can't give a role</td><td>Drag Morphy's role above that role in Server Settings → Roles.</td></tr><tr><td>Nothing happens in a channel</td><td>Check the channel doesn't block Morphy (channel settings → Permissions).</td></tr><tr><td>A feature stopped after you changed channels or roles</td><td>Run <code>/setup</code> again. It marks any channel that was deleted or that Morphy can't post in, and names the missing permission.</td></tr><tr><td>&quot;This is a Morphy Premium feature.&quot;</td><td>Your server is on the Free plan. Run <code>/setup</code> to see your plan, then <code>/subscribe</code>.</td></tr></tbody></table></div>
+<h3>Ticket follow-up tools (Premium)</h3>
+<p>Use /tickets settings closed_category to retain closed tickets (default 7 days). Without a closed category, the existing five-second deletion remains. Staff can /ticket reopen, /ticket rename or /ticket move. Give Morphy View Channel, Manage Channels and Manage Roles access in both categories. A refused move or permission change needs a staff retry; the reply tells you it did not finish.</p>
+<p>/ticket close-request asks the opener to close or keep the ticket. Set close_request_hours for an optional deadline. /tickets reply-add saves text used by /ticket reply. /tickets block-add blocks new tickets by role; /tickets bypass-add skips only the open-ticket count, not the block or schedule. /tickets hours sets days, local open/close time, time zone, and whether to refuse or show a notice outside hours. /tickets settings dm_transcript:true sends transcript files to the opener when their DMs allow it.</p>
+<h3>Game logs in forum threads (Premium)</h3>
+<p>After linking Nitrado, use /gamelogs forum enabled:true channel:&lt;forum&gt; group:server to batch new entries by map. Group kind splits by event kind; group tribe splits named tribe events and leaves other entries in a general map thread. Give Morphy View Channel, Send Messages, Send Messages in Threads and Embed Links; Manage Threads is needed for archiving and reopening. The forum must permit posts without required tags. Existing text routes stay saved and resume with enabled:false. This reads logs only and never sends game commands.</p>
+<p>/gamelogs trusted names:&lt;comma-separated names&gt; labels names on your list; names are not authenticated identities. /gamelogs signals enabled:true turns on optional review observations. Set a signals text channel or a forum to receive them. Scores indicate which observations to review, not a probability of cheating. First observed is not account age, a prior ban is not proof of evasion, and missed leave logs can look like long sessions. No automatic punishment occurs. Morphy keeps at most 50 saved thread mappings per map and forum, archiving the oldest when needed. The hourly cap still counts log lines, not embeds. Failed or capped posts can lose lines; this is not a durable forensic archive.</p>
 </div></main>
 <footer class="foot"><div class="wrap foot-in">
 <span class="foot-brand"><img src="mascot-face-128.webp" width="28" height="28" alt="" loading="lazy"><b>Morphy</b>The bot that becomes yours</span>

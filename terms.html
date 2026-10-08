@@ -17,86 +17,8 @@
 <meta name="twitter:description" content="The terms for using Morphy: the Free plan, Premium per server, refunds, the games' make-believe coins and the server list on our website.">
 <meta name="twitter:image" content="https://morphybot.github.io/og-banner.png?v=cf16220618">
 <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
-<title>Morphy Terms of Service</title><style>@font-face{font-family:Poppins;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/poppins-600.woff2) format("woff2")}
-@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/poppins-700.woff2) format("woff2")}
-@font-face{font-family:"Poppins fb";src:local("Arial");size-adjust:112%;ascent-override:94%;descent-override:31%;line-gap-override:9%}
-:root{--bg:#0a0a23;--bg-deep:#07071a;--panel:#12132e;--line:rgba(196,181,253,.16);--line-2:rgba(255,255,255,.08);--ink:#f5f3ff;--soft:#c6c4e0;--mute:#a09fbf;--violet:#a78bfa;--teal:#5eead4;--teal-2:#2dd4bf;--grad:linear-gradient(100deg,#c4b5fd 0%,#a5b4fc 40%,#5eead4 100%);--btn:linear-gradient(120deg,#d4c6ff 0%,#a9c1ff 45%,#7ef0dc 100%);--head:Poppins,"Poppins fb",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--r:18px}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:84px;background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body);overflow-x:clip;min-height:100vh;display:flex;flex-direction:column}
-main{flex:1 0 auto}
-img,svg{display:block;max-width:100%}
-a{color:var(--teal)}
-h1,h2,h3,h4{font-family:var(--head);font-weight:700;line-height:1.15;margin:0;letter-spacing:-.01em;text-wrap:balance}
-p{margin:0;text-wrap:pretty}
-code{font:600 .9em/1 var(--mono);background:rgba(167,139,250,.14);border:1px solid rgba(167,139,250,.22);color:#e4dcff;padding:2px 6px;border-radius:6px;white-space:nowrap}
-.wrap{width:min(1200px,calc(100% - 32px));margin-inline:auto}
-.ic{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:10px}
-main:focus{outline:0}
-.skip{position:absolute;left:16px;top:-80px;z-index:100;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-weight:600;text-decoration:none}
-.skip:focus{top:12px}
-[hidden]{display:none!important}
-.sprite{position:absolute;width:0;height:0;overflow:hidden}
-.nw{white-space:nowrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:14px;font:600 1rem/1.2 var(--head);text-decoration:none;border:1px solid transparent;white-space:nowrap;cursor:pointer}
-.btn-primary{background:var(--btn);color:#100d2b;box-shadow:0 10px 30px -10px rgba(139,92,246,.7),0 0 0 1px rgba(255,255,255,.25) inset}
-.btn-primary:hover{filter:brightness(1.06)}
-.btn-ghost{background:rgba(255,255,255,.04);color:var(--ink);border-color:rgba(255,255,255,.16)}
-.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28)}
-.btn-lg{min-height:56px;padding:14px 26px;font-size:1.05rem}
-.btn-sm{min-height:40px;padding:8px 16px;font-size:.92rem;border-radius:12px}
-.top{position:sticky;top:0;z-index:50;background:rgba(10,10,35,.78);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line-2)}
-.top-in{display:flex;align-items:center;gap:20px;height:66px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:700 1.2rem/1 var(--head);margin-right:auto;flex:none}
-.brand img{width:36px;height:36px;border-radius:50%;box-shadow:0 0 0 1px rgba(196,181,253,.4),0 0 18px rgba(139,92,246,.55)}
-.nav ul{display:flex;gap:2px;list-style:none;margin:0;padding:0}
-.nav a{display:block;padding:8px 12px;border-radius:10px;color:var(--soft);text-decoration:none;font-size:.95rem;white-space:nowrap}
-.nav a:hover,.nav a[aria-current=page]{color:var(--ink);background:rgba(255,255,255,.05)}
-.menu{display:none;position:relative}
-.menu summary{list-style:none;cursor:pointer;width:42px;height:42px;display:grid;place-items:center;border-radius:12px;border:1px solid rgba(255,255,255,.14);color:var(--ink)}
-.menu summary::-webkit-details-marker{display:none}
-.menu[open] summary{background:rgba(255,255,255,.08)}
-.menu-panel{position:absolute;right:0;top:calc(100% + 10px);width:220px;background:#15163a;border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 24px 60px -20px rgba(0,0,0,.8)}
-.menu-panel a{display:block;padding:11px 14px;border-radius:10px;color:var(--ink);text-decoration:none}
-.menu-panel a:hover,.menu-panel a[aria-current=page]{background:rgba(255,255,255,.06)}
-.foot{border-top:1px solid var(--line-2);background:var(--bg-deep);padding:34px 0 40px;color:var(--mute);font-size:.92rem}
-.foot-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px}
-.foot-brand{display:flex;align-items:center;gap:10px;color:var(--soft)}
-.foot-brand img{width:28px;height:28px;border-radius:50%}
-.foot-brand b{font:700 1.05rem/1 var(--head);color:var(--ink)}
-.foot nav ul{display:flex;flex-wrap:wrap;gap:4px 10px;list-style:none;margin:0;padding:0}
-.foot nav a{display:inline-flex;align-items:center;min-height:32px;padding:4px 8px;color:var(--soft);text-decoration:none;border-radius:8px}
-.foot nav a:hover{color:var(--ink);text-decoration:underline}
-.foot-note{flex-basis:100%;font-size:.84rem}
-.foot-note a{color:var(--soft)}
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}.btn,.nav a{transition:background-color .2s,border-color .2s,filter .2s,color .2s,transform .2s}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-@media (max-width:860px) and (min-width:761px){.top-in{gap:14px}.nav a{padding:8px 9px}}
-@media (max-width:760px){.nav{display:none}.menu{display:block}}
-@media (max-width:620px){.top-in{height:60px;gap:8px}.brand{font-size:1.12rem;gap:8px}.brand img{width:32px;height:32px}.nav-cta{padding:8px 12px;font-size:.86rem;min-height:40px}}
-@media (max-width:374px){.brand{font-size:1.02rem;gap:6px}.brand img{width:28px;height:28px}.nav-cta{padding:8px 10px;font-size:.8rem}.menu summary{width:40px;height:40px}}
-.doc{max-width:780px;padding:48px 0 80px}
-.doc h1{font-size:clamp(2rem,1.3rem + 2.4vw,2.9rem);letter-spacing:-.02em;margin:0 0 22px}
-.doc h2{font-size:clamp(1.3rem,1.1rem + .8vw,1.6rem);margin:2.2em 0 .6em;color:#ddd6fe}
-.doc h3{font-size:1.12rem;font-weight:600;margin:1.6em 0 .5em}
-.doc p{margin:0 0 1em}.doc ul,.doc ol{margin:0 0 1em;padding-left:1.4em}.doc li{margin:.35em 0}.doc li p{margin:.4em 0}
-.doc code{white-space:normal;overflow-wrap:anywhere}
-.doc strong{color:#fff}
-.muted{color:var(--mute)}
-.doc .btn{margin:8px 8px 0 0}
-.table{overflow-x:auto;margin:12px 0 1.4em}table{border-collapse:collapse;width:100%}th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line-2)}th{color:#c4b5fd;font-family:var(--head);font-weight:600}td code{overflow-wrap:anywhere}
-blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--teal);background:rgba(255,255,255,.035);border-radius:0 12px 12px 0}blockquote p:last-child{margin:0}
-.doc details{border-bottom:1px solid var(--line-2)}
-.doc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 4px;font:600 1.05rem/1.4 var(--head);color:var(--ink)}
-.doc summary::-webkit-details-marker{display:none}
-.doc summary .ic{color:var(--violet)}
-.doc details[open] summary .ic{transform:rotate(45deg)}
-.doc details p{margin:0;padding:0 4px 20px;color:var(--soft)}
-@media (prefers-reduced-motion:no-preference){.doc summary .ic{transition:transform .2s}}
-.toc{display:flex;flex-wrap:wrap;gap:6px 16px;padding:0;list-style:none}
-.cmds td:last-child{color:var(--mute)}@media(min-width:721px){.cmds td:first-child,.cmds td:last-child{white-space:nowrap}}
-@media(max-width:720px){.cmds thead{display:none}.cmds tr{display:block;padding:8px 0;border-bottom:1px solid var(--line-2)}.cmds td{display:block;padding:2px 0;border:0}}</style></head><body><a class="skip" href="#main">Skip to content</a>
+<title>Morphy Terms of Service</title><style>@font-face{font-family:Poppins;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/poppins-600.woff2) format("woff2")}@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:url(fonts/poppins-700.woff2) format("woff2")}@font-face{font-family:"Poppins fb";src:local("Arial");size-adjust:112%;ascent-override:94%;descent-override:31%;line-gap-override:9%}:root{--bg:#0a0a23;--bg-deep:#07071a;--panel:#12132e;--line:rgba(196,181,253,.16);--line-2:rgba(255,255,255,.08);--ink:#f5f3ff;--soft:#c6c4e0;--mute:#a09fbf;--violet:#a78bfa;--teal:#5eead4;--teal-2:#2dd4bf;--grad:linear-gradient(100deg,#c4b5fd 0%,#a5b4fc 40%,#5eead4 100%);--btn:linear-gradient(120deg,#d4c6ff 0%,#a9c1ff 45%,#7ef0dc 100%);--head:Poppins,"Poppins fb",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--r:18px}*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-top:84px;background:var(--bg)}body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body);overflow-x:clip;min-height:100vh;display:flex;flex-direction:column}main{flex:1 0 auto}img,svg{display:block;max-width:100%}a{color:var(--teal)}h1,h2,h3,h4{font-family:var(--head);font-weight:700;line-height:1.15;margin:0;letter-spacing:-.01em;text-wrap:balance}p{margin:0;text-wrap:pretty}code{font:600 .9em/1 var(--mono);background:rgba(167,139,250,.14);border:1px solid rgba(167,139,250,.22);color:#e4dcff;padding:2px 6px;border-radius:6px;white-space:nowrap}.wrap{width:min(1200px,calc(100% - 32px));margin-inline:auto}.ic{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:10px}main:focus{outline:0}.skip{position:absolute;left:16px;top:-80px;z-index:100;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-weight:600;text-decoration:none}.skip:focus{top:12px}[hidden]{display:none!important}.sprite{position:absolute;width:0;height:0;overflow:hidden}.nw{white-space:nowrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:14px;font:600 1rem/1.2 var(--head);text-decoration:none;border:1px solid transparent;white-space:nowrap;cursor:pointer}.btn-primary{background:var(--btn);color:#100d2b;box-shadow:0 10px 30px -10px rgba(139,92,246,.7),0 0 0 1px rgba(255,255,255,.25) inset}.btn-primary:hover{filter:brightness(1.06)}.btn-ghost{background:rgba(255,255,255,.04);color:var(--ink);border-color:rgba(255,255,255,.16)}.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28)}.btn-lg{min-height:56px;padding:14px 26px;font-size:1.05rem}.btn-sm{min-height:40px;padding:8px 16px;font-size:.92rem;border-radius:12px}.top{position:sticky;top:0;z-index:50;background:rgba(10,10,35,.78);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line-2)}.top-in{display:flex;align-items:center;gap:20px;height:66px}.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:700 1.2rem/1 var(--head);margin-right:auto;flex:none}.brand img{width:36px;height:36px;border-radius:50%;box-shadow:0 0 0 1px rgba(196,181,253,.4),0 0 18px rgba(139,92,246,.55)}.nav ul{display:flex;gap:2px;list-style:none;margin:0;padding:0}.nav a{display:block;padding:8px 12px;border-radius:10px;color:var(--soft);text-decoration:none;font-size:.95rem;white-space:nowrap}.nav a:hover,.nav a[aria-current=page]{color:var(--ink);background:rgba(255,255,255,.05)}.menu{display:none;position:relative}.menu summary{list-style:none;cursor:pointer;width:42px;height:42px;display:grid;place-items:center;border-radius:12px;border:1px solid rgba(255,255,255,.14);color:var(--ink)}.menu summary::-webkit-details-marker{display:none}.menu[open] summary{background:rgba(255,255,255,.08)}.menu-panel{position:absolute;right:0;top:calc(100% + 10px);width:220px;background:#15163a;border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 24px 60px -20px rgba(0,0,0,.8)}.menu-panel a{display:block;padding:11px 14px;border-radius:10px;color:var(--ink);text-decoration:none}.menu-panel a:hover,.menu-panel a[aria-current=page]{background:rgba(255,255,255,.06)}.foot{border-top:1px solid var(--line-2);background:var(--bg-deep);padding:34px 0 40px;color:var(--mute);font-size:.92rem}.foot-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px}.foot-brand{display:flex;align-items:center;gap:10px;color:var(--soft)}.foot-brand img{width:28px;height:28px;border-radius:50%}.foot-brand b{font:700 1.05rem/1 var(--head);color:var(--ink)}.foot nav ul{display:flex;flex-wrap:wrap;gap:4px 10px;list-style:none;margin:0;padding:0}.foot nav a{display:inline-flex;align-items:center;min-height:32px;padding:4px 8px;color:var(--soft);text-decoration:none;border-radius:8px}.foot nav a:hover{color:var(--ink);text-decoration:underline}.foot-note{flex-basis:100%;font-size:.84rem}.foot-note a{color:var(--soft)}@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}.btn,.nav a{transition:background-color .2s,border-color .2s,filter .2s,color .2s,transform .2s}}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}@media (max-width:860px) and (min-width:761px){.top-in{gap:14px}.nav a{padding:8px 9px}}@media (max-width:760px){.nav{display:none}.menu{display:block}}@media (max-width:620px){.top-in{height:60px;gap:8px}.brand{font-size:1.12rem;gap:8px}.brand img{width:32px;height:32px}.nav-cta{padding:8px 12px;font-size:.86rem;min-height:40px}}@media (max-width:374px){.brand{font-size:1.02rem;gap:6px}.brand img{width:28px;height:28px}.nav-cta{padding:8px 10px;font-size:.8rem}.menu summary{width:40px;height:40px}}
+.doc{max-width:780px;padding:48px 0 80px}.doc h1{font-size:clamp(2rem,1.3rem + 2.4vw,2.9rem);letter-spacing:-.02em;margin:0 0 22px}.doc h2{font-size:clamp(1.3rem,1.1rem + .8vw,1.6rem);margin:2.2em 0 .6em;color:#ddd6fe}.doc h3{font-size:1.12rem;font-weight:600;margin:1.6em 0 .5em}.doc p{margin:0 0 1em}.doc ul,.doc ol{margin:0 0 1em;padding-left:1.4em}.doc li{margin:.35em 0}.doc li p{margin:.4em 0}.doc code{white-space:normal;overflow-wrap:anywhere}.doc strong{color:#fff}.muted{color:var(--mute)}.doc .btn{margin:8px 8px 0 0}.table{overflow-x:auto;margin:12px 0 1.4em}table{border-collapse:collapse;width:100%}th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line-2)}th{color:#c4b5fd;font-family:var(--head);font-weight:600}td code{overflow-wrap:anywhere}blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--teal);background:rgba(255,255,255,.035);border-radius:0 12px 12px 0}blockquote p:last-child{margin:0}.doc details{border-bottom:1px solid var(--line-2)}.doc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 4px;font:600 1.05rem/1.4 var(--head);color:var(--ink)}.doc summary::-webkit-details-marker{display:none}.doc summary .ic{color:var(--violet)}.doc details[open] summary .ic{transform:rotate(45deg)}.doc details p{margin:0;padding:0 4px 20px;color:var(--soft)}@media (prefers-reduced-motion:no-preference){.doc summary .ic{transition:transform .2s}}.toc{display:flex;flex-wrap:wrap;gap:6px 16px;padding:0;list-style:none}.cmds td:last-child{color:var(--mute)}@media(min-width:721px){.cmds td:first-child,.cmds td:last-child{white-space:nowrap}}@media(max-width:720px){.cmds thead{display:none}.cmds tr{display:block;padding:8px 0;border-bottom:1px solid var(--line-2)}.cmds td{display:block;padding:2px 0;border:0}}</style></head><body><a class="skip" href="#main">Skip to content</a>
 <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></symbol></svg>
 <header class="top"><div class="wrap top-in">
 <a class="brand" href="index.html"><img src="mascot-face-128.webp" width="36" height="36" alt=""><span>Morphy</span></a>
@@ -105,7 +27,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 <details class="menu"><summary aria-label="Menu"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></summary><nav class="menu-panel" aria-label="Menu"><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a><a href="index.html#servers">Servers</a><a href="commands.html">Commands</a><a href="setup.html">Setup guide</a><a href="faq.html">FAQ</a><a href="https://morphy-production-c1ba.up.railway.app/dashboard">Dashboard</a></nav></details>
 </div></header>
 <main id="main" tabindex="-1"><div class="wrap doc"><h1>Morphy Terms of Service</h1>
-<p><em>Last updated: October 5, 2026</em></p>
+<p><em>Last updated: October 7, 2026</em></p>
 <p>These terms cover your use of <strong>Morphy</strong>, a Discord bot. &quot;We&quot; and &quot;us&quot; mean the people who run Morphy. By adding Morphy to a Discord server or using its commands, you agree to these terms. If you don't agree, please remove Morphy from your server.</p>
 <h2>1. What Morphy is</h2>
 <p>Morphy is a Discord bot with a free plan for every server and a paid plan called Premium. It provides tools such as tickets, welcome messages, applications, invite tracking, giveaways, polls, info panels, points and community games with make-believe coins. Each server sets Morphy up for itself.</p>
@@ -117,7 +39,7 @@ blockquote{margin:16px 0 1.4em;padding:14px 18px;border-left:4px solid var(--tea
 </ul>
 <h2>3. Free plan and Premium</h2>
 <ul>
-<li>Every server gets the Free plan: custom commands, moderation, welcome messages and picture cards, goodbye messages, auto roles, role menus and XP levels, plus the <code>/setup</code>, <code>/help</code>, <code>/subscribe</code>, <code>/showcase</code> and <code>/stats</code> commands. It has no time limit and needs no payment.</li>
+<li>Every server gets the Free plan: custom commands, moderation and Automod, welcome messages and picture cards, goodbye messages, auto roles, role menus, chat and voice XP levels, a server log, reminders, birthdays, sticky roles and sticky messages, plus the <code>/setup</code>, <code>/help</code>, <code>/subscribe</code>, <code>/showcase</code> and <code>/stats</code> commands. It has no time limit and needs no payment. Regex rules, file rules and extra exemptions for each Automod rule need Premium.</li>
 <li>Premium adds the rest of Morphy, for example tickets, branding, community games with make-believe coins, applications, giveaways, invite tracking, anti-nuke and the do-not-post trap. It costs <strong>$9.99 USD per server for 30 days</strong> or <strong>$99.90 USD per server for 365 days</strong> (or the price shown when you pay).</li>
 <li>Payments are made by hand for now (for example Cash App, PayPal or Venmo). Each one covers 30 days, or 365 days at the yearly price, and doesn't renew automatically. We check each payment by hand and switch Premium on within 24 hours. When paid time ends, Premium stays on for 3 more days. If you pay before your paid time ends, or during those 3 days, the new days are added to the old end date, even if we check your payment after those 3 days are over. If we take longer than 24 hours to check it, the new days start when we check it instead, or at your end date if Premium is still on then, so you don't pay for our delay. Premium time we give you for free works the same way, without the 3 extra days: if you pay before it ends, the new days start when it ends. We'll remind you before the time runs out.</li>
 <li>If we offer card payments, they renew automatically until you cancel with <code>/subscribe</code>, and Premium stays on until the end of the period you've paid for.</li>
