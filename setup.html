@@ -120,6 +120,14 @@
 </ol>
 <p>Days are US Central time, and new activity shows up within about 5 minutes. Numbers are kept for 400 days.</p>
 <p>On the dashboard, the Analytics page has a chart, the same CSV and the counting switch.</p>
+<h3>Counter channels (every server)</h3>
+<p>A counter channel is a voice channel nobody can join whose name shows a number, like &quot;Members: 412&quot;. Staff with Manage Channels set them up, and Morphy needs Manage Channels too.</p>
+<ol>
+<li><code>/counters add kind:members</code> makes the channel. Kinds: members, humans, bots, boosts and ark-online (the players on your tracked ARK servers, so add one with <code>/servers add</code> first). Give it your own name with <code>name:</code>, keeping <code>{count}</code> in it (<code>{max}</code> too for ark-online), like <code>name:Survivors: {count}</code>.</li>
+<li>Morphy updates every counter every 10 minutes (Discord allows two renames per channel per 10 minutes). <code>/counters refresh</code> updates them now.</li>
+<li><code>/counters list</code> shows them and <code>/counters remove channel:#Members</code> removes one and deletes its channel. Up to 10 per server. A counter whose channel you deleted by hand is forgotten on the next update.</li>
+</ol>
+<p>There is no online-member counter: that needs the Presence intent, which Morphy does not ask for.</p>
 <h3>Automatic message rules (Free plan)</h3>
 <p>On the dashboard, open <strong>Moderation and safety</strong> to edit rules, actions and exemptions. The same rules can be changed in Discord.</p>
 <p>Run <code>/automod starter action:delete</code> for a starter word list, or <code>/automod add</code> for words (including * wildcards), spam, duplicate text, mentions, caps, invites or zalgo. Set a mod-log with <code>/moderation setup</code>, then run <code>/automod on</code>. Free servers can add 10 rules; Premium allows 25, regex, attachment rules and exemptions for individual rules. <code>/automod list</code>, <code>/automod pause</code> and <code>/automod remove</code> manage saved rules. Server-wide exemptions are Free. Staff with moderation permissions are exempt. Morphy needs Manage Messages to delete messages and the appropriate permission for a timeout, kick or ban. A refused action is recorded in the mod-log. Regex rules that exceed their execution time limit are skipped. Spam and duplicate windows reset when Morphy restarts.</p>
