@@ -20,13 +20,13 @@
 <header class="top"><div class="wrap top-in">
 <a class="brand" href="index.html"><img src="mascot-face-128.webp" width="36" height="36" alt=""><span>Morphy</span></a>
 <nav class="nav" aria-label="Main"><ul><li><a href="features.html" aria-current="page">Features</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="commands.html">Commands</a></li><li><a href="setup.html">Setup guide</a></li><li><a href="faq.html">FAQ</a></li><li><a href="https://morphy-production-c1ba.up.railway.app/dashboard">Dashboard</a></li></ul></nav>
-<a class="btn btn-primary btn-sm nav-cta" href="https://discord.com/oauth2/authorize?client_id=1549234696041271306&amp;scope=bot+applications.commands&amp;permissions=1099847560438">Add Morphy free</a>
+<a class="btn btn-primary btn-sm nav-cta" href="https://discord.com/oauth2/authorize?client_id=1549234696041271306&amp;scope=bot+applications.commands&amp;permissions=1099864337654">Add Morphy free</a>
 <details class="menu"><summary aria-label="Menu"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></summary><nav class="menu-panel" aria-label="Menu"><a href="features.html" aria-current="page">Features</a><a href="index.html#pricing">Pricing</a><a href="index.html#servers">Servers</a><a href="commands.html">Commands</a><a href="setup.html">Setup guide</a><a href="faq.html">FAQ</a><a href="https://morphy-production-c1ba.up.railway.app/dashboard">Dashboard</a></nav></details>
 </div></header>
 <main id="main" tabindex="-1"><div class="wrap doc">
 <h1>Every feature</h1>
-<p>50 features, grouped by what your staff are doing. Each card shows its plan and the commands that set it up. The <a href="commands.html">commands page</a> has every command, and the <a href="setup.html">setup guide</a> walks through the first ones.</p>
-<p class="muted">Features tagged Free work on every server. Features tagged Premium need Morphy Premium on that server, <a href="index.html#pricing">$9.99 USD a month or $99.90 USD a year</a>.</p>
+<p>52 features, grouped by what your staff are doing. Each card shows its plan and the commands that set it up. The <a href="commands.html">commands page</a> has every command, and the <a href="setup.html">setup guide</a> walks through the first ones.</p>
+<p class="muted">Features tagged Free work on every server. Features tagged Premium need Morphy Premium on that server, <a href="index.html#pricing">$9.99 USD a month or $99.90 USD a year, or $199 USD once for life</a>.</p>
 <div class="feat-page">
 <div class="cmd-tools feat-tools" role="search" aria-label="Features">
 <div class="cmd-find" id="feat-find" hidden><label for="feat-q">Search features</label><input type="search" id="feat-q" placeholder="Try welcome, ticket or ARK" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="feat-count"></div>
@@ -191,6 +191,16 @@
 <div class="feat-top"><h3>Counter channels</h3><span class="tag">Free</span></div>
 <p>Voice channels whose name shows a number: members, humans, bots, boosts or the players online on your tracked ARK servers. Updated every 10 minutes, up to 10 per server.</p>
 <div class="chips"><code>/counters add</code><code>/counters refresh</code></div>
+</article>
+<article class="feat" id="feat-voice-rooms" data-plan="premium">
+<div class="feat-top"><h3>Temporary voice rooms</h3><span class="tag">Premium</span></div>
+<p>A join-to-create voice channel. A member who joins it gets their own room, named from your template, and the room is deleted a minute after it empties. Up to 25 at a time.</p>
+<div class="chips"><code>/counters rooms-setup</code><code>/counters rooms-status</code></div>
+</article>
+<article class="feat" id="feat-alerts" data-plan="free">
+<div class="feat-top"><h3>YouTube and Twitch alerts</h3><span class="tag">Free</span></div>
+<p>A post in a channel of your choice when a YouTube channel uploads or a Twitch channel goes live, with your own text and a role to ping. Checked every 5 minutes, up to 10 per server.</p>
+<div class="chips"><code>/autoresponder alert-add</code><code>/autoresponder alert-list</code></div>
 </article>
 <article class="feat" id="feat-stats" data-plan="free">
 <div class="feat-top"><h3>Server stats</h3><span class="tag">Free</span></div>
