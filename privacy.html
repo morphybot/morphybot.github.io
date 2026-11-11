@@ -24,7 +24,7 @@
 <details class="menu"><summary aria-label="Menu"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></summary><nav class="menu-panel" aria-label="Menu"><a href="features.html">Features</a><a href="index.html#pricing">Pricing</a><a href="index.html#servers">Servers</a><a href="commands.html">Commands</a><a href="setup.html">Setup guide</a><a href="faq.html">FAQ</a><a href="https://morphy-production-c1ba.up.railway.app/dashboard">Dashboard</a></nav></details>
 </div></header>
 <main id="main" tabindex="-1"><div class="wrap doc"><h1>Morphy Privacy Policy</h1>
-<p><em>Last updated: November 10, 2026</em></p>
+<p><em>Last updated: November 11, 2026</em></p>
 <p>This policy explains what information <strong>Morphy</strong>, a Discord bot, collects, why, and what you can do about it. &quot;We&quot; and &quot;us&quot; mean the people who run Morphy.</p>
 <h2>1. What we collect</h2>
 <p>Morphy only keeps what it needs to work in your server.</p>
@@ -93,6 +93,7 @@
 <li>Anyone who visits our website, which shows the server list in section 4 (name, icon, member count, whether it has Premium or the Free plan, and a Join link if your staff add one).</li>
 <li>To check a tracked ARK server, Morphy asks the game server directly over the internet, and for ARK: Survival Ascended it downloads <strong>Studio Wildcard</strong>'s public server list. We don't send either of them anything about your Discord server or its members.</li>
 <li>For the YouTube and Twitch alerts your staff add (<code>/autoresponder alert-add</code>), Morphy fetches public data from <strong>YouTube</strong> (a channel's newest public uploads, through the YouTube Data API with Morphy's own API key, every 10 minutes; the handle or channel ID your staff typed is sent to that API once to find the channel) and <strong>Twitch</strong> (whether a channel is live, through Twitch's API with Morphy's own app credentials, every 5 minutes). We keep the channel ID or name, the Discord channel and role you picked, your message text, and the IDs of the last 50 videos or streams seen, so each is posted once. Nothing about your Discord server or its members is sent to YouTube or Twitch.</li>
+<li><strong>Anthropic</strong>, only on servers where staff turn on the scam picture rule in Automod (Premium). When a member's post has 2 or more pictures and little or no text, Morphy sends Anthropic's API the Discord links to up to 4 of that post's pictures (a link has the channel's ID and the file name in it), and Anthropic checks whether they show a scam. No message text, member name or server name is sent. Morphy doesn't save the pictures. It keeps only the result: in memory for about 6 hours so the same pictures aren't checked twice, and in the moderation case when the post is removed.</li>
 <li>Anyone the law requires us to share with.</li>
 </ul>
 <h2>4. The server list on our website</h2>
