@@ -240,6 +240,7 @@
 <li>Staff press <strong>Claim</strong> to take the ticket (only the claimer can type) and <strong>Staff info</strong> to see the member's history.</li>
 <li>Staff or the member press <strong>Close</strong> to close it. A transcript is saved to your transcript channel. If Morphy can't save it (for example it can't read the ticket's messages or post files in that channel), the ticket stays open and says what to fix, so no conversation is lost.</li>
 <li>Change types with <code>/tickets type-add</code> and <code>/tickets question-add</code>.</li>
+<li>Every type opens in the category from <code>/tickets settings category:</code>. To give one type its own category, run <code>/tickets type-category type:Shop category:#Shop tickets</code>, or pick it under that type on the dashboard's Tickets page. Run it without <code>category:</code> to go back to the main category. If a type's category is deleted or full, its tickets still open, outside any category, and Morphy tells your log channel.</li>
 </ul>
 <p><strong>Ping different staff for different ticket types (optional):</strong></p>
 <ul>
@@ -428,19 +429,21 @@
 <p>Members check their points with <code>/points check</code> and see the top members with <code>/points leaderboard</code>. Staff see a member's full history with <code>/points history</code>.</p>
 <p>On the dashboard, use the Coins and community page for the name, log channel and staff roles. Giving points is in Discord only.</p>
 <h2>Step 11: ARK server tracking (Premium, optional)</h2>
-<p>A live panel with your ARK servers: online or offline, map, players and version. Morphy only reads what the servers show publicly. It never asks for a game password, RCON or a host login.</p>
+<p>A live panel with your ARK servers: online or offline, map, players and version. Morphy reads what the servers show publicly. For servers on a Nitrado account you linked with <code>/nitrado link</code>, it reads what Nitrado says about them, which is how console servers get on the panel. It never asks for a game password or RCON.</p>
 <ol>
 <li><code>/servers add</code> (needs Manage Server). Pick the game:
 <ul>
 <li>For ARK: Survival Ascended, start typing the server's name and pick it from the list, or type its IP and game port, like <code>1.2.3.4:7777</code>. Morphy finds it on Studio Wildcard's public list of unofficial servers, so the server has to be on that list (official servers aren't covered).</li>
-<li>For ARK: Survival Evolved (PC, Steam), type the IP and the query port, like <code>1.2.3.4:27015</code>. If you leave the port out, Morphy tries 27015. Console servers can't be added this way.</li>
+<li>For ARK: Survival Evolved (PC, Steam), type the IP and the query port, like <code>1.2.3.4:27015</code>. If you leave the port out, Morphy tries 27015. Console servers can't be added this way, since they answer no public check. Use the Nitrado choice for them.</li>
+<li>For servers on Nitrado (PC, Xbox or PlayStation), link the account first with <code>/nitrado link</code>. Then pick <strong>Linked Nitrado account</strong> as the game. For the server, pick one from the list, or pick <strong>All linked servers</strong> to add every ARK server on the account in one go.</li>
 <li>Add a <code>label</code> to give it a shorter name on the panel.</li>
 </ul></li>
 <li><code>/servers panel</code> posts the panel in the channel you pick. Morphy edits that same post when something changes, at most every 2 minutes. Posting it again moves it and removes the old one.</li>
-<li><code>/servers list</code> shows everyone how the servers are doing, and <code>/servers players</code> shows who's on an ASE server. ASA's public list only has the player count, not names.</li>
+<li><code>/servers list</code> shows everyone how the servers are doing, and <code>/servers players</code> shows who's on an ASE server on PC. ASA's public list only has the player count, not names.</li>
 </ol>
 <p>A server shows as offline after 2 checks in a row with no answer, so one lost packet doesn't flip it. If Morphy itself can't check (for example Wildcard's list is down), the panel says &quot;Can't check right now&quot; instead of offline. A Discord server can track up to 20 game servers. <code>/servers remove</code> stops one and deletes its history (Morphy keeps 30 days of online and player counts for each server). Without Premium, the checks stop and the panel says tracking is paused.</p>
-<p>On the dashboard, the ARK servers page adds and removes servers, posts the panel and shows player charts. Linking Nitrado is in Discord only.</p>
+<p>Nitrado servers work a little differently. Morphy asks Nitrado about each one every 10 minutes, not every 2, because it asks Nitrado one thing every 4 seconds for each linked account and game logs use the same account. The panel says when each Nitrado server was last checked. A Nitrado server shows as offline as soon as Nitrado says it isn't running. If Nitrado refuses a request or the link stops working, the panel says &quot;Can't check right now&quot;. <code>/nitrado unlink</code> takes the Nitrado servers off the list and deletes their history.</p>
+<p>On the dashboard, the ARK servers page adds and removes servers, posts the panel and shows player charts. Linking Nitrado is in Discord only. Once an account is linked, the page's Nitrado section has Add to panel next to each game server, and Add all.</p>
 <h3>Game logs from Nitrado (Premium, optional)</h3>
 <p>If your game server is on Nitrado, Morphy can post its log lines in Discord channels. This needs a Nitrado link first: run <code>/nitrado link</code> and read the note it shows before you paste a token.</p>
 <ol>
@@ -448,7 +451,7 @@
 <li><code>/gamelogs status</code> shows where each kind goes and when each game server was last read.</li>
 <li><code>/gamelogs limit</code> sets how many lines Morphy posts an hour for your server (10 to 600, 120 to start). <code>/gamelogs server</code> turns one linked game server on or off, and <code>/gamelogs pause</code> and <code>/gamelogs resume</code> stop and start all of it.</li>
 </ol>
-<p>Morphy reads Nitrado every 5 minutes and posts only lines that are new since it started reading, so turning it on never floods a channel with old lines. Posts never ping anyone, and player IDs (Steam, Epic, ARK IDs) are cut out. Morphy reads two things, both read-only: Nitrado's activity log for the server (restarts, settings and file changes, and who made them), which lands under server activity, and the newest part of an ARK server's ShooterGame.log, which gives joins, leaves, chat, kills and admin commands. Morphy reads no other file. If <code>/gamelogs status</code> says it couldn't find ShooterGame.log, check that the server is an ARK server on Nitrado and has been started at least once.</p>
+<p>Morphy reads each game server about every 5 minutes and posts only lines that are new since it started reading, so turning it on never floods a channel with old lines. Morphy asks Nitrado one thing every 4 seconds for each linked account, so with more than 20 game servers on one account a line can take up to 15 minutes to show up. Morphy reads the first 25 game servers on a Nitrado account. Posts never ping anyone, and player IDs (Steam, Epic, ARK IDs) are cut out. Morphy reads two things, both read-only: Nitrado's activity log for the server (restarts, settings and file changes, and who made them), which lands under server activity, and the newest part of an ARK server's ShooterGame.log, which gives joins, leaves, chat, kills and admin commands. Morphy reads no other file. <code>/gamelogs status</code> says for each game server whether it was read, is waiting its turn, was refused by Nitrado or failed. A game server that isn't ARK, isn't running or has no ShooterGame.log yet gives only its activity log, and Morphy looks for the file again every 30 minutes. If an ARK server shows no ShooterGame.log, check that it has been started at least once.</p>
 <p>On the dashboard, use the Game logs page.</p>
 <h2>Step 12: Get Premium</h2>
 <p>Every server has the Free plan, with no time limit. Premium is $9.99 USD a month (30 days) or $99.90 USD a year (365 days) per server. Lifetime Premium is $199 USD per server, paid once.</p>
